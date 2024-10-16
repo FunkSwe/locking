@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import styles from './About.module.scss';
-import { teamMembersData } from '../../assets/teamMembersData';
-import TeamMember from '../../components/TeamMember';
+/* import { teamMembersData } from '../../assets/teamMembersData';
+import TeamMember from '../../components/TeamMember'; */
 
 const About = () => {
   console.log(teamMembersData);
@@ -37,7 +37,7 @@ const About = () => {
         </motion.p>
       </section>
       <div className={styles.crew}>
-        {teamMembersData ? (
+       {/*  {teamMembersData ? (
           teamMembersData.map(({ name, desc, img, socials, id }) => (
             <TeamMember
               key={id}
@@ -50,7 +50,7 @@ const About = () => {
           ))
         ) : (
           <div>Loading...</div>
-        )}
+        )} */}
       </div>
     </div>
   );
