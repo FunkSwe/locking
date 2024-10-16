@@ -1,4 +1,3 @@
-'use client';
 import { usePathname } from 'next/navigation'; // Import the correct hook
 import { Darker_Grotesque } from 'next/font/google';
 import React, { useEffect, useRef, useState } from 'react';
@@ -10,16 +9,11 @@ import './menu.css';
 const menuLinks = [
   { path: '/', label: 'Home' },
   { path: '/about', label: 'About' },
-  { path: '/giveprops', label: 'Props' },
+  { path: '/props', label: 'Props' },
   { path: '/media', label: 'Media' },
-  { path: '/playground', label: 'Playgorund' },
+  { path: '/playground', label: 'Playground' },
   { path: '/contact', label: 'Contact' },
 ];
-
-const darkerGrotesque = Darker_Grotesque({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-});
 
 const Menu = () => {
   const container = useRef();
