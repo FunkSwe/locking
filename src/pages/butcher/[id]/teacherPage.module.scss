@@ -1,0 +1,40 @@
+.teacher {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+
+    .btn_container {
+      position: fixed;
+      top: 10vh;
+      left: 5vw;
+      pointer-events: auto;
+      cursor: pointer;
+      z-index: 100;
+    }
+
+    .scroll_wrapper {
+        position: absolute;
+        right: 2.5vw;
+        top: 80vh;
+        width: 10vw;
+        height: fit-content;
+        display: block;
+
+        @media (min-width: 500px) {
+            span {
+                color: white;
+            }
+          }
+
+        @media (min-width: 980px) {
+            right: 15vw;
+          }
+
+        @media (min-width: 1200px) {
+            right: 25vw;
+          }
+    }
+}

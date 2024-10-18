@@ -13,9 +13,15 @@
 
 .menu-logo {
   padding: 0.5rem 1rem;
-  border-radius: 25px;
-  border: 1px solid #ffffff;
-  cursor: pointer;
+  border-radius: 50%;
+  border: 3px solid #e3e3e3;
+  height: 120px;
+  width: 120px;
+  display: grid;
+  place-content: center;
+  font-size: clamp(24px, 4vw + 1rem, 36px);
+  font-weight: 800;
+  transition: all 0.3s ease-in-out;
 }
 
 .menu-logo:hover {
@@ -35,8 +41,15 @@
 
 .menu-open p {
   padding: 0.5rem 1rem;
-  border-radius: 25px;
-  border: 1px solid #888;
+  border-radius: 50%;
+  border: 3px solid #e3e3e3;
+  height: 120px;
+  width: 120px;
+  display: grid;
+  place-content: center;
+  font-size: clamp(24px, 4vw + 1rem, 36px);
+  font-weight: 800;
+  transition: all 0.3s ease-in-out;
 }
 
 .menu-open p:hover {
@@ -52,10 +65,16 @@
 }
 
 .menu-close p {
-  padding: 2em;
-  border: 1px solid #000000;
   padding: 0.5rem 1rem;
-  border-radius: 25px;
+  border-radius: 50%;
+  border: 3px solid #e3e3e3;
+  height: 120px;
+  width: 120px;
+  display: grid;
+  place-content: center;
+  font-size: clamp(24px, 4vw + 1rem, 36px);
+  font-weight: 800;
+  transition: all 0.3s ease-in-out;
 }
 
 .menu-overlay {
@@ -73,14 +92,7 @@
     100% 100%,
     100% 100%
   ); /* Initially hidden off-screen to the right */
-  transition: clip-path 0.6s ease-in-out;
-}
-
-.menu-close-icon {
-  flex: 2;
-  display: flex;
-  align-items: flex-end;
-  cursor: pointer;
+  transition: clip-path 0.3s ease-in-out;
 }
 
 .menu-copy {
@@ -88,18 +100,14 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-top: 2em;
-}
-
-.menu-close-icon p {
-  font-size: 100px;
-  -webkit-text-stroke: 3px #ef6a17;
-  line-height: 70%;
+  padding-top: 12rem;
+  padding-left: 12rem;
 }
 
 .menu-link-item {
   width: max-content;
-  /*  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); */
+  pointer-events: auto;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 .menu-link-item-holder {
@@ -114,6 +122,11 @@
   line-height: 85%;
 }
 
+.menu-link-item-holder a:hover {
+  color: #ffffff !important;
+  transition: color 0.3s ease;
+}
+
 .menu-letter {
   display: inline-block;
   transition: transform 0.3s ease;
@@ -121,7 +134,8 @@
 }
 
 .menu-info {
-  display: flex;
+  position: absolute;
+  bottom: 4rem;
 }
 
 .menu-info-col {
@@ -132,8 +146,14 @@
 }
 
 @media (max-width: 900px) {
-  .menu-close-icon {
-    display: none;
+  .menu-copy {
+    flex: 0;
+    margin-top: 6rem;
+    margin-left: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 15rem;
   }
   .menu-copy {
     padding-top: 8em;

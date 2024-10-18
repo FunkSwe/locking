@@ -90,7 +90,7 @@ const Hero = () => {
             animate='enter'
             exit='exit'
             className={cn(
-              `text-center pt-20 lg:top-20 lg:w-full text-2xl md:text-5xl lg:text-7xl z-10 text-white lg:mt-20 mt-6 mb-4 p-4 rounded-md duration-500 pointer-events-none text-shadow-lg font-base`
+              `text-center pt-20 lg:top-20 lg:w-full text-2xl md:text-5xl lg:text-7xl z-10 text-white lg:mt-20 mt-6 mb-4 p-4 rounded-md duration-500 pointer-events-none text-shadow-lg font-alt`
             )}
           >
             Funkcamp 2025 - 20 years Anniversary
@@ -100,7 +100,7 @@ const Hero = () => {
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.4, delay: 0.5 }}
-            className='w-full max-h-fit text-sm md:text-xl text-center leading-loose text-slate-200 drop-shadow-l z-10 relative font-primary rounded-md transition-opacity duration-500 pointer-events-none p-4'
+            className='w-full max-h-fit text-sm md:text-xl text-center leading-loose text-slate-200 drop-shadow-l z-10 relative font-primary rounded-md transition-opacity duration-500 pointer-events-none p-4 font-base'
           >
             Swedens first locking camp, bringing the pioneers to share with the
             locking community

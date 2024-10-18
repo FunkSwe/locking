@@ -7,7 +7,7 @@ import './menu.css';
 const menuLinks = [
   { path: '/', label: 'Home' },
   { path: '/about', label: 'About' },
-  { path: '/props', label: 'Props' },
+  { path: '/tribute', label: 'Tribute' },
   { path: '/media', label: 'Media' },
   { path: '/contact', label: 'Contact' },
 ];
@@ -25,31 +25,29 @@ const Menu = () => {
 
   useGSAP(
     () => {
-      // Initially position the menu links off-screen to the right
       gsap.set('.menu-link-item-holder', { x: 100, opacity: 0 });
 
-      // Create a timeline for the menu overlay and menu items
       tl.current = gsap
         .timeline({ paused: false })
-        // Animate the menu overlay from right to left
+
         .to('.menu-overlay', {
-          duration: 0.3, // Faster animation duration
-          clipPath: 'polygon(100% 0, 100% 0, 100% 100%, 100% 100%)', // Starts off-screen from the right
-          ease: 'power2.inOut', // Faster ease
-        })
-        .to('.menu-overlay', {
-          duration: 0.3, // Faster animation duration
-          clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)', // Slides in from the right
-          ease: 'power2.inOut', // Faster ease
-        })
-        // Stagger the appearance of menu items
-        .to('.menu-link-item-holder', {
-          x: 0, // Move items from right to left
-          opacity: 1,
-          duration: 0.3, // Reduced duration for menu items
-          stagger: 0.08, // Reduced stagger time for quicker item appearance
+          duration: 0.2,
+          clipPath: 'polygon(100% 0, 100% 0, 100% 100%, 100% 100%)',
           ease: 'power2.inOut',
-          delay: 0.2, // Reduced delay to match the faster overlay animation
+        })
+        .to('.menu-overlay', {
+          duration: 0.2,
+          clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)',
+          ease: 'power2.inOut',
+        })
+
+        .to('.menu-link-item-holder', {
+          x: 0,
+          opacity: 1,
+          duration: 0.2,
+          stagger: 0.04,
+          ease: 'power2.inOut',
+          delay: 0.2,
         });
     },
     { scope: container }
@@ -72,32 +70,33 @@ const Menu = () => {
     <div className='menu-container' ref={container}>
       <div className='menu-bar'>
         <div className='menu-logo'>
-          <Link to={'/'}>Funkcamp 2025</Link>
+          <Link to={'/'} className='font-alt'>
+            FC 2025
+          </Link>
         </div>
         <div className='menu-open' onClick={toggleMenu}>
-          <p>Menu</p>
+          <p className='font-alt'>Menu</p>
         </div>
         <div className='menu-overlay'>
           <div className='menu-overlay-bar'>
             <div className='menu-logo'>
-              <Link to={'/'}>Funkcamp 2025</Link>
+              <Link to={'/'} className='font-alt'>
+                FC 2025
+              </Link>
             </div>
             <div className='menu-close' onClick={toggleMenu}>
-              <p>Close</p>
+              <p className='font-alt'>Close</p>
             </div>
           </div>
 
-          <div className='menu-close-icon'>
-            <p onClick={toggleMenu}>&#x2715;</p>
-          </div>
           <div className='menu-copy'>
             <div className='menu-links'>
               {menuLinks.map((link) => (
                 <div className='menu-link-item' key={link.label}>
                   <div className='menu-link-item-holder'>
-                    <Link to={link.path} className='menu-link'>
+                    <Link to={link.path} className='menu-link '>
                       {link.label.split('').map((letter, index) => (
-                        <span key={index} className='menu-letter'>
+                        <span key={index} className='menu-letter font-alt'>
                           {letter}
                         </span>
                       ))}

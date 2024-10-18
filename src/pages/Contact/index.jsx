@@ -1,7 +1,7 @@
 import React from 'react';
 import { AiOutlineMail } from 'react-icons/ai';
-
 import styles from './Contact.module.scss';
+import PageTransition from '@/components/PageTransition';
 
 const Contact = () => {
   return (
@@ -18,4 +18,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default PageTransition(Contact);

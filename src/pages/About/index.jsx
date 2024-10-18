@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import styles from './About.module.scss';
 /* import { teamMembersData } from '../../assets/teamMembersData';
 import TeamMember from '../../components/TeamMember'; */
+import PageTransition from '@/components/PageTransition';
 
 const About = () => {
   return (
@@ -55,4 +56,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default PageTransition(About);

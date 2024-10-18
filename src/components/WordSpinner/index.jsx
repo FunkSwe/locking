@@ -22,7 +22,7 @@ const WordSpinner = ({ words }) => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 20 }}
           transition={{ duration: 0.5 }}
-          className='text-white font-branding font-semibold'
+          className='text-white font-alt font-semibold'
         >
           {words[currentIndex]}
         </motion.div>

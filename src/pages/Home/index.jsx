@@ -6,8 +6,9 @@ import IMG2 from '@/assets/images/2009.jpeg';
 import IMG3 from '@/assets/images/2005.png';
 import IMG4 from '@/assets/images/2018_panel.jpg';
 import Lenis from '@studio-freight/lenis';
+import PageTransition from '@/components/PageTransition';
 
-export default function Home() {
+const Home = () => {
   useEffect(() => {
     const lenis = new Lenis();
 
@@ -50,4 +51,6 @@ export default function Home() {
       />
     </main>
   );
-}
+};
+
+export default PageTransition(Home);

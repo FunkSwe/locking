@@ -1,0 +1,33 @@
+.page-loader {
+    display: flex;
+    place-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10000;
+    flex-direction: column;
+    pointer-events: none;
+
+    > .row {
+      flex: 1;
+      width: 100%;
+      display: flex;
+    }
+
+    .block {
+        position: relative;
+        flex: 1;
+        background: #282828;
+        margin: -.25px
+    }
+  }
+
+  .transition-in .block {
+    transform-origin: top;
+  }
+  
+  .transition-out .block {
+    transform-origin: bottom;
+  }

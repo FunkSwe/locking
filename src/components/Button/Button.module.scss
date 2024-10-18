@@ -1,20 +1,25 @@
-@import "@/styles/settings/__settings";
+@use '../../styles/base/' as *;
 
-.button {
+.btn {
+    position: relative;
+    width: fit-content;
+    width: 160px;
+    height: fit-content;
+    padding: 1rem 2rem;
+    display: grid;
+    place-content: center;
+    color: $color-white;
+    background-color: $color-card-bg;
+    border: 1px solid $color-2;
+    transition: all 0.4s ease-in-out;
+    border-radius: 5px;
+    pointer-events: auto;
+    cursor: pointer;
 
-  font-size: 1em;
-  color: white;
-  background-color: $color-button-background;
-  border: 0;
-  font-weight: $font-weight-black;
-  font-family: inherit;
-  text-transform: uppercase;
-  padding: .6em 1em;
-  border-radius: $border-radius-small;
-  cursor: pointer;
-
-  &:hover {
-    background-color: lighten($color-button-background, 10);
-  }
-
+    &:hover {
+        cursor: pointer;
+        background-color: $color-2;
+        border: 1px solid $color-1;
+        color: white;
+    }
 }
