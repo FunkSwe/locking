@@ -55,7 +55,7 @@ export const teacherData = [
   {
     id: 1,
     name: 'Og Skeeter Rabbit',
-    country: 'FR',
+    country: 'US',
     img: '1.png',
     title: 'James Higgins',
     subtitle: 'Gogo Brothers',
@@ -73,7 +73,7 @@ export const teacherData = [
   {
     id: 3,
     name: 'Damon Frost',
-    country: 'SWE',
+    country: 'US/SWE',
     img: '3.png',
     title: 'Rubberband man',
     subtitle: 'Worldwide',

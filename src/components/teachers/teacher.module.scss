@@ -1,6 +1,6 @@
 .teacher {
   position: relative;
-  height: 50vh;
+  height: 60vh;
   width: 100%;
   overflow: hidden;
   filter: drop-shadow(10px 10px 50px rgba(0, 0, 0, 0.534))
@@ -8,8 +8,11 @@
     brightness(70%);
   transition: all 0.4s ease-in-out;
   pointer-events: auto;
+  margin-bottom: 2rem;
+  margin-top: 10vh;
 
   @media (min-width: 768px) {
+
     position: relative;
     width: 20vw;
     height: 50vh;
@@ -21,6 +24,7 @@
     transition: all 0.4s ease-in-out;
     object-fit: cover;
     object-position: top center;
+    border-radius: 8px;
   }
 
   &:hover {

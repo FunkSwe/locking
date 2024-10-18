@@ -76,7 +76,7 @@ const TeachersList = () => {
         }}
         transition={{ duration: 0.8, delay: 1.6, ease: 'easeInOut' }}
       >
-        TEACHERS 2024
+        TEACHERS 2025
       </motion.h1>
       <motion.p
         className={styles.desc}
@@ -86,7 +86,8 @@ const TeachersList = () => {
         }}
         transition={{ duration: 1.2, delay: 2, ease: 'easeInOut' }}
       >
-        We are proud to have such a great line up for 2024, true masters at work
+        We are proud to have this great line up, and 3/4 teachers from funkcamp
+        2005
       </motion.p>
       <div className={styles.tooltip_wrapper}>
         <div className={styles.grid_item}>

@@ -5,7 +5,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Media from './pages/Media';
 import Tribute from './pages/Tribute';
-import Teacher from './pages/butcher';
+import Teacher from './pages/Teacher';
 import Menu from './components/menu/Menu';
 
 const App = () => {

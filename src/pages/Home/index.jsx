@@ -7,6 +7,7 @@ import IMG3 from '@/assets/images/2005.png';
 import IMG4 from '@/assets/images/2018_panel.jpg';
 import Lenis from '@studio-freight/lenis';
 import PageTransition from '@/components/PageTransition';
+import TeachersList from '@/components/teachers/TeachersList';
 
 const Home = () => {
   useEffect(() => {
@@ -23,6 +24,7 @@ const Home = () => {
   return (
     <main className='w-screen h-full'>
       <Hero />
+      <TeachersList />
       {/*   <img src={IMG} alt="" /> */}
       {/* Teacher presentation goes here */}
       <Section

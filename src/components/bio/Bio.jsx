@@ -1,5 +1,5 @@
 import styles from './bio.module.scss';
-import TextReveal from '@/components/reveal/TextReveal';
+import TextReveal from '@/components/PresentationCard/reveal/TextReveal';
 
 const Bio = ({ title, subtitle, desc }) => {
   if (!title || !subtitle || !desc) {

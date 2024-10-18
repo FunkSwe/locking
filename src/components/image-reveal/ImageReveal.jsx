@@ -51,7 +51,9 @@ const ImageReveal = ({ name, country, img }) => {
     return <div>Loading... </div>;
   }
 
-  const imagePath = `@/assets/teachers/${img}`;
+  const imagePath = `/src/assets/teachers/${img}`;
+
+  console.log('image path:', imagePath);
 
   return (
     <div className={`${styles['image-reveal']}`}>

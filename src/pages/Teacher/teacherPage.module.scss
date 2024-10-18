@@ -8,11 +8,11 @@
 
     .btn_container {
       position: fixed;
-      top: 10vh;
+      top: 20vh;
       left: 5vw;
       pointer-events: auto;
       cursor: pointer;
-      z-index: 100;
+      z-index: 10000;
     }
 
     .scroll_wrapper {

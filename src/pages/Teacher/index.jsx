@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom'; // Replacing usePathname and useRouter from Next.js
-import { teacherData } from '@/assets/data/pageData';
+import { useParams, useNavigate } from 'react-router-dom'; ''
 import Bio from '@/components/bio/Bio';
 import PageLoader from '@/components/page-loader/PageLoader';
 import ImageReveal from '@/components/image-reveal/ImageReveal';
@@ -8,13 +7,14 @@ import styles from './teacherPage.module.scss';
 import ScrollIndicator from '@/components/scrolldown/ScrollIndicator';
 import Button from '@/components/button/Button';
 import { motion } from 'framer-motion';
+import { teacherData } from '@/assets/data/pageData';
 
 const Teacher = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const { id } = useParams(); // Replacing usePathname with useParams to get the teacher ID from the URL
-  const navigate = useNavigate(); // Replacing useRouter with useNavigate for navigation
+  const { id } = useParams(); 
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     // Simulate an asynchronous data fetch
@@ -63,8 +63,7 @@ const Teacher = () => {
                       subtitle={item.subtitle}
                       desc={item.desc}
                     />
-                  </div>y
-                
+                  </div>
                 );
               }
               return null;
