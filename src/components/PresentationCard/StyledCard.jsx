@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from './StyledCard.module.scss';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const StyledCard = ({ title, mainTitle, narrator, itemPng }) => {
   return (
@@ -21,7 +22,7 @@ const StyledCard = ({ title, mainTitle, narrator, itemPng }) => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1.5 }}
         >
-          <Image src={itemPng} alt='Chameleon Image' layout='fill' />
+          <LazyLoadImage src={itemPng} alt='Chameleon Image' effect='blur' />
         </motion.div>
       </AnimatePresence>
     </div>

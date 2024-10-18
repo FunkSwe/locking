@@ -2,9 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
 
+@font-face {
+    font-family: Aileron;
+    src: url('/src/assets/fonts/Aileron-regular.otf');
+  }
 
-$font-base:  'Gruppo', sans-serif;;
-$font-alt: 'Audiowide', sans-serif;
+  @font-face {
+    font-family: Anek;
+    src: url('/src/assets/fonts/AnekBangla.ttf');
+  }
+
+$font-alt: Anek, sans-serif;
+$font-base: Aileron, sans-serif;
 $font-default: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
 Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 

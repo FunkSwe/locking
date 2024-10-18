@@ -1,20 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {
-      fontFamily: {
-        montserrat: `'Montserrat', sans-serif`,
-        merriweather: `'Merriweather', serif`,
-        raleway: `'Raleway', sans-serif`,
-        lexend: `'Lexend', sans-serif`,
-      },
-    },
+    extend: {},
   },
   plugins: [
-    require("@tailwindcss/forms"),
-    require("@tailwindcss/typography"),
-    require("prettier-plugin-tailwindcss"),
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+    require('prettier-plugin-tailwindcss'),
     // require('flowbite/plugin')
   ],
 };

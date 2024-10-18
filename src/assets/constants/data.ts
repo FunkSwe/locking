@@ -1,8 +1,8 @@
-import lockersLakeImg from '/assets/images/presentation/lockerslake.jpg';
-import gregImg from '/assets/images/presentation/greg.png';
-import fredImg from '/assets/images/presentation/web_fred.png';
-import shabImg from '/assets/images/presentation/web_shab.png';
-import donImg from '/assets/images/presentation/web_don.png';
+import lockersLakeImg from '../images/presentation/lockerslake.jpg';
+import gregImg from '../images/presentation/greg.png';
+import fredImg from '../images/presentation/web_fred.png';
+import shabImg from '../images/presentation/web_shab.png';
+import donImg from '../images/presentation/web_don.png';
 
 export const peopleData = [
     {

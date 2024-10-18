@@ -1,13 +1,12 @@
-'use client';
 import styles from './parallaxzoom.module.scss';
-import Picture1 from '/assets/images/2005.png';
-import Picture2 from '/assets/images/2.jpg';
-import Picture3 from '/assets/images/3.jpg';
-import Picture4 from '/assets/images/4.jpg';
-import Picture5 from '/assets/images/5.jpg';
-import Picture6 from '/assets/images/6.jpg';
-import Picture7 from '/assets/images/7.jpg';
-import Image, { StaticImageData } from 'next/image';
+import Picture1 from '@/assets/images/2005.png';
+import Picture2 from '@/assets/images/2.jpg';
+import Picture3 from '@/assets/images/3.jpg';
+import Picture4 from '@/assets/images/4.jpg';
+import Picture5 from '@/assets/images/5.jpg';
+import Picture6 from '@/assets/images/6.jpg';
+import Picture7 from '@/assets/images/7.jpg';
+import { Img } from 'react-image';
 import { useScroll, useTransform, motion, MotionValue } from 'framer-motion';
 import { useRef, useState } from 'react';
 
@@ -46,8 +45,8 @@ const ParallaxZoom = () => {
   }));
 
   // State for lightbox functionality
-  const [lightboxOpen, setLightboxOpen] = useState < boolean > false;
-  const [currentImageIndex, setCurrentImageIndex] = useState < number > 0;
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const openLightbox = (index) => {
     setCurrentImageIndex(index);
@@ -72,12 +71,11 @@ const ParallaxZoom = () => {
               onClick={() => openLightbox(index)}
               style={{ pointerEvents: 'auto' }}
             >
-              <Image
+              <Img
                 src={src}
                 alt='image'
-                placeholder='blur'
-                fill
-                style={{ objectFit: 'cover' }}
+                loader={<div>Loading...</div>}
+                unloader={<div>Failed to load image</div>}
               />
             </div>
           </motion.div>

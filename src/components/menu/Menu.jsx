@@ -1,7 +1,5 @@
-import { usePathname } from 'next/navigation'; // Import the correct hook
-import { Darker_Grotesque } from 'next/font/google';
 import React, { useEffect, useRef, useState } from 'react';
-import Link from 'next/link';
+import { Link, useLocation } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import './menu.css';
@@ -11,16 +9,14 @@ const menuLinks = [
   { path: '/about', label: 'About' },
   { path: '/props', label: 'Props' },
   { path: '/media', label: 'Media' },
-  { path: '/playground', label: 'Playground' },
   { path: '/contact', label: 'Contact' },
 ];
 
 const Menu = () => {
   const container = useRef();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const pathname = usePathname(); // Use pathname to detect route changes
+  const location = useLocation();
 
-  /*GSAP*/
   const tl = useRef();
 
   const toggleMenu = () => {
@@ -70,13 +66,13 @@ const Menu = () => {
   // Close the menu when route changes
   useEffect(() => {
     setIsMenuOpen(false); // Close the menu on route change
-  }, [pathname]);
+  }, [location.pathname]);
 
   return (
     <div className='menu-container' ref={container}>
       <div className='menu-bar'>
         <div className='menu-logo'>
-          <Link href={'/'}>Funkcamp 2025</Link>
+          <Link to={'/'}>Funkcamp 2025</Link>
         </div>
         <div className='menu-open' onClick={toggleMenu}>
           <p>Menu</p>
@@ -84,7 +80,7 @@ const Menu = () => {
         <div className='menu-overlay'>
           <div className='menu-overlay-bar'>
             <div className='menu-logo'>
-              <Link href={'/'}>Funkcamp 2025</Link>
+              <Link to={'/'}>Funkcamp 2025</Link>
             </div>
             <div className='menu-close' onClick={toggleMenu}>
               <p>Close</p>
@@ -99,7 +95,7 @@ const Menu = () => {
               {menuLinks.map((link) => (
                 <div className='menu-link-item' key={link.label}>
                   <div className='menu-link-item-holder'>
-                    <Link href={link.path} className='menu-link'>
+                    <Link to={link.path} className='menu-link'>
                       {link.label.split('').map((letter, index) => (
                         <span key={index} className='menu-letter'>
                           {letter}
@@ -112,7 +108,7 @@ const Menu = () => {
             </div>
             <div className='menu-info'>
               <div className='menu-info-col'>
-                <a href='#'>Instagram &#8599;</a>
+                <a to='#'>Instagram &#8599;</a>
               </div>
               <div className='menu-info-col'>
                 <p>funkcampswe@gmail.com</p>

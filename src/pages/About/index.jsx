@@ -4,7 +4,6 @@ import styles from './About.module.scss';
 import TeamMember from '../../components/TeamMember'; */
 
 const About = () => {
-  console.log(teamMembersData);
   return (
     <div className={styles.about}>
       <section>
@@ -37,7 +36,7 @@ const About = () => {
         </motion.p>
       </section>
       <div className={styles.crew}>
-       {/*  {teamMembersData ? (
+        {/*  {teamMembersData ? (
           teamMembersData.map(({ name, desc, img, socials, id }) => (
             <TeamMember
               key={id}

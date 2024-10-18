@@ -155,7 +155,7 @@ h1 {
   
   
     h2 {
-      font-family: $font-base;
+      font-family: $font-alt;
       font-size: 2.25rem;
   
       @media screen and (max-width: 960px) {
@@ -169,6 +169,7 @@ h1 {
   
     
     h3 {
+      font-family: $font-alt;
       font-size: 1.5rem;
   
       @media screen and (max-width: 960px) {
@@ -389,4 +390,12 @@ h1 {
       padding-bottom: 1rem;
       word-break: keep-all;
     }
-    
+
+    .font-alt {
+      font-family: $font-alt;
+    }
+
+    .font-base {
+      font-family: $font-base;
+    }
+   

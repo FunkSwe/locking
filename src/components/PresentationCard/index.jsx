@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import styles from './Presentation.module.css';
 import Card from './Card';
-import { peopleData } from '@/contants/data';
+import { peopleData } from '@/assets/constants/data';
 
 const PresentationCard = () => {
   const [data, setData] = useState(peopleData);

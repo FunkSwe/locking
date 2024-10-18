@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from './Card.module.scss';
+import { Img } from 'react-image';
 
 const Card = ({ title, year, desc, id, image, itemPng }) => {
   return (
@@ -13,11 +14,17 @@ const Card = ({ title, year, desc, id, image, itemPng }) => {
           transition={{ duration: 1 }}
         >
           <div className={styles.overlay}></div>
-          <Image
+          <Img
             src={image}
             alt={title}
-            fill
-            style={{ objectFit: 'cover', objectPosition: 'center' }}
+            loader={<div>Loading...</div>}
+            unloader={<div>Failed to load image</div>}
+            style={{
+              objectFit: 'cover',
+              objectPosition: 'center',
+              width: '100%',
+              height: '100%',
+            }}
           />
         </motion.div>
 
@@ -29,7 +36,7 @@ const Card = ({ title, year, desc, id, image, itemPng }) => {
           transition={{ duration: 1.6, delay: 0.4 }}
           className={styles.png}
         >
-          <Image src={itemPng} alt={title} width={360} height={360} />
+          <Img src={itemPng} alt={title} width={360} height={360} />
         </motion.div>
 
         {/* Card Information */}

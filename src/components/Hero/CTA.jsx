@@ -1,9 +1,9 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const HighlightItem = ({ title, content, path }) => {
   return (
     <Link
-      href={path}
+      to={path}
       className='py-4 px-8 border-[1px] border-x-transparent border-y-[#888] hover:bg-white hover:text-black text-white transition-all duration-300'
     >
       <span className='text-xl font-bold'>{title}</span>

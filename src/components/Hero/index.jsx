@@ -3,14 +3,20 @@ import { motion } from 'framer-motion';
 import { fadeIn } from '@/components/animations/Animations';
 import CTA from './CTA';
 import WordSpinner from '../WordSpinner';
-/* import IMG from '../../assets/desktopfc.jpg'; */
+import IMG from '@/assets/desktopfc.jpg';
+import { Img } from 'react-image';
+import { cn } from '@/utils/classnames';
 
 const Spinner = () => {
   const words = ['Foundation', 'Culture', 'History', 'Purpose'];
   return (
     <div className='lg:mt-40 mt-10 text-3xl xl:text-7xl md:text-5xl p-4 rounded-md transition-all duration-500 ease-in-out'>
       <div className='w-full flex flex-col justify-center items-center'>
-        <h2 className='text-aubergine-500 font-branding drop-shadow-md text-white whitespace-nowrap text-center'>
+        <h2
+          className={cn(
+            'text-aubergine-500 drop-shadow-md text-white whitespace-nowrap text-center'
+          )}
+        >
           The artform of locking
         </h2>
         <div className='pl-3 sticky drop-shadow-md'>
@@ -65,10 +71,12 @@ const Hero = () => {
           controls
           src='/videos/club.mp4'
         ></video> */}
-        <img
-          className='w-full h-full object-cover'
-          alt='funkyuncle'
-          src='/desktopfc.jpg'
+        <Img
+          style={{ width: '100%', height: '100%', opacity: 0.4 }}
+          src={IMG}
+          alt='image'
+          loader={<div>Loading...</div>}
+          unloader={<div>Failed to load image</div>}
         />
       </div>
       {/* when pushing play this part under should be opacity 0 fix */}
@@ -81,7 +89,9 @@ const Hero = () => {
             initial='initial'
             animate='enter'
             exit='exit'
-            className={`text-center pt-20 lg:top-20 lg:w-full text-2xl md:text-5xl lg:text-7xl z-10 text-white lg:mt-20 mt-6 mb-4 font-branding p-4 rounded-md duration-500 pointer-events-none text-shadow-lg`}
+            className={cn(
+              `text-center pt-20 lg:top-20 lg:w-full text-2xl md:text-5xl lg:text-7xl z-10 text-white lg:mt-20 mt-6 mb-4 p-4 rounded-md duration-500 pointer-events-none text-shadow-lg font-base`
+            )}
           >
             Funkcamp 2025 - 20 years Anniversary
           </motion.h1>

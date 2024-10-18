@@ -1,4 +1,3 @@
-'use client';
 import { useEffect } from 'react';
 import Hero from '@/components/Hero';
 import Section from '@/components/Section';
@@ -20,14 +19,13 @@ export default function Home() {
     requestAnimationFrame(raf);
   }, []);
 
-  const words = ['Power', 'Soul', 'Funk', 'Culture'];
-
   return (
     <main className='w-screen h-full'>
       <Hero />
+      {/*   <img src={IMG} alt="" /> */}
       {/* Teacher presentation goes here */}
       <Section
-        image={IMG}
+        image={'/src/assets/images/asa2022.jpeg'}
         title='Funkcamp at Åsafolkhögkola'
         desc='Tony Gogo visiting åsa folkhögskola 2022. In 2022 we decided to go visit the school in the woods and give the studens a chance to learn from a pioneer. '
         tag='Camp'

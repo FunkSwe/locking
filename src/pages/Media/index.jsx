@@ -3,7 +3,6 @@ import Lenis from '@studio-freight/lenis';
 import ParallaxZoom from '@/components/ParallaxZoom/ParallaxZoom';
 import ParallaxZoom2 from '@/components/ParallaxZoom/ParallaxZoom2';
 import ParallaxZoom3 from '@/components/ParallaxZoom/ParallaxZoom3';
-import ParallaxZoom4 from '@/components/ParallaxZoom/ParallaxZoom4';
 
 const Media = () => {
   useEffect(() => {
@@ -24,7 +23,6 @@ const Media = () => {
       <ParallaxZoom />
       <ParallaxZoom2 />
       <ParallaxZoom3 />
-      <ParallaxZoom4 />
     </div>
   );
 };
