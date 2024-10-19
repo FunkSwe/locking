@@ -1,5 +1,4 @@
 import React, { useRef, useEffect } from 'react';
-import { Img } from 'react-image';
 import { gsap, Power2 } from 'gsap';
 import styles from './imagereveal.module.scss';
 
@@ -51,7 +50,7 @@ const ImageReveal = ({ name, country, img }) => {
     return <div>Loading... </div>;
   }
 
-  const imagePath = `/src/assets/teachers/${img}`;
+  /*   const imagePath = `/src/assets/teachers/${img}`; */
 
   /*  console.log('image path:', imagePath); */
 
@@ -65,12 +64,10 @@ const ImageReveal = ({ name, country, img }) => {
         </div>
         <div className={`${styles['image-container']}`}>
           {img && (
-            <Img
+            <img
               className='w-full h-full md:h-screen md:w-screen object-cover object-center'
               alt={name}
-              src={imagePath}
-              loader={<div>Loading...</div>}
-              unloader={<div>Failed to load image</div>}
+              src={img}
             />
           )}
         </div>
