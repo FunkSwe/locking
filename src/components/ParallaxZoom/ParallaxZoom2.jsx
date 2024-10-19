@@ -1,4 +1,3 @@
-
 import styles from './parallaxzoom.module.scss';
 import Picture1 from '@/assets/images/4.jpg';
 import Picture2 from '@/assets/images/2005.png';
@@ -33,7 +32,7 @@ const ParallaxZoom2 = () => {
     { src: Picture2, scale: scale5 },
     { src: Picture3, scale: scale6 },
     { src: Picture4, scale: scale5 },
-    { src: Picture5, scale: scale6 },
+    { src: Picture5, scale: scale5 },
     { src: Picture6, scale: scale8 },
     { src: Picture7, scale: scale9 },
   ];
@@ -77,6 +76,7 @@ const ParallaxZoom2 = () => {
                 alt='image'
                 loader={<div>Loading...</div>}
                 unloader={<div>Failed to load image</div>}
+                style={{ width: '100%', height: '100%' }}
               />
             </div>
           </motion.div>

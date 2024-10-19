@@ -4,7 +4,7 @@ import { gsap, Power2 } from 'gsap';
 import styles from './imagereveal.module.scss';
 
 const ImageReveal = ({ name, country, img }) => {
-  console.log('ImageReveal props:', name, country, img);
+  /*  console.log('ImageReveal props:', name, country, img); */
   const image = useRef(null);
   const container = useRef(null);
   const overlayRef = useRef(null);
@@ -53,7 +53,7 @@ const ImageReveal = ({ name, country, img }) => {
 
   const imagePath = `/src/assets/teachers/${img}`;
 
-  console.log('image path:', imagePath);
+  /*  console.log('image path:', imagePath); */
 
   return (
     <div className={`${styles['image-reveal']}`}>
