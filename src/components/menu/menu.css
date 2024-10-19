@@ -9,6 +9,7 @@
   z-index: 1000;
   display: flex;
   justify-content: space-between;
+  pointer-events: none;
 }
 
 .menu-logo {
@@ -22,6 +23,7 @@
   font-weight: 800;
   transition: all 0.3s ease-in-out;
   background: white;
+  pointer-events: auto;
 }
 
 .menu-logo:hover {
@@ -32,6 +34,11 @@
 
 .menu-logo:hover a {
   color: black;
+}
+
+.menu-close,
+.menu-open {
+  pointer-events: auto;
 }
 
 .menu-bar a,
@@ -56,6 +63,11 @@
 .menu-open p:hover {
   color: #000000;
   background: #ffffff;
+}
+
+.menu-close p:hover {
+  background: black;
+  color: #ef6a17;
 }
 
 .menu-overlay-bar a,

@@ -1,18 +1,17 @@
-import security from "../assets/undraw_exams_re_4ios.svg";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import { useNavigate } from 'react-router-dom';
 /* import OAuth from "../components/OAuth"; */
-import { useState } from "react";
-import { toast } from "react-hot-toast";
-import Loader from "../components/Loader";
-import IMG from "../assets/images/tkr-bg.png";
+import { useState } from 'react';
+import { toast } from 'react-hot-toast';
+import Loader from '@/components/Loader';
+import IMG from '/FcLogo.png';
 
 const SignIn = () => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
-    email: "",
-    password: "",
+    email: '',
+    password: '',
   });
   const { email, password } = formData;
 
@@ -35,8 +34,8 @@ const SignIn = () => {
         password
       );
       if (userCredentials?.user) {
-        navigate("/");
-        toast.success("Welcome Back, have a great day");
+        navigate('/');
+        toast.success('Welcome Back, have a great day');
       }
     } catch (error) {
       console.log(error);
@@ -59,7 +58,7 @@ const SignIn = () => {
         <div className='h-full'>
           {/* <!-- Left column container with background--> */}
           <div className='g-6 flex h-full flex-wrap items-center justify-center lg:justify-between'>
-            <div className='shrink-1 mb-12 grow-0 basis-auto rounded-md bg-transparent md:mb-0 md:w-9/12 md:shrink-0 lg:w-6/12 xl:w-6/12'>
+            <div className='shrink-1 mb-12 grow-0 basis-auto rounded-xl bg-white md:mb-0 md:w-9/12 md:shrink-0 lg:w-6/12 xl:w-6/12'>
               <img src={IMG} className='lg:w-full w-64 ' alt='Sample image' />
             </div>
 
@@ -101,16 +100,16 @@ const SignIn = () => {
 
                 <div className='mx-auto flex w-full max-w-[90%] items-center justify-between'>
                   <p className='text- pt-3 text-gray-500'>
-                    Dont have an account?{" "}
+                    Dont have an account?{' '}
                     <span
-                      onClick={() => navigate("/sign-up")}
+                      onClick={() => navigate('/sign-up')}
                       className='cursor-pointer text-white'
                     >
                       Register
-                    </span>{" "}
+                    </span>{' '}
                   </p>
                   <p
-                    onClick={() => navigate("/forgot-password")}
+                    onClick={() => navigate('/forgot-password')}
                     className='inline cursor-pointer bg-gradient-to-r from-gray-300 to-gray-300 bg-clip-text pt-3 text-transparent hover:shadow-xl'
                   >
                     Forgot password?

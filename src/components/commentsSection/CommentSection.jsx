@@ -1,25 +1,25 @@
-import React, { useState } from "react";
-import CommentTextArea from "./CommentTextArea";
-import { getAuth } from "firebase/auth";
-import Loader from "../Loader";
+import React, { useState } from 'react';
+import CommentTextArea from './CommentTextArea';
+import { getAuth } from 'firebase/auth';
+import Loader from '../Loader';
 import {
   doc,
   getDoc,
   serverTimestamp,
   setDoc,
   updateDoc,
-} from "firebase/firestore";
-import { db } from "../../config/firebase";
-import { useParams } from "react-router-dom";
-import { toast } from "react-hot-toast";
-import { v4 as uuidv4 } from "uuid";
-import Swal from "sweetalert2";
+} from 'firebase/firestore';
+import { db } from '../../config/firebase';
+import { useParams } from 'react-router-dom';
+import { toast } from 'react-hot-toast';
+import { v4 as uuidv4 } from 'uuid';
+import Swal from 'sweetalert2';
 
 const CommentSection = () => {
   const auth = getAuth();
   const { articleId } = useParams();
   const [loading, setLoading] = useState(false);
-  const [inputText, setinputText] = useState("");
+  const [inputText, setinputText] = useState('');
   const onChangeHandler = (e) => {
     setinputText(e.target.value);
   };
@@ -29,7 +29,7 @@ const CommentSection = () => {
     setLoading(true);
     try {
       if (auth) {
-        const blogRef = doc(db, "blogs", articleId);
+        const blogRef = doc(db, 'blogs', articleId);
         const commentData = {
           comment: inputText.trim(),
           userId: auth.currentUser.uid,
@@ -52,13 +52,13 @@ const CommentSection = () => {
 
         // Update the document with the new blogData containing comments
         // await setDoc(blogRef, blogData);
-        setinputText("");
-        toast.success("Comment Posted!!");
-        console.log("Try finished");
+        setinputText('');
+        toast.success('Comment Posted!!');
+        console.log('Try finished');
       }
     } catch (error) {
       if (!auth.currentUser) {
-        Swal.fire("You need to be logged in to post a comment.");
+        Swal.fire('You need to be logged in to post a comment.');
       }
       console.log(error);
       // toast.error("Unable to post comment");
@@ -72,7 +72,6 @@ const CommentSection = () => {
   }
   return (
     <div className='mt-4'>
-      <h1 className='py-3 text-2xl text-cyan-800'>Comments ~</h1>
       <form onSubmit={onSubmitHandler}>
         {/* change to falsy */}
         <CommentTextArea

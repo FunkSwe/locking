@@ -16,7 +16,7 @@ import Tags from "../components/common/Tags";
 import InfiniteScroll from "react-infinite-scroll-component";
 import CardSkeleton from "../components/skeleton/CardSkeleton";
 
-const Articles = () => {
+const Posts = () => {
   const [blogsData, setBlogsData] = useState([]); // Initialize as empty array
   const [loading, setLoading] = useState(true);
   const [lastBlog, setLastBlog] = useState(null);
@@ -127,4 +127,4 @@ const Articles = () => {
   );
 };
 
-export default Articles;
+export default Posts;

@@ -2,38 +2,39 @@ import {
   createUserWithEmailAndPassword,
   getAuth,
   updateProfile,
-} from "firebase/auth";
+} from 'firebase/auth';
 import {
   getDownloadURL,
   getStorage,
   ref,
   uploadBytesResumable,
-} from "firebase/storage";
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
-import { toast } from "react-hot-toast";
-import { db } from "../config/firebase";
-import { doc, serverTimestamp, setDoc } from "firebase/firestore";
-import Loader from "../components/Loader";
-import { v4 as uuidv4 } from "uuid";
-import { FcAddImage } from "react-icons/fc";
+} from 'firebase/storage';
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import { toast } from 'react-hot-toast';
+import { db } from '../config/firebase';
+import { doc, serverTimestamp, setDoc } from 'firebase/firestore';
+import Loader from '../components/Loader';
+import { v4 as uuidv4 } from 'uuid';
+import { FcAddImage } from 'react-icons/fc';
 /* import OAuth from "../components/OAuth"; */
-import IMG from '../assets/images/tkr-bg.png'
+import IMG from '/FcLogo.png';
 
-const defaultAvatarUrl = "../assets/images/default-avatar.png"; // Default avatar
+const defaultAvatarUrl = '../assets/images/default-avatar.png'; // Default avatar
 
 const Register = () => {
   const auth = getAuth();
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    password: "",
-    image: "",
+    name: '',
+    email: '',
+    password: '',
+    image: '',
+    role: 'user',
   });
   const [imagePreview, setImagePreview] = useState(null); // For image preview
   const [progressState, setProgressState] = useState();
-  const { name, email, password, image } = formData;
+  const { name, email, password, role, image } = formData;
   const [loading, setLoading] = useState(false);
 
   const onChangeHandler = (e) => {
@@ -72,7 +73,7 @@ const Register = () => {
       const uploadTask = uploadBytesResumable(storageRef, file);
 
       uploadTask.on(
-        "state_changed",
+        'state_changed',
         (snapshot) => {
           const progress =
             (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
@@ -80,7 +81,7 @@ const Register = () => {
         },
         (error) => {
           console.log(error);
-          toast.error("Unable to upload file");
+          toast.error('Unable to upload file');
           reject(error);
         },
         () => {
@@ -115,16 +116,17 @@ const Register = () => {
       });
 
       // Save user to Firestore with admin=false
-      await setDoc(doc(db, "users", user.uid), {
+      await setDoc(doc(db, 'users', user.uid), {
         name: name,
         email: user.email,
         photoURL: avatarUrl, // Save the avatar URL to Firestore as well
         admin: false, // Add admin=false for regular users
+        role: role,
         timestamp: serverTimestamp(),
       });
 
-      navigate("/");
-      toast.success("User registered successfully, Welcome!!");
+      navigate('/');
+      toast.success('User registered successfully, Welcome!!');
     } catch (error) {
       console.log(error);
       toast.error(error.message);
@@ -140,17 +142,13 @@ const Register = () => {
   return (
     <div>
       <h1 className='mb-10 mt-36 text-white text-center font-raleway text-5xl font-bold text-transparent'>
-       Create an account
+        Create an account
       </h1>
       <section className='mx-auto max-w-7xl'>
         <div className='h-full'>
           <div className='g-6 flex h-full flex-wrap items-center justify-center lg:justify-between'>
-            <div className='shrink-1 mb-12 grow-0 basis-auto rounded-md bg-[#003f5c] md:mb-0 md:w-9/12 md:shrink-0 lg:w-6/12 xl:w-6/12'>
-              <img
-                src={IMG}
-                className='w-full '
-                alt='Sample image'
-              />
+            <div className='shrink-1 mb-12 grow-0 basis-auto rounded-xl bg-[#e2c9bcf6] md:mb-0 md:w-9/12 md:shrink-0 lg:w-6/12 xl:w-6/12'>
+              <img src={IMG} className='w-full ' alt='Sample image' />
             </div>
 
             <div className='mx-auto mb-12 mt-8 md:mb-0 md:w-8/12 lg:mt-0 lg:w-5/12 xl:w-5/12'>
@@ -207,7 +205,7 @@ const Register = () => {
                     onChange={onChangeHandler}
                     type='file'
                     id='file'
-                    style={{ display: "none" }}
+                    style={{ display: 'none' }}
                     maxLength={1}
                     accept='.jpg,.png,.jpeg'
                   />
@@ -233,16 +231,16 @@ const Register = () => {
 
                 <div className='mx-auto flex w-full max-w-[90%] items-center justify-between'>
                   <p
-                    onClick={() => navigate("/sign-in")}
+                    onClick={() => navigate('/sign-in')}
                     className='pt-3 text-gray-400'
                   >
-                    You have an account?{" "}
+                    You have an account?{' '}
                     <span className='cursor-pointer bg-gradient-to-r from-rose-400 to-red-500 bg-clip-text text-transparent'>
                       Login now
-                    </span>{" "}
+                    </span>{' '}
                   </p>
                   <p
-                    onClick={() => navigate("/forgot-password")}
+                    onClick={() => navigate('/forgot-password')}
                     className='inline cursor-pointer bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text pt-3 text-transparent hover:shadow-xl'
                   >
                     Forgot password?
