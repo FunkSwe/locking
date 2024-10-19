@@ -1,0 +1,35 @@
+// button.module.scss
+
+.button {
+    // Common styles
+    padding: 8px 12px;
+    border-radius: 12px;
+    font-family: 'Your Font', sans-serif;
+    font-weight: bold;
+    transition: transform 0.3s;
+    text-align: center;
+  
+    &:hover {
+      transform: scale(1.05);
+    }
+  
+    // Primary variant
+    &.primary {
+      background-color: blue;
+      color: white;
+    }
+  
+    // Secondary variant
+    &.secondary {
+      background-color: orange;
+      color: white;
+    }
+  
+    // Outline variant
+    &.outline {
+      background: none;
+      box-shadow: inset 0 0 0 2px #0015CE;
+      color: #333; // Change to your desired color
+    }
+  }
+  

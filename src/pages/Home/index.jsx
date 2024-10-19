@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import Hero from '@/components/Hero';
+import Hero from './Hero';
 import Section from '@/components/Section';
 import IMG from '@/assets/images/asa2022.jpeg';
 import IMG2 from '@/assets/images/2009.jpeg';
@@ -23,6 +23,7 @@ const Home = () => {
 
   return (
     <main className='w-screen h-full'>
+      {/*  <Hero /> */}
       <Hero />
       <TeachersList />
       {/*   <img src={IMG} alt="" /> */}
