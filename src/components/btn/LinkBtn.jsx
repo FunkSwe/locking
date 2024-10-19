@@ -1,10 +1,12 @@
-import Link from "next/link";
-import styles from './button.module.scss'
+import { Link } from 'react-router-dom';
+import styles from './button.module.scss';
 
-const LinkBtn = ({title, link}) => {
+const LinkBtn = ({ title, link }) => {
   return (
-      <Link href={link} className={styles.btn}>{title}</Link>
-  )
-}
+    <Link to={link} className={styles.btn}>
+      {title}
+    </Link>
+  );
+};
 
-export default LinkBtn
+export default LinkBtn;

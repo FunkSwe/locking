@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import Button from '@/components/btn/Button';
 import heroImg from '@/assets/derbyhero.png';
+import { HashLink } from 'react-router-hash-link';
 
 const Hero = () => {
   return (
@@ -19,17 +20,10 @@ const Hero = () => {
         </p>
         <div className='flex flex-col items-start md:items-center justify-center md:justify-start gap-4 pt-12 md:flex-row md:gap-6'>
           <Button variant='secondary'>
-            <Link to='/'>Read more</Link>
+            <HashLink to='/#teachers'>Read more</HashLink>
           </Button>
           <Button variant='primary'>
-            <Link
-              to={{
-                pathname: 'https://www.facebook.com/groups/158481954185947',
-              }}
-              target='_blank'
-            >
-              Join LockerLegends on FB
-            </Link>
+            <Link to='/contact'>Register</Link>
           </Button>
         </div>
       </div>

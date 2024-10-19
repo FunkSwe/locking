@@ -25,7 +25,9 @@ const Home = () => {
     <main className='w-screen h-full'>
       {/*  <Hero /> */}
       <Hero />
-      <TeachersList />
+      <div id='teachers'>
+        <TeachersList />
+      </div>
       {/*   <img src={IMG} alt="" /> */}
       {/* Teacher presentation goes here */}
       <Section
