@@ -3,7 +3,7 @@ import { gsap, Power2 } from 'gsap';
 import styles from './imagereveal.module.scss';
 
 const ImageReveal = ({ name, country, img }) => {
-  /*  console.log('ImageReveal props:', name, country, img); */
+   console.log('ImageReveal props:', name, country, img);
   const image = useRef(null);
   const container = useRef(null);
   const overlayRef = useRef(null);
@@ -50,9 +50,8 @@ const ImageReveal = ({ name, country, img }) => {
     return <div>Loading... </div>;
   }
 
-  /*   const imagePath = `/src/assets/teachers/${img}`; */
+   const imagePath = `/teachers/${img}`;
 
-  /*  console.log('image path:', imagePath); */
 
   return (
     <div className={`${styles['image-reveal']}`}>
@@ -67,7 +66,7 @@ const ImageReveal = ({ name, country, img }) => {
             <img
               className='w-full h-full md:h-screen md:w-screen object-cover object-center'
               alt={name}
-              src={`/assets/teachers/${img}`}
+              src={imagePath}
             />
           )}
         </div>

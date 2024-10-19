@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
 import { toast } from 'react-hot-toast';
 import Swal from 'sweetalert2';
-
+import { RiLoginCircleLine } from 'react-icons/ri';
 import { motion } from 'framer-motion';
 import Avatar from '../avatar/Avatar';
 import styles from './Header.module.scss';
@@ -107,7 +107,7 @@ const Header = () => {
       {!authenticated && (
         <motion.li className={styles.nav_item}>
           <Link className={styles['nav_link']} to='/sign-in'>
-            Sign In
+            <RiLoginCircleLine />
           </Link>
         </motion.li>
       )}

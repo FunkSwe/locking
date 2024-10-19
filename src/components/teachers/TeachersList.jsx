@@ -3,12 +3,12 @@ import styles from './teachersList.module.scss';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { motion } from 'framer-motion';
 
-import Img1 from '/src/assets/teachers/1.png';
-import Img2 from '/src/assets/teachers/2.png';
-import Img3 from '/src/assets/teachers/3.png';
-import Img4 from '/src/assets/teachers/4.png';
-import Img5 from '/src/assets/teachers/5.png';
-import Img6 from '/src/assets/teachers/6.png';
+import Img1 from '/teachers/1.png';
+import Img2 from '/teachers/2.png';
+import Img3 from '/teachers/3.png';
+import Img4 from '/teachers/4.png';
+import Img5 from '/teachers/5.png';
+import Img6 from '/teachers/6.png';
 import ToolT from '../tooltip/ToolT';
 import Teacher from './Teacher';
 
