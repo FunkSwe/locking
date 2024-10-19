@@ -18,7 +18,7 @@ import Loader from '../components/Loader';
 import { v4 as uuidv4 } from 'uuid';
 import { FcAddImage } from 'react-icons/fc';
 /* import OAuth from "../components/OAuth"; */
-import IMG from '../assets/images/tkr-bg.png';
+import IMG from '/FcLogo.png';
 
 const defaultAvatarUrl = '../assets/images/default-avatar.png'; // Default avatar
 
@@ -147,7 +147,7 @@ const Register = () => {
       <section className='mx-auto max-w-7xl'>
         <div className='h-full'>
           <div className='g-6 flex h-full flex-wrap items-center justify-center lg:justify-between'>
-            <div className='shrink-1 mb-12 grow-0 basis-auto rounded-md bg-[#003f5c] md:mb-0 md:w-9/12 md:shrink-0 lg:w-6/12 xl:w-6/12'>
+            <div className='shrink-1 mb-12 grow-0 basis-auto rounded-xl bg-[#e2c9bcf6] md:mb-0 md:w-9/12 md:shrink-0 lg:w-6/12 xl:w-6/12'>
               <img src={IMG} className='w-full ' alt='Sample image' />
             </div>
 

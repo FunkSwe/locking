@@ -4,10 +4,6 @@ import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
 import { toast } from 'react-hot-toast';
 import Swal from 'sweetalert2';
 
-import Nav from '../Nav/Nav';
-import NavItem from '../Nav/NavItem';
-import MenuBtn from '../menuBtn/MenuBtn';
-import { navData } from '../../assets/Data';
 import { motion } from 'framer-motion';
 import Avatar from '../avatar/Avatar';
 import styles from './Header.module.scss';
@@ -67,11 +63,6 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles['logo-container']}>Logo</div>
-      <MenuBtn active={active} setActive={setActive} />
-      <Nav active={active}>
-        {navData.map(({ title, path, id }, i) => (
-          <NavItem title={title} path={path} key={id} i={i} />
-        ))}
         <motion.li className={styles.nav_item}>
           <Link className={styles['nav_link']} to='/articles'>
             Articles
@@ -120,7 +111,6 @@ const Header = () => {
             </Link>
           </motion.li>
         )}
-      </Nav>
     </header>
   );
 };
