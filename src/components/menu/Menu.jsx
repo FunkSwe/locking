@@ -71,7 +71,7 @@ const Menu = () => {
       <div className='menu-bar'>
         <div className='menu-logo'>
           <Link to={'/'} className='font-alt'>
-            FC 2025
+            <img src='/fclogosmall.png' alt='logo' />
           </Link>
         </div>
         <div className='menu-open' onClick={toggleMenu}>
@@ -81,7 +81,7 @@ const Menu = () => {
           <div className='menu-overlay-bar'>
             <div className='menu-logo'>
               <Link to={'/'} className='font-alt'>
-                FC 2025
+                <img src='/fclogosmall.png' alt='logo' />
               </Link>
             </div>
             <div className='menu-close' onClick={toggleMenu}>

@@ -9,7 +9,7 @@
   @media (min-width: 768px) {
   position: relative;
   width: 80%;
-  height: 140vh;
+  height: 100%;
   overflow: hidden;
   margin: 0 auto;
   }
@@ -20,18 +20,23 @@
     filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.225));
     text-transform: uppercase;
     width: 0%;
-    font-size: $font-size-xxl;
+    font-size: $font-size-xl;
     font-weight: 800;
     overflow: hidden;
     white-space: nowrap;
     z-index: 10;
     pointer-events: none;
+    text-align: center;
 
     @media (min-width: 768px) {
       font-size: $font-size-xxxl;
     }
   }
 
+  .desc {
+    padding: 0.5rem 1rem;
+    margin: 0 auto;
+  }
   p {
     margin: 0 auto;
     font-size: $font-size-m;
@@ -46,13 +51,15 @@
   grid-template-rows: repeat(3, 1fr);
   justify-content: center;
   align-items: flex-end;
-  height: 50vh;
+  padding: 0 1rem;
+  
   margin: 0;
   border-radius: 25px;
 
   @media (min-width: 768px) {
     grid-template-columns: repeat(3, 1fr);
-    height: 50vh;
+    padding: 0;
+    
   }
   }
 }
@@ -64,7 +71,7 @@
   width: 100%;
   z-index: 100;
   pointer-events: none;
-  display: grid;
+  display: none;
   grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
   justify-content: center;
@@ -75,6 +82,7 @@
   @media (min-width: 768px) {   
     grid-template-columns: repeat(3, 1fr);
     height: 160vh;
+    display: grid;
   }
 }
 
