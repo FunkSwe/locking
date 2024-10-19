@@ -43,8 +43,8 @@ const Header = () => {
       text: 'Are you sure you want to logout?',
       icon: 'question',
       showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
+      confirmButtonColor: '#e3f68c',
+      cancelButtonColor: '#ef7575',
       confirmButtonText: 'Logout',
       cancelButtonText: 'Cancel',
     });
@@ -62,55 +62,55 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      <div className={styles['logo-container']}>Logo</div>
+      <motion.li className={styles.nav_item}>
+        <Link className={styles['nav_link']} to='/posts'>
+          Posts
+        </Link>
+      </motion.li>
+      {authenticated && user && (
+        <>
+          {/* Only show the "Write" option to admins */}
+          {isAdmin && (
+            <>
+              <motion.li className={styles.nav_item}>
+                <Link
+                  className={styles['nav_link']}
+                  to={`/myblogs/${user.uid}`}
+                >
+                  My Blogs
+                </Link>
+              </motion.li>
+              <motion.li className={styles.nav_item}>
+                <Link className={styles['nav_link']} to='/write'>
+                  Write
+                </Link>
+              </motion.li>
+            </>
+          )}
+          <button
+            onClick={handleLogout}
+            className={`${styles.nav_item} ${styles.logout_btn}`}
+          >
+            <span className={styles['nav_link']}>Logout</span>
+          </button>
+          <div className={styles.user}>
+            <Avatar
+              src={user.photoURL || '../../assets/images/default-avatar.png'}
+            />
+            <p>
+              {' '}
+              : <span>{user.displayName || 'Anonymous'}</span>
+            </p>
+          </div>
+        </>
+      )}
+      {!authenticated && (
         <motion.li className={styles.nav_item}>
-          <Link className={styles['nav_link']} to='/articles'>
-            Articles
+          <Link className={styles['nav_link']} to='/sign-in'>
+            Sign In
           </Link>
         </motion.li>
-        {authenticated && user && (
-          <>
-            {/* Only show the "Write" option to admins */}
-            {isAdmin && (
-              <>
-                <motion.li className={styles.nav_item}>
-                  <Link
-                    className={styles['nav_link']}
-                    to={`/myblogs/${user.uid}`}
-                  >
-                    My Blogs
-                  </Link>
-                </motion.li>
-                <motion.li className={styles.nav_item}>
-                  <Link className={styles['nav_link']} to='/write'>
-                    Write
-                  </Link>
-                </motion.li>
-              </>
-            )}
-            <button
-              onClick={handleLogout}
-              className={`${styles.nav_item} ${styles.logout_btn}`}
-            >
-              <span className={styles['nav_link']}>Logout</span>
-            </button>
-            <div className={styles.user}>
-              <p>
-                Logged in as: <span>{user.displayName || 'Anonymous'}</span>
-              </p>
-              <Avatar
-                src={user.photoURL || '../../assets/images/default-avatar.png'}
-              />
-            </div>
-          </>
-        )}
-        {!authenticated && (
-          <motion.li className={styles.nav_item}>
-            <Link className={styles['nav_link']} to='/sign-in'>
-              Sign In
-            </Link>
-          </motion.li>
-        )}
+      )}
     </header>
   );
 };
