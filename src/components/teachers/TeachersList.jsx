@@ -92,15 +92,15 @@ const TeachersList = () => {
       <div className={styles.tooltip_wrapper}>
         <div className={styles.grid_item}>
           <ToolT
-            title='Super Powers'
-            description='Style and Grace - Attitude- Perfectionist, Stunts, Trix, Show stopping moves'
+            title='The historian'
+            description='Speaker of truths and protector of the artform'
           >
             <p>OG Skeeter Rabbit</p>
           </ToolT>
         </div>
         <div className={styles.grid_item}>
           <ToolT
-            title='Super Powers'
+            title='Mr Soul-Man'
             description='Pure Funk - Character - Grooves, Playfullness, Sooouuul brotha no.1'
           >
             <p>Willow Evann</p>
@@ -108,15 +108,15 @@ const TeachersList = () => {
         </div>
         <div className={styles.grid_item}>
           <ToolT
-            title='Super Powers'
-            description='Attitude - Style and Grace - Maturity, Fierce, Powerful impact on the scene'
+            title='Mr Rhythm'
+            description='Bip... are you breathing... Bip 2 3 & a 4'
           >
             <p>Damon Frost</p>
           </ToolT>
         </div>
         <div className={styles.grid_item}>
           <ToolT
-            title='Super Powers'
+            title='The perfectionist'
             description='Pure Funk - Attitude - Unique, powerful, playfullness, perfectionism'
           >
             <p>Funky Asparagus</p>
@@ -124,16 +124,16 @@ const TeachersList = () => {
         </div>
         <div className={styles.grid_item}>
           <ToolT
-            title='Super Powers'
-            description='Character - Style and Grace - Flawless technique, precision, stunts, fundamentals'
+            title='Swedens finest OG'
+            description='Style and Grace - Creative, Flawless technique, precision, fundamentals'
           >
             <p>Prime</p>
           </ToolT>
         </div>
         <div className={styles.grid_item}>
           <ToolT
-            title='Super Powers'
-            description='Character - Style and Grace - Flawless technique, precision, stunts, fundamentals'
+            title='Funk Super Hero'
+            description='Whats funk? Character - Style and Grace - Technique - Precision... Stunts, Trix and strong fundamentals'
           >
             <p>Arvidos</p>
           </ToolT>
@@ -143,130 +143,7 @@ const TeachersList = () => {
         {teacherData.map(({ id, image, name }) => (
           <Teacher key={id} id={id} name={name} image={image} />
         ))}
-      </motion.div>
-      {/*    <motion.div
-        className={styles.img_1}
-        initial={{
-          opacity: 0,
-          width: 0,
-        }}
-        animate={{
-          opacity: 1,
-          width: desktop ? '100vw' : '30vw',
-          height: desktop ? '50vh' : '60vh',
-        }}
-        transition={{ duration: 0.4, delay: 2, ease: 'easeInOut' }}
-      >
-        <Link href={'/teacher/' + 2}></Link>
-        <Image
-          className={styles.img}
-          src={Img1}
-          alt='patrick'
-          style={{
-            objectFit: 'cover',
-            objectPosition: 'top center',
-            zIndex: '-1',
-          }}
-          priority
-        />
-      </motion.div>
-
-      <motion.div
-        className={styles.img_1}
-        initial={{ opacity: 0, width: 0 }}
-        animate={{
-          opacity: 1,
-          width: desktop ? '100vw' : '30vw',
-          height: desktop ? '50vh' : '60vh',
-        }}
-        transition={{ duration: 0.4, delay: 2.2, ease: 'easeInOut' }}
-      >
-        <Link href={'/teacher/' + 4}></Link>
-        <Image
-          className={styles.img}
-          src={Img3}
-          alt='willow'
-          style={{
-            objectFit: 'cover',
-            objectPosition: 'center',
-            zIndex: '-1',
-          }}
-          priority
-        />
-      </motion.div>
-      <motion.div
-        className={styles.img_1}
-        initial={{ opacity: 0, width: 0 }}
-        animate={{
-          opacity: 1,
-          width: desktop ? '100vw' : '25vw',
-          height: desktop ? '50vh' : '60vh',
-        }}
-        transition={{ duration: 0.4, delay: 2.2, ease: 'easeInOut' }}
-      >
-        <Link href={'/teacher/' + 3}></Link>
-        <Image
-          className={styles.img}
-          src={Img4}
-          alt='charlie'
-          fill
-          style={{
-            objectFit: 'cover',
-            objectPosition: 'center',
-            zIndex: '-1',
-          }}
-          priority
-        />
-      </motion.div>
-
-      <motion.div
-        className={styles.img_1}
-        initial={{ opacity: 0, width: 0 }}
-        animate={{
-          opacity: 1,
-          width: desktop ? '100vw' : '30vw',
-          height: desktop ? '50vh' : '60vh',
-        }}
-        transition={{ duration: 0.4, delay: 2.2, ease: 'easeInOut' }}
-      >
-        <Link href={'/teacher/' + 5}></Link>
-        <Image
-          className={styles.img}
-          src={Img5}
-          alt='atrain'
-          fill
-          style={{
-            objectFit: 'cover',
-            objectPosition: 'center top',
-            zIndex: '1',
-          }}
-          priority
-        />
-      </motion.div>
-      <motion.div
-        className={styles.img_1}
-        initial={{ opacity: 0, width: 0 }}
-        animate={{
-          opacity: 1,
-          width: desktop ? '100vw' : '30vw',
-          height: desktop ? '50vh' : '60vh',
-        }}
-        transition={{ duration: 0.4, delay: 2.4, ease: 'easeInOut' }}
-      >
-        {' '}
-        <Link href={'/teacher/' + 1}></Link>
-        <Image
-          className={styles.img}
-          src={Img2}
-          alt='manny'
-          style={{
-            objectFit: 'cover',
-            objectPosition: 'top center',
-            zIndex: '1',
-          }}
-          priority
-        />
-      </motion.div> */}
+      </motion.div>    
     </div>
   );
 };

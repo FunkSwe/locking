@@ -24,12 +24,12 @@
     font-size: $font-size-xl;
     font-weight: 800;
     z-index: 10;
-    text-transform: uppercase;
+    text-transform: capitalize;
     background: transparent;
     color: $color-white;
     /* -webkit-box-reflect: below 0px linear-gradient(transparent, $color-1); */
     @media (min-width: 768px) {
-      font-size: $font-size-xxl;
+      font-size: $font-size-xxxl;
     } 
   }
   .container {
@@ -60,6 +60,7 @@
         text-shadow: 2px 2px 1px rgb(0, 0, 0);
         font-size: clamp(10rem, 5vw, 15rem);
         font-weight: 800;
+        font-family: $font-base;
       }
     }
   }

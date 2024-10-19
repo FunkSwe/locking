@@ -11,7 +11,8 @@
     width: 80%;
     font-size: clamp(2rem, 4vw, 6rem);
     color: #ebb31b;
-    text-transform: uppercase;
+    text-transform: capitalize;
+    font-weight: 800;
    
 
     &:last-of-type {
@@ -21,6 +22,8 @@
 
   select {
     color: black;
+    border-radius: 5px;
+    font-weight: 600;
   }
 
   .contact_form {
@@ -103,7 +106,7 @@
     label {
       margin: 0.25rem auto 0.25rem;
       text-align: left;
-      color: rgb(243, 139, 41);
+      color: #888;
       width: 80%;
     }
 

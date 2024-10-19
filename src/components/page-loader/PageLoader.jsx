@@ -71,6 +71,7 @@ const PageLoader = ({ setLoading, title }) => {
       <div className={`${styles['home-loader-text']}`}>
         {chars.map((char, index) => (
           <motion.div
+            className='font-alt'
             key={index}
             custom={index}
             animate={textControls}

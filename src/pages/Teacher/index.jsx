@@ -22,7 +22,7 @@ const Teacher = () => {
     const fetchData = async () => {
       try {
         // Assuming teacherData is static or fetched from an API
-        const fetchedData = await teacherData.slice(0, 5);
+        const fetchedData = await teacherData.slice(0, 6);
         setData(fetchedData);
         setLoading(false);
       } catch (error) {

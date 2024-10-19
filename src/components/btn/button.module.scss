@@ -8,6 +8,10 @@
     font-weight: bold;
     transition: transform 0.3s;
     text-align: center;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   
     &:hover {
       transform: scale(1.05);
@@ -17,12 +21,15 @@
     &.primary {
       background-color: blue;
       color: white;
+
+    
     }
   
     // Secondary variant
     &.secondary {
       background-color: orange;
       color: white;
+    
     }
   
     // Outline variant

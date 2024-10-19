@@ -7,10 +7,10 @@ export const buttonVariants = cva(
   {
     variants: {
       variant: {
-        primary: 'bg-indigo-600 hover:bg-indigo-700 text-neutral-100',
-        secondary: 'bg-orange-500 hover:bg-orange-600 text-neutral-100',
+        primary: 'bg-indigo-600 hover:bg-indigo-700 text-neutral-100 w-full md:max-w-1/2',
+        secondary: 'bg-orange-500 hover:bg-orange-600 text-neutral-100 w-full md:max-w-1/2',
         outline:
-          'bg-none shadow-[inset_0_0_0_2px_#737fee] text-neutral-900 hover:shadow-[inset_0_0_0_2px_#737fee] ',
+          'bg-none shadow-[inset_0_0_0_2px_#737fee] text-neutral-900 hover:shadow-[inset_0_0_0_2px_#737fee] w-full md:max-w-1/2',
       },
     },
     defaultVariants: {

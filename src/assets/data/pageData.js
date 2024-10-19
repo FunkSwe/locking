@@ -102,7 +102,7 @@ export const teacherData = [
     id: 6,
     name: 'Arvidos',
     country: 'SWE',
-    img: '6.png',
+    img: '61.png',
     title: 'Arvid Håkansson',
     subtitle: 'Above the clouds',
     desc: 'Arvidos text',
