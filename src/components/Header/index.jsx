@@ -3,11 +3,19 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
 import { toast } from 'react-hot-toast';
 import Swal from 'sweetalert2';
-import { RiLoginCircleLine } from 'react-icons/ri';
+import {
+  RiLoginCircleLine,
+  RiLogoutCircleLine,
+  RiPencilLine,
+  RiArticleLine,
+  RiArchive2Line,
+} from 'react-icons/ri';
 import { motion } from 'framer-motion';
 import Avatar from '../avatar/Avatar';
 import styles from './Header.module.scss';
-import useAuthStatus from '../../hooks/useAuthStatus'; // Assuming you have this hook
+import useAuthStatus from '../../hooks/useAuthStatus';
+import Magnetic from '../magnetic/magnetic';
+import { FcManager } from 'react-icons/fc';
 
 const Header = () => {
   const [active, setActive] = useState(false);
@@ -62,37 +70,47 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      <motion.li className={styles.nav_item}>
-        <Link className={styles['nav_link']} to='/posts'>
-          Posts
-        </Link>
-      </motion.li>
+      <Magnetic>
+        <motion.li className={styles.nav_item}>
+          <Link className={styles['nav_link']} to='/posts'>
+            <RiArticleLine />
+          </Link>
+        </motion.li>
+      </Magnetic>
       {authenticated && user && (
         <>
           {/* Only show the "Write" option to admins */}
           {isAdmin && (
             <>
-              <motion.li className={styles.nav_item}>
-                <Link
-                  className={styles['nav_link']}
-                  to={`/myblogs/${user.uid}`}
-                >
-                  My Blogs
-                </Link>
-              </motion.li>
-              <motion.li className={styles.nav_item}>
-                <Link className={styles['nav_link']} to='/write'>
-                  Write
-                </Link>
-              </motion.li>
+              <Magnetic>
+                <motion.li className={styles.nav_item}>
+                  <Link
+                    className={styles['nav_link']}
+                    to={`/myblogs/${user.uid}`}
+                  >
+                    <RiArchive2Line />
+                  </Link>
+                </motion.li>
+              </Magnetic>
+              <Magnetic>
+                <motion.li className={styles.nav_item}>
+                  <Link className={styles['nav_link']} to='/write'>
+                    <RiPencilLine />
+                  </Link>
+                </motion.li>
+              </Magnetic>
             </>
           )}
-          <button
-            onClick={handleLogout}
-            className={`${styles.nav_item} ${styles.logout_btn}`}
-          >
-            <span className={styles['nav_link']}>Logout</span>
-          </button>
+          <Magnetic>
+            <button
+              onClick={handleLogout}
+              className={`${styles.nav_item} ${styles.logout_btn}`}
+            >
+              <span className={styles['nav_link']}>
+                <RiLogoutCircleLine />
+              </span>
+            </button>
+          </Magnetic>
           <div className={styles.user}>
             <Avatar
               src={user.photoURL || '../../assets/images/default-avatar.png'}
@@ -105,11 +123,13 @@ const Header = () => {
         </>
       )}
       {!authenticated && (
+        <Magnetic>
         <motion.li className={styles.nav_item}>
           <Link className={styles['nav_link']} to='/sign-in'>
             <RiLoginCircleLine />
           </Link>
         </motion.li>
+        </Magnetic>
       )}
     </header>
   );

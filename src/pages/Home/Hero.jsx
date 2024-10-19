@@ -4,7 +4,7 @@ import heroImg from '@/assets/derbyhero.png';
 
 const Hero = () => {
   return (
-    <div className='relative w-full flex h-4/5 mb-32 items-center justify-between gap-8 px-6 pt-40 text-neutral-900 md:px-20 lg:pr-0'>
+    <div className='relative w-full flex h-screen mb-32 items-center justify-between gap-8 px-28 pt-40 text-neutral-900 md:px-60 lg:pr-0'>
       <div>
         <h1 className='font-heading text-3xl font-bold md:text-5xl text-white'>
           OFFICIAL FUNKCAMP WEBSITE
@@ -34,7 +34,7 @@ const Hero = () => {
         </div>
       </div>
       <img
-        className='hidden xl:max-w-xl object-contain xl:block drop-shadow-2xl rotate-12'
+        className='hidden xl:max-w-xl object-contain xl:block drop-shadow-2xl rotate-12 pr-10'
         src={heroImg}
         alt='Mavericks flats'
       />

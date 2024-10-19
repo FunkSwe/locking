@@ -124,9 +124,9 @@ const WriteBlog = () => {
   };
 
   return (
-    <div className='h-full bg-gray-200 pb-20'>
+    <div className='h-full bg-gray-200/20 pb-20'>
       {loadingState && <Loader />}
-      <h1 className='mt-20 bg-gradient-to-r from-black to-[#888] bg-clip-text py-4 pt-14 text-center font-raleway text-4xl font-extrabold text-transparent md:text-5xl'>
+      <h1 className='mt-40 bg-gradient-to-r from-orange-700 to-[#f8f8f8] bg-clip-text py-4 pt-14 text-center font-raleway text-4xl font-extrabold text-transparent md:text-5xl'>
         Create a new Blog Post
       </h1>
 
@@ -169,9 +169,9 @@ const WriteBlog = () => {
 
           <button
             type='submit'
-            className='mt-6 w-full bg-gradient-to-r from-black to-[#888] py-3 text-white'
+            className='mt-6 w-full bg-gradient-to-r from-black to-[#888] py-5 text-white rounded-md'
           >
-            Publish Blog Post
+            Submit Blog Post
           </button>
         </form>
       </div>

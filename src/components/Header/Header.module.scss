@@ -1,119 +1,96 @@
-@use "../../styles/base/" as *;
+@use '../../styles/base/' as *;
 .header {
-    position: fixed;
-    z-index: 10;
+  position: fixed;
+  z-index: 10;
+  width: 100px;
+  height: fit-content;
+  top: 0vh;
+  left: 0;
+  padding: 5rem 0;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  color: white;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+
+  @media (min-width: 768px) {
+    padding: 20vh 0;
+  }
+
+  .logo-container {
     width: 100%;
-    top: 0vh;
-    left: 0;
-    padding: 1rem 10vw;
-    height: 100px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    color: white;
+    max-width: fit-content;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    pointer-events: none;
+    justify-content: flex-start;
 
     @media (min-width: 768px) {
       display: grid;
       place-content: center;
-      padding: 1rem 20vw;
-  }
-
-    .logo-container {
-        width: 100%;
-        max-width: fit-content;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-
-        @media (min-width: 768px) {
-            display: grid;
-            place-content: center;
-        }
     }
+  }
 }
 
 .nav_item {
-    height: 46px;
-    position: relative;
-    padding: 1rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    pointer-events: auto;
-    cursor: pointer;
-  
-    @media screen and (min-width: 768px) {
-      height: 100%;
-      width: fit-content;
-      padding: 0 1rem;
-    }
-  
-    .nav_link {
-      padding: 0.5rem 1rem;
-      position: relative;
-      font-weight: 400;
-      font-size: clamp(1.2rem, 1.5vw, 1.75rem);
-      width: 100%;
-      text-transform: capitalize;
-      text-decoration: none;
-      color: rgba(234, 228, 228, 0.768);
-      pointer-events: auto;
-      border: 3px solid white;
-      border-radius: 5px;
-  
-      @media screen and (min-width: 768px) {
-        padding: 0.5rem 1rem;
-       
-      }
-  
-      &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 0%;
-        height: 100%;
-        background-color: #f4f4f4;
-        z-index: -1;
-        border-radius: 2px;
-      }
-    }
-  
-    &:hover,
-    &:active {
-      .nav_link {
-        color: black;
-        z-index: 10;
-      }
-      .nav_link::after {
-        width: 100%;
-        cursor: pointer;
-        transition: width 0.4s ease-in-out;
-      }
-    }
+  position: relative;
+  height: 46px;
+  width: 46px;
+  display: grid;
+  place-content: center;
+  pointer-events: auto;
+  cursor: pointer;
 
-
-    .user {
-        height: 100%;
-        width: 100%;
-        font-weight: bold;
-        text-align: center;
-        letter-spacing: 1px;
-        padding: 0.5rem;
-        border-bottom: 1px solid rgba(255,255,255,0.2);
-        display: none;
-      }
-
-      .user p {
-        font-size: 2px !important;
-      }
-    
-      .user p span {
-    color: white;
-    text-shadow: 1px 1px 1px rgba(0,0,0.335);
-      }
+  @media screen and (min-width: 768px) {
+    padding: 1rem 1rem;
   }
+
+  .nav_link {
+    position: relative;
+    font-weight: 400;
+    font-size: clamp(1.2rem, 1.5vw, 1.75rem);
+    text-transform: capitalize;
+    text-decoration: none;
+    color: rgba(234, 228, 228, 0.668);
+    pointer-events: auto;
+    border-radius: 50%;
+    width: inherit;
+    height: inherit;
+
+  }
+
+  &:hover,
+  &:active {
+    .nav_link {
+      color: white;
+      z-index: 10;
+    }
+    .nav_link::after {
+      width: 46px;
+      cursor: pointer;
+      transition: width 0.4s ease-in-out;
+    }
+  }
+}
+
+.user {
+  height: 100%;
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+  padding: 1rem;
+ filter: drop-shadow(2px 2px 5px rgba(255,255,255,0.12));
+}
+
+.user p {
+  font-size: 8px !important;
+}
+
+p span {
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0.335);
+}

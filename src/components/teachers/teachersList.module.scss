@@ -76,12 +76,12 @@
     grid-template-rows: repeat(3, 1fr);
   justify-content: center;
   align-items: flex-end;
-  height: 100vh;
+  height: 100%;
   margin: 0;
 
   @media (min-width: 768px) {   
     grid-template-columns: repeat(3, 1fr);
-    height: 160vh;
+    height: 100%;
     display: grid;
   }
 }
@@ -89,7 +89,7 @@
 .grid_item {
   position: relative;
   width: 80%;
-  height: 50vh;
+  height: 100%;
   padding: 1rem 0;
   background-color: transparent;
   pointer-events: none;
@@ -100,8 +100,6 @@
   z-index: 5;
 
   @media (min-width: 768px) {
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-    padding: 1rem 0;
+    padding: 5rem 0 0;
   }
 }

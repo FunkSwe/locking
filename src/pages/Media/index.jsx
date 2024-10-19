@@ -1,9 +1,7 @@
 import { useEffect } from 'react';
 import Lenis from '@studio-freight/lenis';
-import ParallaxZoom from '@/components/ParallaxZoom/ParallaxZoom';
-import ParallaxZoom2 from '@/components/ParallaxZoom/ParallaxZoom2';
-import ParallaxZoom3 from '@/components/ParallaxZoom/ParallaxZoom3';
 import PageTransition from '@/components/PageTransition';
+import ImageGallery from '@/components/image-gallery/ImageGallery';
 
 const Media = () => {
   useEffect(() => {
@@ -21,9 +19,7 @@ const Media = () => {
       <h2 className='text-white text-7xl py-12 px-10 w-full text-center'>
         Media from the past
       </h2>
-      <ParallaxZoom />
-      <ParallaxZoom2 />
-      <ParallaxZoom3 />
+      <ImageGallery />
     </div>
   );
 };
