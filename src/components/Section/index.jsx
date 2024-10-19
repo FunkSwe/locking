@@ -3,7 +3,7 @@ import { Img } from 'react-image';
 import React, { useRef } from 'react';
 
 const Section = ({ image, title, desc, tag }) => {
-  console.log(image);
+  /*  console.log(image); */
   const secRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: secRef,
