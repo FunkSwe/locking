@@ -67,7 +67,7 @@ const ImageReveal = ({ name, country, img }) => {
             <img
               className='w-full h-full md:h-screen md:w-screen object-cover object-center'
               alt={name}
-              src={`/src/assets/teachers/${img}`}
+              src={`/assets/teachers/${img}`}
             />
           )}
         </div>
