@@ -7,10 +7,12 @@ import Media from './pages/Media';
 import Tribute from './pages/Tribute';
 import Teacher from './pages/Teacher';
 import Menu from './components/menu/Menu';
+import ScrollToTop from './utils/ScrollToTop';
 
 const App = () => {
   return (
     <div>
+      <ScrollToTop />
       <Menu />
       <Routes>
         <Route path='/' element={<Home />} />
