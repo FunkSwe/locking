@@ -42,8 +42,8 @@ const ForgotPassword = () => {
       <section className='mx-auto max-w-7xl'>
         <div className='h-full'>
           {/* <!-- Left column container with background--> */}
-          <div className='g-6 flex h-full flex-wrap items-center justify-center lg:justify-between'>
-            <div className='shrink-1 mb-12 grow-0 basis-auto rounded-md md:mb-0 md:w-9/12 md:shrink-0 lg:w-6/12 xl:w-6/12'>
+          <div className='g-6 flex h-full flex-wrap items-center justify-center lg:justify-between md:p-20'>
+            <div className='shrink-1 mb-12 grow-0 basis-auto rounded-md md:mb-0 md:w-9/12 md:shrink-0 lg:w-6/12 xl:w-6/12 bg-slate-300'>
               <img src={IMG} className='w-full ' alt='Funkcamp logo' />
             </div>
 
@@ -71,14 +71,14 @@ const ForgotPassword = () => {
                     Have an account?
                     <span
                       onClick={() => navigate('/sign-in')}
-                      className='cursor-pointer bg-gradient-to-r from-rose-400 to-red-500 bg-clip-text text-transparent'
+                      className='cursor-pointer bg-gradient-to-r from-lime-200 to-green-800 bg-clip-text text-transparent'
                     >
                       Login
                     </span>{' '}
                   </p>
                   <p
                     onClick={() => navigate('/sign-up')}
-                    className='inline cursor-pointer bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text pt-3 text-transparent hover:shadow-xl'
+                    className='inline cursor-pointer bg-gradient-to-r from-orange-600 to-orange-200 bg-clip-text pt-3 text-transparent hover:shadow-xl'
                   >
                     Register
                   </p>
@@ -93,15 +93,7 @@ const ForgotPassword = () => {
                     Send reset email
                   </button>
                 </div>
-
-                <div className='mx-auto my-4 mt-5 flex w-full max-w-[90%] items-center before:mt-0.5 before:flex-1 before:border-t before:border-gray-500 after:mt-0.5 after:flex-1 after:border-t after:border-gray-500'>
-                  <p className='mx-4 mb-0 text-center font-semibold dark:text-white'>
-                    OR
-                  </p>
-                </div>
               </form>
-              {/* Google authentication */}
-              <OAuth />
             </div>
           </div>
         </div>

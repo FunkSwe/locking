@@ -146,7 +146,7 @@ const Register = () => {
       </h1>
       <section className='mx-auto max-w-7xl'>
         <div className='h-full'>
-          <div className='g-6 flex h-full flex-wrap items-center justify-center lg:justify-between'>
+          <div className='g-6 flex h-full flex-wrap items-center justify-center lg:justify-between md:p-20'>
             <div className='shrink-1 mb-12 grow-0 basis-auto rounded-xl bg-[#e2c9bcf6] md:mb-0 md:w-9/12 md:shrink-0 lg:w-6/12 xl:w-6/12'>
               <img src={IMG} className='w-full ' alt='Sample image' />
             </div>
@@ -235,8 +235,8 @@ const Register = () => {
                     className='pt-3 text-gray-400'
                   >
                     You have an account?{' '}
-                    <span className='cursor-pointer bg-gradient-to-r from-rose-400 to-red-500 bg-clip-text text-transparent'>
-                      Login now
+                    <span className='cursor-pointer bg-gradient-to-r from-lime-200 to-green-800 bg-clip-text text-transparent'>
+                      Login
                     </span>{' '}
                   </p>
                   <p
