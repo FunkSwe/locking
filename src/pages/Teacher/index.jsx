@@ -16,16 +16,17 @@ const Teacher = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
+  // Load data (fetch if it would be api)
   useEffect(() => {
-    setData(teacherData.slice(0, 6)); // Load data
-    setLoading(false); // Set loading to false once data is set
+    setData(teacherData.slice(0, 6));
+    setLoading(false);
   }, []);
 
   if (loading) {
-    return <PageLoader title="Loading..." setLoading={setLoading} />;
+    return <PageLoader title='Loading...' setLoading={setLoading} />;
   }
 
-  // Find the teacher by id
+  // Find the teacher by id using data in a js file
   const teacher = data.find((item) => Number(id) === item.id);
 
   // Handle if no teacher is found
@@ -37,17 +38,25 @@ const Teacher = () => {
     <div className={styles.teacher}>
       <motion.div
         className={styles.btn_container}
-        onClick={() => navigate('/')} // Navigate back on button click
+        onClick={() => navigate('/')}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.4, delay: 3 }}
       >
-        <Btn title="Go Back" />
+        <Btn title='Go Back' />
       </motion.div>
 
       <PageLoader title={teacher.title} setLoading={setLoading} />
-      <ImageReveal name={teacher.name} country={teacher.country} img={teacher.img} />
-      <Bio title={teacher.title} subtitle={teacher.subtitle} desc={teacher.desc} />
+      <ImageReveal
+        name={teacher.name}
+        country={teacher.country}
+        img={teacher.img}
+      />
+      <Bio
+        title={teacher.title}
+        subtitle={teacher.subtitle}
+        desc={teacher.desc}
+      />
 
       <div className={styles.scroll_wrapper}>
         <ScrollIndicator />
