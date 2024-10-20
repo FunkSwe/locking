@@ -6,7 +6,7 @@ import { cn } from '@/utils/classnames';
 
 const Tribute = () => {
   return (
-    <div className={cn(styles.respect, 'md:mt-60 mb-20 min-h-screen')}>
+    <div className={cn(styles.respect, 'mt-40 md:mt-60 mb-20 min-h-screen')}>
       <section>
         <p>
           Thank you for everything you given us, to inspire us and bring joy to

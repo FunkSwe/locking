@@ -5,7 +5,7 @@ import { HashLink } from 'react-router-hash-link';
 
 const Hero = () => {
   return (
-    <div className='relative w-full flex h-screen mb-32 items-center justify-between gap-8 px-10 pt-40 text-neutral-900 md:px-60 lg:pr-0'>
+    <div className='relative w-full flex h-screen mb-32 items-center justify-between gap-8 px-4 pt-40 text-neutral-900 md:px-60 lg:pr-0'>
       <div>
         <h1 className='font-heading text-3xl font-bold md:text-5xl text-white'>
           OFFICIAL FUNKCAMP WEBSITE

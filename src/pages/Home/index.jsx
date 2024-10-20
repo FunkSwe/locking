@@ -43,24 +43,26 @@ const Home = () => {
     <main className='w-screen h-full'>
       {/*  <Hero /> */}
       <Hero />
-      <section className='px-10 md:px-40 mb-40'>
+      <section className='px-4 md:px-40 mb-40'>
         <AnimatedText text='Welcome!' className='title' />
         <SlideInLeft>
           <p className='mb-10'>
-            We are looking forward to meet all who will come and join the camp.{' '}
-            <br />
-            The line up we have 3/4 from the funkcamp 2005. Og Skeeter Rabbit,
-            Prime (Dj) & Damon Frost
+            We are looking forward to meet all who will come and join the in
+            2025. <br />
+            Proud to say that we have 3/4 from the line up of funkcamp 2005. Og
+            Skeeter Rabbit, Prime (Dj) & Damon Frost... only one missing is Dave
+            Gregory "Campbellock Jr" Pope 🕊️
             <br />
             We also have Manne Schutt, Willow Evann who both have been a part of
             the camp since 2015.
             <br />
-            And one of Swedens finest Arvid Håkansson. <br />
+            And one of Swedens finest - <br />
+            The Funk super hero 🔥 Arvid Håkansson. <br />
           </p>
         </SlideInLeft>
         <SlideInLeft>
-          <p className='mb-10'>
-            Schedule is not fully set, but dates are! <br />
+          <p className=''>
+            Schedule is not set, but dates are and time are! <br />
             The camp will take place on 17th - 20th of April 2025, in Stockholm
             Sweden.
             <br />
@@ -75,59 +77,59 @@ const Home = () => {
         <TeachersList />
       </div>
       {/* Teacher presentation goes here */}
-      <section className='px-10 md:px-40 mb-40'>
-      <div className='py-10 px-4 md:px-20'>
-      <AnimatedText text='Blast from the past!' className='title' />
-      </div>
-      <Section
-        image={IMG}
-        title='2005'
-        desc='First camp only dedicated to Locking in Europe & Sweden. Not only first but first time Sweden had the honor to learn from two pioneers'
-        tag='The Beginning'
-      />
-      <Section
-        image={IMG2}
-        title='Super Jam'
-        desc='Not a funkcamp but a collab with superjam bringing Campbellock Jr to teach and perform in Stockholm Sweden'
-        tag='Performance/Workshop'
-      />
-      <Section
-        image={IMG3}
-        title='Funkcamp 2007'
-        desc='Tony Gogo & Og Skeeter Rabbit sharing the GoGo brothers legacy. Connection between the party steps and locking.'
-        tag='Bluehill'
-      />
-      <Section
-        image={IMG4}
-        title='Funkcamp 2009'
-        desc='O.G Skeeter Rabbit at Danscenter Stockholm'
-        tag='camp'
-      />
-      <Section
-        image={IMG5}
-        title='Funkcamp 2015'
-        desc='10th Anniversary, OG Skeeter Rabbit, Tony Gogo & Loose Caboose... The biggest camp til today'
-        tag='Dansklotet'
-      />
-      <Section
-        image={IMG6}
-        title='Funkcamp 2015'
-        desc='O.G Skeeter Rabbit, Tony Gogo & Loose Caboose teaching at the University of dance in Stockholm, DOCH.'
-        tag='DOCH'
-      />
-      <Section
-        image={IMG7}
-        title='Funkcamp 2016'
-        desc='Anthony Edwards, Damon Frost, LockSmith, Manne & Willow teaching at funkcamp 2016'
-        tag='House of shapes'
-      />
-      <Section
-        image={IMG8}
-        title='Funkcamp 2018'
-        desc='OG Skeeter Rabbit, Willow, Manne & Anthony teaching at funkcamp 2018'
-        tag='Danscenter Fryshuset'
+      <section className='px-4 md:px-40 mb-40'>
+        <div className='py-10 px-4 md:px-20'>
+          <AnimatedText text='Blast from the past!' className='title' />
+        </div>
+        <Section
+          image={IMG}
+          title='2005'
+          desc='First camp only dedicated to Locking in Europe & Sweden. Not only first but first time Sweden had the honor to learn from two pioneers'
+          tag='The Beginning'
         />
-        </section>
+        <Section
+          image={IMG2}
+          title='Super Jam'
+          desc='Not a funkcamp but a collab with superjam bringing Campbellock Jr to teach and perform in Stockholm Sweden'
+          tag='Performance/Workshop'
+        />
+        <Section
+          image={IMG3}
+          title='Funkcamp 2007'
+          desc='Tony Gogo & Og Skeeter Rabbit sharing the GoGo brothers legacy. Connection between the party steps and locking.'
+          tag='Bluehill'
+        />
+        <Section
+          image={IMG4}
+          title='Funkcamp 2009'
+          desc='O.G Skeeter Rabbit at Danscenter Stockholm'
+          tag='camp'
+        />
+        <Section
+          image={IMG5}
+          title='Funkcamp 2015'
+          desc='10th Anniversary, OG Skeeter Rabbit, Tony Gogo & Loose Caboose... The biggest camp til today'
+          tag='Dansklotet'
+        />
+        <Section
+          image={IMG6}
+          title='Funkcamp 2015'
+          desc='O.G Skeeter Rabbit, Tony Gogo & Loose Caboose teaching at the University of dance in Stockholm, DOCH.'
+          tag='DOCH'
+        />
+        <Section
+          image={IMG7}
+          title='Funkcamp 2016'
+          desc='Anthony Edwards, Damon Frost, LockSmith, Manne & Willow teaching at funkcamp 2016'
+          tag='House of shapes'
+        />
+        <Section
+          image={IMG8}
+          title='Funkcamp 2018'
+          desc='OG Skeeter Rabbit, Willow, Manne & Anthony teaching at funkcamp 2018'
+          tag='Danscenter Fryshuset'
+        />
+      </section>
     </main>
   );
 };
