@@ -19,7 +19,7 @@ const Section = ({ image, title, desc, tag }) => {
       <motion.div className='absolute h-[60%] md:h-[120%] w-full ' style={{ top: y }}>
         <div className='absolute inset-0 bg-transparent z-100'></div>
         <Img
-          className='w-100 h-fit md:h-screen md:w-screen object-cover object-center'
+          className='w-100 h-fit min-h-80 md:h-screen md:w-screen object-cover object-center'
           alt={title}
           src={image}
           loader={<div>Loading...</div>}
