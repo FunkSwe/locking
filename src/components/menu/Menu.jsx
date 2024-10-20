@@ -18,12 +18,12 @@ import './menu.scss';
 import useAuthStatus from '../../hooks/useAuthStatus';
 
 const menuLinks = [
-  { path: '/', label: 'Home' },
-  { path: '/about', label: 'About' },
-  { path: '/tribute', label: 'Tribute' },
-  { path: '/media', label: 'Media' },
-  { path: '/posts', label: 'Posts' },
-  { path: '/contact', label: 'Contact' },
+  { path: '/funkcamp', label: 'Home' },
+  { path: '/funkcamp/about', label: 'About' },
+  { path: '/funkcamp/tribute', label: 'Tribute' },
+  { path: '/funkcamp/media', label: 'Media' },
+  { path: '/funkcamp/posts', label: 'Posts' },
+  { path: '/funkcamp/contact', label: 'Contact' },
 ];
 
 const Menu = () => {
@@ -133,7 +133,7 @@ const Menu = () => {
     <div className='menu-container' ref={container}>
       <div className='menu-bar'>
         <div className='menu-logo'>
-          <Link to={'/'}>
+          <Link to={'/funkcamp'}>
             <img src='/fclogosmall.png' alt='logo' />
           </Link>
         </div>
@@ -141,7 +141,7 @@ const Menu = () => {
         <div className='menu-overlay'>
           <div className='menu-overlay-bar'>
             <div className='menu-logo'>
-              <Link to={'/'} className='font-alt'>
+              <Link to={'/funkcamp'} className='font-alt'>
                 <img src='/fclogosmall.png' alt='logo' />
               </Link>
             </div>
@@ -170,14 +170,14 @@ const Menu = () => {
                   <>
                     <Magnetic>
                       <Link
-                        to={`/myblogs/${user.uid}`}
+                        to={`/funkcamp/myblogs/${user.uid}`}
                         className='menu-link-icon'
                       >
                         <RiArchive2Line />
                       </Link>
                     </Magnetic>
                     <Magnetic>
-                      <Link to='/write' className='menu-link-icon'>
+                      <Link to='/funkcamp/write' className='menu-link-icon'>
                         <RiPencilLine />
                       </Link>
                     </Magnetic>
@@ -189,7 +189,7 @@ const Menu = () => {
               <div className='menu-info-col'>
                 <p>Contact Us: funkcampswe@gmail.com</p>
                 <button className='copy-button' onClick={copyToClipboard}>
-                <RiFileCopyLine />
+                  <RiFileCopyLine />
                 </button>
                 {copySuccess && <span className='copy-success'>Copied!</span>}
               </div>
@@ -200,7 +200,7 @@ const Menu = () => {
           <div className='auth-controls'>
             {/* Show sign-in/sign-out buttons based on authentication */}
             {!authenticated ? (
-              <Link to='/sign-in' className='menu-link'>
+              <Link to='/funkcamp/sign-in' className='menu-link'>
                 <RiLoginCircleLine size={32} />
               </Link>
             ) : (

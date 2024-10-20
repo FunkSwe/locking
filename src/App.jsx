@@ -22,6 +22,8 @@ import MyBlogs from './pages/MyBlogs';
 import { Toaster } from 'react-hot-toast';
 import PageNotFound from './pages/PageNotFound/PageNotFound';
 import ScrollToTop from './utils/ScrollToTop';
+import Landing from './pages/Landing/Landing';
+import LockingHome from './pages/locking/Home';
 
 const App = () => {
   return (
@@ -29,28 +31,32 @@ const App = () => {
       <ScrollToTop />
       <Menu />
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/media' element={<Media />} />
-        <Route path='/tribute' element={<Tribute />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='/teacher/:id' element={<Teacher />} />
+        <Route path='/' element={<Landing />} />
+        <Route path='/funkcamp' element={<Home />} />
+        <Route path='/funkcamp/about' element={<About />} />
+        <Route path='/funkcamp/media' element={<Media />} />
+        <Route path='/funkcamp/tribute' element={<Tribute />} />
+        <Route path='/funkcamp/contact' element={<Contact />} />
+        <Route path='/funkcamp/teacher/:id' element={<Teacher />} />
 
-        <Route path='/posts' element={<Posts />} />
-        <Route path='/sign-in' element={<SignIn />} />
-        <Route path='/sign-up' element={<Register />} />
-        <Route path='/forgot-password' element={<ForgotPassword />} />
-        <Route path='/sign-out' element={<Logout />} />
-        <Route path='/category/:categoryName' element={<Category />} />
-        <Route path='/blog/:articleId' element={<SingleArticle />} />
-        <Route path='/search/:query' element={<SearchResults />} />
-        <Route path='/edit/:articleId' element={<EditArticle />} />
+        <Route path='/funkcamp/posts' element={<Posts />} />
+        <Route path='/funkcamp/sign-in' element={<SignIn />} />
+        <Route path='/funkcamp/sign-up' element={<Register />} />
+        <Route path='/funkcamp/forgot-password' element={<ForgotPassword />} />
+        <Route path='/funkcamp/sign-out' element={<Logout />} />
+        <Route path='/funkcamp/category/:categoryName' element={<Category />} />
+        <Route path='/funkcamp/blog/:articleId' element={<SingleArticle />} />
+        <Route path='/funkcamp/search/:query' element={<SearchResults />} />
+        <Route path='/funkcamp/edit/:articleId' element={<EditArticle />} />
         <Route path='*' element={<PageNotFound />} />
 
         <Route element={<PrivateRoute />}>
-          <Route path='/myBlogs/:userId' element={<MyBlogs />} />
-          <Route path='/write' element={<WriteBlog />} />
+          <Route path='/funkcamp/myBlogs/:userId' element={<MyBlogs />} />
+          <Route path='/funkcamp/write' element={<WriteBlog />} />
         </Route>
+
+        {/* Locking routes */}
+        <Route path='/locking' element={<LockingHome />} />
       </Routes>
       <Toaster
         position='top-center'

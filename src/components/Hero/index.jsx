@@ -3,9 +3,10 @@ import { motion } from 'framer-motion';
 import { fadeIn } from '@/components/animations/Animations';
 import CTA from './CTA';
 import WordSpinner from '../WordSpinner';
-import IMG from '@/assets/desktopfc.jpg';
+import IMG from '/locking.jpg';
 import { Img } from 'react-image';
 import { cn } from '@/utils/classnames';
+import { Link } from 'react-router-dom';
 
 const Spinner = () => {
   const words = ['Foundation', 'Culture', 'History', 'Purpose'];
@@ -82,19 +83,23 @@ const Hero = () => {
       {/* when pushing play this part under should be opacity 0 fix */}
       {contentVisible && (
         <div
-          className={`w-screen h-screen z-50 grid place-content-center py-20 transition-opacity duration-500 pointer-events-none`}
+          className={`w-screen h-screen z-50 grid place-content-center py-20 transition-opacity duration-500 pointer-events-none relative`}
         >
+          <div className='absolute inset-0 bg-black/80 z-10 pointer-events-none object-cover'></div>
           <motion.h1
             variants={fadeIn}
             initial='initial'
             animate='enter'
             exit='exit'
             className={cn(
-              `text-center pt-20 lg:top-20 lg:w-full text-2xl md:text-5xl lg:text-7xl z-10 text-white lg:mt-20 mt-6 mb-4 p-4 rounded-md duration-500 pointer-events-none text-shadow-lg font-alt`
+              `text-center pt-20 lg:top-20 lg:w-full text-2xl md:text-5xl lg:text-7xl text-white lg:mt-20 mt-6 mb-4 p-4 rounded-md duration-500 pointer-events-none text-shadow-lg font-alt`
             )}
           >
-            Funkcamp 2025 - 20 years Anniversary
+            From Campbellocking to Locking
           </motion.h1>
+          <h2 className='text-center text-3xl md:text-6xl z-10'>
+            Coming soon... Under construction
+          </h2>
           <Spinner />
           <motion.p
             initial={{ y: -100, opacity: 0 }}
@@ -102,9 +107,14 @@ const Hero = () => {
             transition={{ duration: 0.4, delay: 0.5 }}
             className='w-full max-h-fit text-sm md:text-xl text-center leading-loose text-slate-200 drop-shadow-l z-10 relative font-primary rounded-md transition-opacity duration-500 pointer-events-none p-4 font-base'
           >
-            Swedens first locking camp, bringing the pioneers to share with the
-            locking community
+            Swedens first website dedicated to the artform of locking
           </motion.p>
+          <Link
+            to='/funkcamp'
+            className='z-50 text-4xl border-gray-100 border-4 w-fit py-4 px-6 place-self-center rounded-md bg-black cursor-pointer pointer-events-auto hover:bg-orange-700'
+          >
+            Go to Funkcamp
+          </Link>
           <motion.div
             className='pointer-events-auto'
             initial={{ y: -100, opacity: 0 }}

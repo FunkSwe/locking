@@ -38,7 +38,7 @@ const Teacher = () => {
     <div className={styles.teacher}>
       <motion.div
         className={styles.btn_container}
-        onClick={() => navigate('/')}
+        onClick={() => navigate('/funkcamp')}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.4, delay: 3 }}

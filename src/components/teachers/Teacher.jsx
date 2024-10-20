@@ -25,7 +25,7 @@ const Teacher = ({ id, name, image }) => {
       }}
       transition={{ duration: 0.4, delay: 2, ease: 'easeInOut' }}
     >
-      <Link to={'/teacher/' + id}></Link>
+      <Link to={'/funkcamp/teacher/' + id}></Link>
       <Img
         className={styles.img}
         alt={name}
