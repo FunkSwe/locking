@@ -1,10 +1,14 @@
 import { useEffect } from 'react';
 import Hero from './Hero';
 import Section from '@/components/Section';
-import IMG from '@/assets/images/asa2022.jpeg';
-import IMG2 from '@/assets/images/2009.jpeg';
-import IMG3 from '@/assets/images/2005.png';
-import IMG4 from '@/assets/images/2018_panel.jpg';
+import IMG from '/fc05/1.jpg';
+import IMG2 from '/vitan01.jpg';
+import IMG3 from '/fc07.jpg';
+import IMG4 from '/fc09.jpg';
+import IMG5 from '/fc15/1.jpg';
+import IMG6 from '/doch.jpg';
+import IMG7 from '/fc16.jpg';
+import IMG8 from '/fc18.jpg';
 import Lenis from '@studio-freight/lenis';
 import PageTransition from '@/components/PageTransition';
 import TeachersList from '@/components/teachers/TeachersList';
@@ -36,10 +40,10 @@ const Home = () => {
   }, []);
 
   return (
-    <main className='w-screen h-full p-10'>
+    <main className='w-screen h-full'>
       {/*  <Hero /> */}
       <Hero />
-      <section className='md:px-60 mb-40'>
+      <section className='px-10 md:px-40 mb-40'>
         <AnimatedText text='Welcome!' className='title' />
         <SlideInLeft>
           <p className='mb-10'>
@@ -62,7 +66,8 @@ const Home = () => {
             <br />
             We already have participants from around the world. So if you wanna
             be part of the experience, <br />
-            sign up at funkcampswe@gmail.com or thru the sign up page.
+            sign up at funkcampswe@gmail.com or thru the form on the contact
+            page.
           </p>
         </SlideInLeft>
       </section>
@@ -70,30 +75,59 @@ const Home = () => {
         <TeachersList />
       </div>
       {/* Teacher presentation goes here */}
+      <section className='px-10 md:px-40 mb-40'>
+      <div className='py-10 px-4 md:px-20'>
+      <AnimatedText text='Blast from the past!' className='title' />
+      </div>
       <Section
         image={IMG}
-        title='Funkcamp at Åsafolkhögkola'
-        desc='Tony Gogo visiting åsa folkhögskola 2022. In 2022 we decided to go visit the school in the woods and give the studens a chance to learn from a pioneer. '
-        tag='Camp'
+        title='2005'
+        desc='First camp only dedicated to Locking in Europe & Sweden. Not only first but first time Sweden had the honor to learn from two pioneers'
+        tag='The Beginning'
       />
       <Section
         image={IMG2}
-        title='Funkcamp 2009'
-        desc='O.G Skeeter Rabbit and the Soul Sweat crew'
-        tag='Camp'
+        title='Super Jam'
+        desc='Not a funkcamp but a collab with superjam bringing Campbellock Jr to teach and perform in Stockholm Sweden'
+        tag='Performance/Workshop'
       />
       <Section
         image={IMG3}
-        title='Funkcamp 2005'
-        desc='The first funkcamp in 2005, first time the pioneers from the US came and shared their history and the foundations, artform of locking. Greg "Campellock Jr" Pope and O.G Skeeter Rabbit'
-        tag='camp'
+        title='Funkcamp 2007'
+        desc='Tony Gogo & Og Skeeter Rabbit sharing the GoGo brothers legacy. Connection between the party steps and locking.'
+        tag='Bluehill'
       />
       <Section
         image={IMG4}
-        title='Funkcamp 2018'
-        desc='O.G Skeeter Rabbit, Damon Frost and Anthony Edwards, Q & A`s at the Funkcamp, sharing their knowledge, differences and similarities. Deep talks about the culture, the dance and how to preserve the history and move forwards'
+        title='Funkcamp 2009'
+        desc='O.G Skeeter Rabbit at Danscenter Stockholm'
         tag='camp'
       />
+      <Section
+        image={IMG5}
+        title='Funkcamp 2015'
+        desc='10th Anniversary, OG Skeeter Rabbit, Tony Gogo & Loose Caboose... The biggest camp til today'
+        tag='Dansklotet'
+      />
+      <Section
+        image={IMG6}
+        title='Funkcamp 2015'
+        desc='O.G Skeeter Rabbit, Tony Gogo & Loose Caboose teaching at the University of dance in Stockholm, DOCH.'
+        tag='DOCH'
+      />
+      <Section
+        image={IMG7}
+        title='Funkcamp 2016'
+        desc='Anthony Edwards, Damon Frost, LockSmith, Manne & Willow teaching at funkcamp 2016'
+        tag='House of shapes'
+      />
+      <Section
+        image={IMG8}
+        title='Funkcamp 2018'
+        desc='OG Skeeter Rabbit, Willow, Manne & Anthony teaching at funkcamp 2018'
+        tag='Danscenter Fryshuset'
+        />
+        </section>
     </main>
   );
 };
