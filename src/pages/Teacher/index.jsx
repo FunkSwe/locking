@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-('');
 import Bio from '@/components/bio/Bio';
 import PageLoader from '@/components/page-loader/PageLoader';
 import ImageReveal from '@/components/image-reveal/ImageReveal';
@@ -18,59 +17,38 @@ const Teacher = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Simulate an asynchronous data fetch
-    const fetchData = async () => {
-      try {
-        // Assuming teacherData is static or fetched from an API
-        const fetchedData = await teacherData.slice(0, 6);
-        setData(fetchedData);
-        setLoading(false);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-        setLoading(false);
-      }
-    };
+    setData(teacherData.slice(0, 6)); // Load data
+    setLoading(false); // Set loading to false once data is set
+  }, []);
 
-    fetchData();
-  }, []); // The empty dependency array ensures that this effect runs only once
+  if (loading) {
+    return <PageLoader title="Loading..." setLoading={setLoading} />;
+  }
+
+  // Find the teacher by id
+  const teacher = data.find((item) => Number(id) === item.id);
+
+  // Handle if no teacher is found
+  if (!teacher) {
+    return <div>No teacher found</div>;
+  }
 
   return (
     <div className={styles.teacher}>
       <motion.div
         className={styles.btn_container}
-        onClick={() => navigate('/')} // Using navigate for routing back
+        onClick={() => navigate('/')} // Navigate back on button click
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.4, delay: 3 }}
       >
-        <Btn title='Go Back'></Btn>
+        <Btn title="Go Back" />
       </motion.div>
-      {!loading && (
-        <>
-          {data &&
-            data.map((item) => {
-              if (Number(id) === item.id) {
-                // Matching the id from useParams
-                return (
-                  <div key={item.id}>
-                    <PageLoader title={item.title} setLoading={setLoading} />
-                    <ImageReveal
-                      name={item.name}
-                      country={item.country}
-                      img={item.img}
-                    />
-                    <Bio
-                      title={item.title}
-                      subtitle={item.subtitle}
-                      desc={item.desc}
-                    />
-                  </div>
-                );
-              }
-              return null;
-            })}
-        </>
-      )}
+
+      <PageLoader title={teacher.title} setLoading={setLoading} />
+      <ImageReveal name={teacher.name} country={teacher.country} img={teacher.img} />
+      <Bio title={teacher.title} subtitle={teacher.subtitle} desc={teacher.desc} />
+
       <div className={styles.scroll_wrapper}>
         <ScrollIndicator />
       </div>

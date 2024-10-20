@@ -8,8 +8,6 @@ import Media from './pages/Media';
 import Tribute from './pages/Tribute';
 import Teacher from './pages/Teacher';
 import Menu from './components/menu/Menu';
-import ScrollToTop from './utils/ScrollToTop';
-/* import Header from './components/Header'; */
 import SignIn from './pages/SignIn';
 import Register from './pages/Register';
 import ForgotPassword from './pages/ForgotPassword';
@@ -23,13 +21,13 @@ import SearchResults from './pages/SearchResults';
 import MyBlogs from './pages/MyBlogs';
 import { Toaster } from 'react-hot-toast';
 import PageNotFound from './pages/PageNotFound/PageNotFound';
+import ScrollToTop from './utils/ScrollToTop';
 
 const App = () => {
   return (
-    <div>
+    <>
       <ScrollToTop />
       <Menu />
-      {/*   <Header /> */}
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
@@ -80,7 +78,7 @@ const App = () => {
           },
         }}
       />
-    </div>
+    </>
   );
 };
 
