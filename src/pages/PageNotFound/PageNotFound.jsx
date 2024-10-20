@@ -10,7 +10,7 @@ const PageNotFound = () => {
       <Locker />
       <SideScroll />
       <Link
-        to='/'
+        to='/funkcamp'
         className='mt-6 text-white bg-black border-2 border-orange-700 mb-20vh'
       >
         Go back to Homepage
