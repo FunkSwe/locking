@@ -1,12 +1,12 @@
-import { getAuth, sendPasswordResetEmail } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
-import OAuth from "../components/OAuth";
-import { useState } from "react";
-import { toast } from "react-hot-toast";
-import Loader from "../components/Loader";
+import { getAuth, sendPasswordResetEmail } from 'firebase/auth';
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import { toast } from 'react-hot-toast';
+import Loader from '../components/Loader';
+import IMG from '/FcLogo.png';
 
 const ForgotPassword = () => {
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
@@ -21,12 +21,12 @@ const ForgotPassword = () => {
     try {
       const auth = getAuth();
       await sendPasswordResetEmail(auth, email);
-      navigate("/sign-in");
+      navigate('/sign-in');
       setLoading(false);
-      toast.success("Email sent, check your mailbox!!");
+      toast.success('Email sent, check your mailbox!!');
     } catch (error) {
       console.log(error);
-      toast.error("Unable to send reset email. Please check your credentials!");
+      toast.error('Unable to send reset email. Please check your credentials!');
     }
   };
 
@@ -36,19 +36,15 @@ const ForgotPassword = () => {
 
   return (
     <div className=''>
-      <h1 className='my-12 mb-20 bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-center font-raleway text-5xl font-bold text-transparent'>
+      <h1 className='my-12 mb-20 bg-clip-text text-center font-raleway text-5xl font-bold text-slate-300'>
         Forgot Password
       </h1>
       <section className='mx-auto max-w-7xl'>
         <div className='h-full'>
           {/* <!-- Left column container with background--> */}
           <div className='g-6 flex h-full flex-wrap items-center justify-center lg:justify-between'>
-            <div className='shrink-1 mb-12 grow-0 basis-auto rounded-md bg-[#003f5c] md:mb-0 md:w-9/12 md:shrink-0 lg:w-6/12 xl:w-6/12'>
-              <img
-                src='https://tecdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp'
-                className='w-full '
-                alt='Sample image'
-              />
+            <div className='shrink-1 mb-12 grow-0 basis-auto rounded-md md:mb-0 md:w-9/12 md:shrink-0 lg:w-6/12 xl:w-6/12'>
+              <img src={IMG} className='w-full ' alt='Funkcamp logo' />
             </div>
 
             {/* <!-- Right column container --> */}
@@ -74,14 +70,14 @@ const ForgotPassword = () => {
                   <p className='text- pt-3 text-gray-400'>
                     Have an account?
                     <span
-                      onClick={() => navigate("/sign-in")}
+                      onClick={() => navigate('/sign-in')}
                       className='cursor-pointer bg-gradient-to-r from-rose-400 to-red-500 bg-clip-text text-transparent'
                     >
                       Login
-                    </span>{" "}
+                    </span>{' '}
                   </p>
                   <p
-                    onClick={() => navigate("/sign-up")}
+                    onClick={() => navigate('/sign-up')}
                     className='inline cursor-pointer bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text pt-3 text-transparent hover:shadow-xl'
                   >
                     Register

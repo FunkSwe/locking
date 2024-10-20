@@ -57,7 +57,7 @@ const SignIn = () => {
       <section className='mx-auto max-w-7xl'>
         <div className='h-full'>
           {/* <!-- Left column container with background--> */}
-          <div className='g-6 flex h-full flex-wrap items-center justify-center lg:justify-between'>
+          <div className='g-6 flex h-full flex-wrap items-center justify-center lg:justify-between md:p-20'>
             <div className='shrink-1 mb-12 grow-0 basis-auto rounded-xl bg-white md:mb-0 md:w-9/12 md:shrink-0 lg:w-6/12 xl:w-6/12'>
               <img src={IMG} className='lg:w-full w-64 ' alt='Sample image' />
             </div>
