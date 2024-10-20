@@ -9,7 +9,10 @@ const PageNotFound = () => {
       <h1>404 PAGE NOT FOUND</h1>
       <Locker />
       <SideScroll />
-      <Link to='/' className='mt-6 text-blue-500 underline'>
+      <Link
+        to='/'
+        className='mt-6 text-white bg-black border-2 border-orange-700 mb-20vh'
+      >
         Go back to Homepage
       </Link>
     </div>
