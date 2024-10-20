@@ -391,3 +391,32 @@ p {
   font-family: $font-base;
 }
 
+
+.title {
+  text-align: left;
+  width: 100%;
+  font-family: $font-alt;
+  font-size: clamp(2rem, 0.75rem + 3vw, 6rem);
+}
+
+.title2 {
+  font-family: $font-alt;
+  font-size: clamp(2rem, 0.75rem + 3vw, 4rem);
+}
+
+.text {
+  font-family: $font-base;
+  font-size:clamp(1rem, 0.75rem + 2.5vw, 1.5rem);
+}
+
+.section {
+  margin: 0 auto;
+  position: relative;
+  min-height: fit-content;
+  min-height: 100vh;
+  padding: 0 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
