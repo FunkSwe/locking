@@ -21,7 +21,7 @@ const Card = ({ id, blog, delHandler }) => {
   return (
     <div>
       <div
-        onClick={() => navigate(`/blog/${id}`)} // Adjusted to navigate to /blog/:id
+        onClick={() => navigate(`/funkcamp/blog/${id}`)} // Adjusted to navigate to /blog/:id
         className='google__btn__shadow relative mx-auto my-2 max-w-sm overflow-hidden rounded-lg border border-gray-200 bg-white bg-gradient-to-r from-gray-700 via-gray-900 to-black shadow transition-all duration-200 ease-in-out hover:shadow-lg hover:shadow-sky-800 dark:border-gray-700 dark:bg-gray-800'
       >
         <div className='transition-all duration-300 ease-in-out'>
@@ -45,7 +45,7 @@ const Card = ({ id, blog, delHandler }) => {
             <button
               onClick={(e) => {
                 e.stopPropagation();
-                navigate(`/blog/${id}`);
+                navigate(`/funkcamp/blog/${id}`);
               }}
               className='inline-flex items-center rounded-lg bg-blue-700 px-3 py-2 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 active:scale-95 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
             >
@@ -98,7 +98,7 @@ const Card = ({ id, blog, delHandler }) => {
                 </span>
                 {/* Edit icon */}
                 <span
-                  onClick={() => navigate(`/edit/${id}`)}
+                  onClick={() => navigate(`/funkcamp/edit/${id}`)}
                   className='cursor-pointer active:scale-95'
                 >
                   <svg

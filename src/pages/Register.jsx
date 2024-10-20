@@ -125,7 +125,7 @@ const Register = () => {
         timestamp: serverTimestamp(),
       });
 
-      navigate('/');
+      navigate('/funkcamp');
       toast.success('User registered successfully, Welcome!!');
     } catch (error) {
       console.log(error);

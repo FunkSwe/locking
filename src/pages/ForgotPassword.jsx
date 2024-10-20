@@ -21,7 +21,7 @@ const ForgotPassword = () => {
     try {
       const auth = getAuth();
       await sendPasswordResetEmail(auth, email);
-      navigate('/sign-in');
+      navigate('/funkcamp/sign-in');
       setLoading(false);
       toast.success('Email sent, check your mailbox!!');
     } catch (error) {
@@ -70,14 +70,14 @@ const ForgotPassword = () => {
                   <p className='text- pt-3 text-gray-400'>
                     Have an account?
                     <span
-                      onClick={() => navigate('/sign-in')}
+                      onClick={() => navigate('/funkcamp/sign-in')}
                       className='cursor-pointer bg-gradient-to-r from-lime-200 to-green-800 bg-clip-text text-transparent'
                     >
                       Login
                     </span>{' '}
                   </p>
                   <p
-                    onClick={() => navigate('/sign-up')}
+                    onClick={() => navigate('/funkcamp/sign-up')}
                     className='inline cursor-pointer bg-gradient-to-r from-orange-600 to-orange-200 bg-clip-text pt-3 text-transparent hover:shadow-xl'
                   >
                     Register

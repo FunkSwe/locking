@@ -109,7 +109,7 @@ const WriteBlog = () => {
           },
         });
 
-        navigate(`/myBlogs/${auth.currentUser.uid}`);
+        navigate(`/funkcamp/myBlogs/${auth.currentUser.uid}`);
         toast.success('Blog post published');
       } catch (error) {
         console.error(error);

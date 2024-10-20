@@ -9,6 +9,7 @@ import Lenis from '@studio-freight/lenis';
 import PageTransition from '@/components/PageTransition';
 import TeachersList from '@/components/teachers/TeachersList';
 import { AnimatedText } from '@/components/animations/AnimatedText';
+import { SlideInLeft } from '@/components/animations/reveal/SlideInLeft';
 
 const firstText =
   "Next year marks the 20th anniversary of Funkcamp. The goal has always been to connect the pioneers of locking with the younger generation. When I started, it was about learning from those who lived the dance, the culture, all of it. At the same time, I wanted to give the youth in Sweden the chance to gain the same knowledge, to raise the level of dancers here by inviting pioneers to teach and build connections between generations. It's been an incredible experience, and next year will also be the last Funkcamp. What the future holds, no one knows, but the young generation needs to pick up the torch, respect the old, and push the scene forward.";
@@ -38,8 +39,32 @@ const Home = () => {
     <main className='w-screen h-full p-10'>
       {/*  <Hero /> */}
       <Hero />
-      <section className='section'>
+      <section className='md:px-60 mb-40'>
         <AnimatedText text='Welcome!' className='title' />
+        <SlideInLeft>
+          <p className='mb-10'>
+            We are looking forward to meet all who will come and join the camp.{' '}
+            <br />
+            The line up we have 3/4 from the funkcamp 2005. Og Skeeter Rabbit,
+            Prime (Dj) & Damon Frost
+            <br />
+            We also have Manne Schutt, Willow Evann who both have been a part of
+            the camp since 2015.
+            <br />
+            And one of Swedens finest Arvid Håkansson. <br />
+          </p>
+        </SlideInLeft>
+        <SlideInLeft>
+          <p className='mb-10'>
+            Schedule is not fully set, but dates are! <br />
+            The camp will take place on 17th - 20th of April 2025, in Stockholm
+            Sweden.
+            <br />
+            We already have participants from around the world. So if you wanna
+            be part of the experience, <br />
+            sign up at funkcampswe@gmail.com or thru the sign up page.
+          </p>
+        </SlideInLeft>
       </section>
       <div id='teachers'>
         <TeachersList />
