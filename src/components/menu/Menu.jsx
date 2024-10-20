@@ -1,14 +1,28 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
-import './menu.css';
+import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
+import { toast } from 'react-hot-toast';
+import Swal from 'sweetalert2';
+import {
+  RiLoginCircleLine,
+  RiLogoutCircleLine,
+  RiPencilLine,
+  RiArchive2Line,
+  RiFileCopyLine,
+} from 'react-icons/ri';
+import Avatar from '../avatar/Avatar';
+import Magnetic from '../magnetic/magnetic';
+import './menu.scss';
+import useAuthStatus from '../../hooks/useAuthStatus';
 
 const menuLinks = [
   { path: '/', label: 'Home' },
   { path: '/about', label: 'About' },
   { path: '/tribute', label: 'Tribute' },
   { path: '/media', label: 'Media' },
+  { path: '/posts', label: 'Posts' },
   { path: '/contact', label: 'Contact' },
 ];
 
@@ -16,6 +30,18 @@ const Menu = () => {
   const container = useRef();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
+  const auth = getAuth();
+  const [user, setUser] = useState(null);
+  const { authenticated, isAdmin } = useAuthStatus();
+  const [copySuccess, setCopySuccess] = useState(false);
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText('funkcampswe@gmail.com').then(() => {
+      setCopySuccess(true);
+      setTimeout(() => setCopySuccess(false), 2000); // Reset message after 2 seconds
+    });
+  };
 
   const tl = useRef();
 
@@ -66,17 +92,52 @@ const Menu = () => {
     setIsMenuOpen(false); // Close the menu on route change
   }, [location.pathname]);
 
+  // Check user authentication status
+  useEffect(() => {
+    const checkAuthStatus = () => {
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          setUser(user);
+        } else {
+          setUser(null);
+        }
+      });
+    };
+    checkAuthStatus();
+  }, [auth]);
+
+  const handleLogout = async () => {
+    const result = await Swal.fire({
+      title: 'Logout',
+      text: 'Are you sure you want to logout?',
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonColor: '#e3f68c',
+      cancelButtonColor: '#ef7575',
+      confirmButtonText: 'Logout',
+      cancelButtonText: 'Cancel',
+    });
+
+    if (result.isConfirmed) {
+      try {
+        await signOut(auth);
+        navigate('/');
+        toast.success('Logged out successfully!');
+      } catch (error) {
+        toast.error('An error occurred while logging out. Please try again.');
+      }
+    }
+  };
+
   return (
     <div className='menu-container' ref={container}>
       <div className='menu-bar'>
         <div className='menu-logo'>
-          <Link to={'/'} className='font-alt'>
+          <Link to={'/'}>
             <img src='/fclogosmall.png' alt='logo' />
           </Link>
         </div>
-        <div className='menu-open' onClick={toggleMenu}>
-          <p className='font-alt'>Menu</p>
-        </div>
+
         <div className='menu-overlay'>
           <div className='menu-overlay-bar'>
             <div className='menu-logo'>
@@ -94,7 +155,7 @@ const Menu = () => {
               {menuLinks.map((link) => (
                 <div className='menu-link-item' key={link.label}>
                   <div className='menu-link-item-holder'>
-                    <Link to={link.path} className='menu-link '>
+                    <Link to={link.path} className='menu-link'>
                       {link.label.split('').map((letter, index) => (
                         <span key={index} className='menu-letter font-alt'>
                           {letter}
@@ -104,15 +165,60 @@ const Menu = () => {
                   </div>
                 </div>
               ))}
+              <div className='icons-menu'>
+                {authenticated && isAdmin && (
+                  <>
+                    <Magnetic>
+                      <Link
+                        to={`/myblogs/${user.uid}`}
+                        className='menu-link-icon'
+                      >
+                        <RiArchive2Line />
+                      </Link>
+                    </Magnetic>
+                    <Magnetic>
+                      <Link to='/write' className='menu-link-icon'>
+                        <RiPencilLine />
+                      </Link>
+                    </Magnetic>
+                  </>
+                )}
+              </div>
             </div>
             <div className='menu-info'>
               <div className='menu-info-col'>
-                <a to='#'>Instagram &#8599;</a>
-              </div>
-              <div className='menu-info-col'>
-                <p>funkcampswe@gmail.com</p>
+                <p>Contact Us: funkcampswe@gmail.com</p>
+                <button className='copy-button' onClick={copyToClipboard}>
+                <RiFileCopyLine />
+                </button>
+                {copySuccess && <span className='copy-success'>Copied!</span>}
               </div>
             </div>
+          </div>
+        </div>
+        <div className='flex gap-12'>
+          <div className='auth-controls'>
+            {/* Show sign-in/sign-out buttons based on authentication */}
+            {!authenticated ? (
+              <Link to='/sign-in' className='menu-link'>
+                <RiLoginCircleLine size={32} />
+              </Link>
+            ) : (
+              <>
+                <button onClick={handleLogout} className='menu-link'>
+                  <RiLogoutCircleLine size={32} />
+                </button>
+                <Avatar
+                  src={
+                    user.photoURL || '../../assets/images/default-avatar.png'
+                  }
+                />
+                <p>: {user.displayName || 'Anonymous'}</p>
+              </>
+            )}
+          </div>
+          <div className='menu-open' onClick={toggleMenu}>
+            <p className='font-alt'>Menu</p>
           </div>
         </div>
       </div>

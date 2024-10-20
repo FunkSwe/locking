@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useEffect, useState } from "react";
-import Search from "../components/Search";
-import Card from "../components/Card";
+import { useEffect, useState } from 'react';
+import Search from '../components/Search';
+import Card from '../components/Card';
 import {
   collection,
   getDocs,
@@ -9,12 +9,12 @@ import {
   orderBy,
   query,
   startAfter,
-} from "firebase/firestore";
-import { db } from "../config/firebase";
-import { toast } from "react-hot-toast";
-import Tags from "../components/common/Tags";
-import InfiniteScroll from "react-infinite-scroll-component";
-import CardSkeleton from "../components/skeleton/CardSkeleton";
+} from 'firebase/firestore';
+import { db } from '../config/firebase';
+import { toast } from 'react-hot-toast';
+import Tags from '../components/common/Tags';
+import InfiniteScroll from 'react-infinite-scroll-component';
+import CardSkeleton from '../components/skeleton/CardSkeleton';
 
 const Posts = () => {
   const [blogsData, setBlogsData] = useState([]); // Initialize as empty array
@@ -26,8 +26,8 @@ const Posts = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const blogRef = collection(db, "blogs");
-        const q = query(blogRef, orderBy("timestamp", "desc"), limit(6));
+        const blogRef = collection(db, 'blogs');
+        const q = query(blogRef, orderBy('timestamp', 'desc'), limit(6));
         const docSnap = await getDocs(q);
         const lastVisible = docSnap.docs[docSnap.docs.length - 1];
         setLastBlog(lastVisible);
@@ -42,7 +42,7 @@ const Posts = () => {
         setLoading(false); // Stop loading
       } catch (error) {
         console.log(error);
-        toast.error("Unable to load articles");
+        toast.error('Unable to load articles');
         setLoading(false); // Stop loading on error
       }
     };
@@ -54,10 +54,10 @@ const Posts = () => {
 
     setInfiniteLoading(true);
     try {
-      const blogRef = collection(db, "blogs");
+      const blogRef = collection(db, 'blogs');
       const q = query(
         blogRef,
-        orderBy("timestamp", "desc"),
+        orderBy('timestamp', 'desc'),
         startAfter(lastBlog),
         limit(4)
       );
@@ -66,7 +66,7 @@ const Posts = () => {
 
       if (docSnap.empty) {
         setHasMore(false);
-        toast.success("All blogs fetched!!");
+        toast.success('All blogs fetched!!');
       }
       setLastBlog(lastVisible);
       const blogs = [];
@@ -79,7 +79,7 @@ const Posts = () => {
       setBlogsData([...blogsData, ...blogs]);
     } catch (error) {
       console.log(error);
-      toast.error("Could not fetch more blogs !!");
+      toast.error('Could not fetch more blogs !!');
     } finally {
       setInfiniteLoading(false);
     }
@@ -87,7 +87,9 @@ const Posts = () => {
 
   return (
     <div className='mx-auto max-w-7xl'>
-      <h1 className=' my-12 text-center text-4xl font-extrabold'>Articles</h1>
+      <h1 className='my-12 text-center text-4xl font-extrabold pt-20'>
+        Articles
+      </h1>
 
       <div className=''>
         <Search />

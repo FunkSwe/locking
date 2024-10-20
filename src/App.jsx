@@ -9,7 +9,7 @@ import Tribute from './pages/Tribute';
 import Teacher from './pages/Teacher';
 import Menu from './components/menu/Menu';
 import ScrollToTop from './utils/ScrollToTop';
-import Header from './components/Header';
+/* import Header from './components/Header'; */
 import SignIn from './pages/SignIn';
 import Register from './pages/Register';
 import ForgotPassword from './pages/ForgotPassword';
@@ -29,7 +29,7 @@ const App = () => {
     <div>
       <ScrollToTop />
       <Menu />
-      <Header />
+      {/*   <Header /> */}
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />

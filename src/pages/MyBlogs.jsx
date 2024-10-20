@@ -6,14 +6,14 @@ import {
   orderBy,
   query,
   where,
-} from "firebase/firestore";
-import { useEffect, useState } from "react";
-import { db } from "../config/firebase";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
-import Swal from "sweetalert2";
-import { toast } from "react-hot-toast";
-import Card from "../components/Card";
-import CardSkeleton from "../components/skeleton/CardSkeleton";
+} from 'firebase/firestore';
+import { useEffect, useState } from 'react';
+import { db } from '../config/firebase';
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import Swal from 'sweetalert2';
+import { toast } from 'react-hot-toast';
+import Card from '../components/Card';
+import CardSkeleton from '../components/skeleton/CardSkeleton';
 
 const MyBlogs = () => {
   const [loading, setLoading] = useState(true);
@@ -29,7 +29,7 @@ const MyBlogs = () => {
       } else {
         // User is not logged in
         setLoading(false);
-        toast.error("You need to be logged in to view your blogs.");
+        toast.error('You need to be logged in to view your blogs.');
       }
     });
     return () => unsubscribe();
@@ -41,11 +41,11 @@ const MyBlogs = () => {
       if (!user) return;
 
       try {
-        const blogRef = collection(db, "blogs");
+        const blogRef = collection(db, 'blogs');
         const q = query(
           blogRef,
-          where("author.id", "==", user.uid),
-          orderBy("timestamp", "desc")
+          where('author.id', '==', user.uid),
+          orderBy('timestamp', 'desc')
         );
         const docSnap = await getDocs(q);
         const blogs = docSnap.docs.map((doc) => ({
@@ -54,8 +54,8 @@ const MyBlogs = () => {
         }));
         setUserBlog(blogs);
       } catch (error) {
-        console.log("Error fetching blogs:", error);
-        toast.error("Error loading your articles.");
+        console.log('Error fetching blogs:', error);
+        toast.error('Error loading your articles.');
       } finally {
         setLoading(false);
       }
@@ -67,33 +67,33 @@ const MyBlogs = () => {
   const delHandler = async (id) => {
     const showConfirmation = () => {
       return Swal.fire({
-        title: "Confirm Delete?",
-        text: "Are you sure you want to delete this post?",
-        icon: "question",
+        title: 'Confirm Delete?',
+        text: 'Are you sure you want to delete this post?',
+        icon: 'question',
         showCancelButton: true,
-        confirmButtonText: "Yes, delete it",
-        cancelButtonText: "Cancel",
+        confirmButtonText: 'Yes, delete it',
+        cancelButtonText: 'Cancel',
       });
     };
 
     const result = await showConfirmation();
     if (user && result.isConfirmed) {
       try {
-        const ref = doc(db, "blogs", id);
+        const ref = doc(db, 'blogs', id);
         await deleteDoc(ref);
         setUserBlog(userBlog.filter((blog) => blog.id !== id));
-        toast.success("Post deleted");
+        toast.success('Post deleted');
       } catch (error) {
-        console.log("Error deleting post:", error);
-        toast.error("Post not deleted");
+        console.log('Error deleting post:', error);
+        toast.error('Post not deleted');
       }
     }
   };
 
   return (
-    <div className='mx-auto max-w-7xl px-20'>
-      <h1 className='pt-40 pb-12 bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text py-5 text-center text-5xl font-extrabold text-transparent'>
-        My Writings on the wall
+    <div className='mx-auto max-w-7xl md:px-20'>
+      <h1 className='relative pt-40 pb-12 py-5 text-center text-5xl font-extrabold text-orange-600'>
+        My writings <span className=''>🤓</span>
       </h1>
 
       <div className='mx-auto mt-12 grid w-[80%] grid-cols-1 gap-5 md:w-[95%] md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3'>
