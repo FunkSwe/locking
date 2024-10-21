@@ -1,0 +1,43 @@
+@use '@/styles/base' as *;
+
+.history {
+    padding: 20vh 20vw;
+
+    h1 {
+        text-align: left;
+        width: 100%;
+        font-family: $font-alt;
+        font-size: clamp(2rem, 0.75rem + 3vw, 6rem);
+        padding-bottom: 2rem;
+    }
+
+    h2 {
+        font-family: $font-alt;
+        font-size: clamp(2rem, 0.75rem + 2vw, 2.5rem);
+        color: #888;
+        padding-bottom: 1rem;
+    }
+
+    p {
+        font-family: $font-base;
+        font-size:clamp(1rem, 0.75rem + 2.5vw, 1.5rem);
+        padding: 1rem 0;
+    }
+}
+
+.title {
+  text-align: left;
+  width: 100%;
+  font-family: $font-alt;
+  font-size: clamp(2rem, 0.75rem + 3vw, 6rem);
+}
+
+.title2 {
+  font-family: $font-alt;
+  font-size: clamp(2rem, 0.75rem + 3vw, 4rem);
+}
+
+.text {
+  font-family: $font-base;
+  font-size:clamp(1rem, 0.75rem + 2.5vw, 1.5rem);
+}

@@ -24,6 +24,7 @@ import PageNotFound from './pages/PageNotFound/PageNotFound';
 import ScrollToTop from './utils/ScrollToTop';
 import Landing from './pages/Landing/Landing';
 import LockingHome from './pages/locking/Home';
+import HistoryPage from './pages/locking/history-page';
 
 const App = () => {
   return (
@@ -57,6 +58,7 @@ const App = () => {
 
         {/* Locking routes */}
         <Route path='/locking' element={<LockingHome />} />
+        <Route path='/locking/historia' element={<HistoryPage />} />
       </Routes>
       <Toaster
         position='top-center'
