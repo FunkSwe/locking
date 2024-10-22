@@ -372,6 +372,8 @@ p {
 }
 
 .title {
+  font-family: $font-alt;
+  font-weight: $font-bold;
   font-size: clamp(2rem, 0.75rem + 3vw, 6rem);
   padding-bottom: 1rem;
   word-break: keep-all;
@@ -396,6 +398,7 @@ p {
   text-align: left;
   width: 100%;
   font-family: $font-alt;
+  font-weight: 800;
   font-size: clamp(2rem, 0.75rem + 3vw, 6rem);
 }
 

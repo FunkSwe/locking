@@ -1,0 +1,161 @@
+@use '@/styles/base/' as *;
+
+.info {
+        margin: 5vh auto 5vh;
+        width: 100%;
+        padding: 0;
+        min-height: 100vh;
+        position: relative;
+        z-index: 1;
+        font-family: $font-base;
+
+      h2 {
+        font-family: $font-alt;
+        margin-top: 2rem;
+        font-size: $font-size-xxl;
+        letter-spacing: 2px;
+        color: $color-orange;
+        filter: drop-shadow(5px 5px 10px rgba(0,0,0,.335));
+
+        &:nth-child(2) {
+          font-size: $font-size-xl;
+        }
+
+        > span {
+          font-size: $font-size-l;
+        }
+      }
+
+
+      .name {
+       font-size: clamp(2rem, 5vw, 6rem);
+       filter: drop-shadow(5px 5px 10px rgba(0,0,0,.335));
+      }
+      
+      h4 {
+        margin-top: 1rem;
+        font-family: $font-alt;
+        margin-top: 2rem;
+        font-size: $font-size-xxl;
+        color: $color-client-3;
+        text-align: center;
+        letter-spacing: 1px;
+        text-transform: capitalize;
+        font-weight: $font-bold;
+    }
+
+    h3 {
+      padding: 1rem 0;
+      color: $color-yellow;
+      text-transform: capitalize;
+      text-align: left;
+      font-size: $font-size-xl;
+      font-family: $font-alt;
+      font-weight: $font-bold;
+    }
+
+      img {
+        width: 100%;
+        height: auto;   
+        
+        @media(min-width: 768px) {
+          width: 40%;
+      }
+    }
+
+    &>.adress {
+      margin: 1rem 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+
+      &>p {
+        margin: 0;
+        padding: 1rem 0.5rem;
+        align-self: flex-start;
+      }
+
+      a {
+        color: $color-orange;
+        padding: 1rem 1.5rem;
+        list-style: none;
+        border: 1px solid white;
+        text-align: left;
+        border-radius: 5px;
+        @media(max-width: 768px) {
+          margin: 0 auto;
+          width: 100%;
+      }
+  
+      &:hover {
+        cursor: pointer;
+        background-color: $color-orange;
+        color: white;
+      }
+      }
+
+    }
+
+    .schedulestart {
+      border-top: 1px solid $color-dodgers-gray;
+      padding: 1rem 0;
+    }
+
+
+    ul {
+      margin: 1.5rem 0;
+      border-top: 1px solid  $color-dodgers-gray;
+      border-bottom: 1px solid  $color-dodgers-gray;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      &:last-of-type {
+        margin-bottom: 10rem;
+      }
+
+      li {
+        padding: 1rem 0.5rem;
+        list-style: circle;
+        color: white;
+        text-align: left;
+        line-height: 1.5;
+      }
+
+      li > a {
+        color: $color-orange;
+        padding: 1rem 0.5rem;
+        list-style: none;
+        border: 1px solid white;
+
+      &:hover {
+        cursor: pointer;
+        background-color:  $color-orange;
+        color: white;
+      }
+      }
+    }
+
+    p {
+        margin: 2rem auto 0;
+        padding: 0.25rem 0.5rem;
+        color: rgba(255, 255, 255, 0.987);
+        font-size: clamp(1rem, 1.5vw, 1.6rem);
+        font-weight: 100;
+        letter-spacing: 1px;
+        line-height: 1.5;
+        text-shadow: 1px 1px black;
+        text-align: left;
+
+        :last-of-type {
+            margin-bottom: 10vh;
+        }
+    }
+
+    .date {
+      color: $color-client-4;
+      font-family: monospace;
+      font-weight: 600;
+    }
+}

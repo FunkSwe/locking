@@ -11,6 +11,7 @@ import Img5 from '/teachers/5.png';
 import Img6 from '/teachers/6.png';
 import ToolT from '../tooltip/ToolT';
 import Teacher from './Teacher';
+import { AnimatedText } from '../animations/AnimatedText';
 
 const teacherData = [
   {

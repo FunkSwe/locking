@@ -14,6 +14,8 @@ import PageTransition from '@/components/PageTransition';
 import TeachersList from '@/components/teachers/TeachersList';
 import { AnimatedText } from '@/components/animations/AnimatedText';
 import { SlideInLeft } from '@/components/animations/reveal/SlideInLeft';
+import Info from '@/components/info/Info';
+import '../../index.scss';
 
 const firstText =
   "Next year marks the 20th anniversary of Funkcamp. The goal has always been to connect the pioneers of locking with the younger generation. When I started, it was about learning from those who lived the dance, the culture, all of it. At the same time, I wanted to give the youth in Sweden the chance to gain the same knowledge, to raise the level of dancers here by inviting pioneers to teach and build connections between generations. It's been an incredible experience, and next year will also be the last Funkcamp. What the future holds, no one knows, but the young generation needs to pick up the torch, respect the old, and push the scene forward.";
@@ -43,8 +45,8 @@ const Home = () => {
     <main className='w-screen h-full'>
       {/*  <Hero /> */}
       <Hero />
-      <section className='px-4 md:px-40 mb-40'>
-        <AnimatedText text='Welcome!' className='title' />
+      <section className='px-4 md:px-60 mb-40'>
+        <AnimatedText text='Welcome!' className='' />
         <SlideInLeft>
           <p className='mb-10'>
             We are looking forward to meet all who will come and join the in
@@ -73,11 +75,14 @@ const Home = () => {
           </p>
         </SlideInLeft>
       </section>
+      <section className='px-4 md:px-60 mb-40'>
+        <Info />
+      </section>
       <div id='teachers'>
         <TeachersList />
       </div>
       {/* Teacher presentation goes here */}
-      <section className='px-4 md:px-40 mb-40'>
+      <section className='px-4 md:px-60 mb-40'>
         <div className='py-10 px-4 md:px-20'>
           <AnimatedText text='Blast from the past!' className='title' />
         </div>

@@ -20,7 +20,7 @@ const Hero = () => {
         </p>
         <div className='flex flex-col items-start md:items-center justify-center md:justify-start gap-4 pt-12 md:flex-row md:gap-6'>
           <Button variant='secondary'>
-            <HashLink to='/funkcamp/#teachers'>Read more</HashLink>
+            <HashLink to='/funkcamp/#info'>Read more</HashLink>
           </Button>
           <Button variant='primary'>
             <Link to='/funkcamp/contact'>Register</Link>

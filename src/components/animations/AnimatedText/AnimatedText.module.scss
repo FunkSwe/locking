@@ -1,8 +1,12 @@
+@use '@/styles/base' as *;
 
 .span {
     display: inline-block;
-    font-weight: 700;
-   /*  font-size: clamp(1.75rem, 4vw, 6rem); */
+    font-weight: 800;
+    font-size: $font-size-xxl;
+    font-weight: $font-bold;
+    font-family: $font-alt;
+    color: $color-orange;
 }
 
 .sr-only {
