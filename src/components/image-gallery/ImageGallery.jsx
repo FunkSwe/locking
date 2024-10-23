@@ -26,11 +26,11 @@ import Picture7 from '@/assets/images/7.jpg';
 import { Img } from 'react-image';
 
 // Random images from Pexels
-const randomImages = [
+/* const randomImages = [
   'https://images.pexels.com/photos/34950/pexels-photo.jpg',
   'https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg',
   'https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg',
-];
+]; */
 
 const images = [
   Img1,
@@ -51,7 +51,7 @@ const images = [
   Picture5,
   Picture6,
   Picture7,
-  ...randomImages,
+  /*  ...randomImages, */
 ];
 
 const ImageGallery = () => {
