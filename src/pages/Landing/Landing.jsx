@@ -41,7 +41,7 @@ const Landing = () => {
           onMouseEnter={handleLeftMouseEnter}
           onMouseLeave={handleLeftMouseLeave}
         >
-          <img src='/FcLogo.png' alt='' className='w-full h-full z-10' />
+         {/*  <img src='/FcLogo.png' alt='' className='w-full h-full z-10' /> */}
           <h1 className='landing-headline'>Funkcamp</h1>
           <Link to='/funkcamp' className='btn'>
             Enter
@@ -55,7 +55,7 @@ const Landing = () => {
           onMouseEnter={handleRightMouseEnter}
           onMouseLeave={handleRightMouseLeave}
         >
-          <img src='/locking.jpg' alt='' className='w-full h-full z-10' />
+         {/*  <img src='/locking.jpg' alt='' className='w-full h-full z-10' /> */}
           <h1 className='landing-headline'>Locking.se</h1>
           <Link to='/locking' className='btn'>
             Enter

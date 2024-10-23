@@ -23,7 +23,7 @@
   height: 100vh;
   z-index: 1000;
   font-family: 'Poppins', sans-serif;
-  background: #282828;
+  background: #080808;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -33,7 +33,7 @@
   position: relative;
   width: 80%;
   height: 70%;
-  background: rgb(35, 35, 35);
+  background: #080808;
   filter: drop-shadow(0px 0px 1px white);
   transition: all 0.2s ease;
 
@@ -81,7 +81,7 @@
   transform: translate(-50%, -50%);
   text-decoration: none;
   color: whitesmoke;
-  background-color: #121212;
+  background-color: #000;
   font-size: 1.5rem;
   border: 0.1rem solid white;
   padding: .8rem 2rem;

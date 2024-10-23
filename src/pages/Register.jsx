@@ -231,7 +231,7 @@ const Register = () => {
 
                 <div className='mx-auto flex w-full max-w-[90%] items-center justify-between'>
                   <p
-                    onClick={() => navigate('/sign-in')}
+                    onClick={() => navigate('/funkcamp/sign-in')}
                     className='pt-3 text-gray-400'
                   >
                     You have an account?{' '}
@@ -240,7 +240,7 @@ const Register = () => {
                     </span>{' '}
                   </p>
                   <p
-                    onClick={() => navigate('/forgot-password')}
+                    onClick={() => navigate('/funkcamp/forgot-password')}
                     className='inline cursor-pointer bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text pt-3 text-transparent hover:shadow-xl'
                   >
                     Forgot password?

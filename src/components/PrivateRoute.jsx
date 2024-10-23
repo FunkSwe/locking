@@ -7,7 +7,7 @@ const PrivateRoute = () => {
   if (loading) {
     return <Loader />;
   }
-  return authenticated ? <Outlet /> : <Navigate to='/sign-in' />;
+  return authenticated ? <Outlet /> : <Navigate to='/funkcamp/sign-in' />;
 };
 
 export default PrivateRoute;
