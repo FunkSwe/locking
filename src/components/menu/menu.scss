@@ -138,7 +138,7 @@
 
 .menu-link-item-holder a {
   color: #000;
-  font-size: clamp(50px, 5vw + 1rem, 120px);
+  font-size: clamp(50px, 4.5vw + 1rem, 100px);
   font-weight: 800;
   letter-spacing: -0.02em;
   line-height: 85%;
@@ -204,6 +204,7 @@
 
 .auth-controls > .menu-link {
   padding: 0 3rem;
+  display: inline-block;
 }
 
 .icons-menu {

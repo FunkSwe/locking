@@ -29,6 +29,7 @@
 
       .name {
        font-size: clamp(2rem, 5vw, 6rem);
+       font-weight: 800;
        filter: drop-shadow(5px 5px 10px rgba(0,0,0,.335));
       }
       
@@ -38,7 +39,7 @@
         margin-top: 2rem;
         font-size: $font-size-xxl;
         color: $color-client-3;
-        text-align: center;
+        text-align: left;
         letter-spacing: 1px;
         text-transform: capitalize;
         font-weight: $font-bold;

@@ -2,14 +2,7 @@
 import { useEffect, useState } from 'react';
 import Search from '../components/Search';
 import Card from '../components/Card';
-import {
-  collection,
-  getDocs,
-  limit,
-  orderBy,
-  query,
-  startAfter,
-} from 'firebase/firestore';
+import { collection, getDocs, limit, orderBy, query, startAfter, doc, deleteDoc } from 'firebase/firestore';
 import { db } from '../config/firebase';
 import { toast } from 'react-hot-toast';
 import Tags from '../components/common/Tags';
@@ -55,12 +48,7 @@ const Posts = () => {
     setInfiniteLoading(true);
     try {
       const blogRef = collection(db, 'blogs');
-      const q = query(
-        blogRef,
-        orderBy('timestamp', 'desc'),
-        startAfter(lastBlog),
-        limit(4)
-      );
+      const q = query(blogRef, orderBy('timestamp', 'desc'), startAfter(lastBlog), limit(4));
       const docSnap = await getDocs(q);
       const lastVisible = docSnap.docs[docSnap.docs.length - 1];
 
@@ -82,6 +70,18 @@ const Posts = () => {
       toast.error('Could not fetch more blogs !!');
     } finally {
       setInfiniteLoading(false);
+    }
+  };
+
+  const handleDelete = async (id) => {
+    try {
+      // Delete blog from Firestore
+      await deleteDoc(doc(db, 'blogs', id));
+      setBlogsData(blogsData.filter((blog) => blog.id !== id));
+      toast.success('Blog deleted successfully');
+    } catch (error) {
+      console.log(error);
+      toast.error('Failed to delete blog');
     }
   };
 
@@ -109,7 +109,7 @@ const Posts = () => {
             }
           >
             {blogsData.map((blog, index) => (
-              <Card key={index} id={blog.id} blog={blog.data} />
+              <Card key={index} id={blog.id} blog={blog.data} delHandler={handleDelete} />
             ))}
           </InfiniteScroll>
         ) : (

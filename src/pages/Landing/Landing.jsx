@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 const Landing = () => {
   const [conLeft, setConLeft] = useState(false);
   const [conRight, setConRight] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
 
   const handleLeftMouseEnter = () => {
     setConLeft(true);
@@ -18,6 +19,15 @@ const Landing = () => {
   };
   const handleRightMouseLeave = () => {
     setConRight(false);
+  };
+
+  const handleRightClick = (e) => {
+    e.preventDefault();
+    setShowPopup(true);
+  };
+
+  const closePopup = () => {
+    setShowPopup(false);
   };
 
   return (
@@ -41,7 +51,6 @@ const Landing = () => {
           onMouseEnter={handleLeftMouseEnter}
           onMouseLeave={handleLeftMouseLeave}
         >
-         {/*  <img src='/FcLogo.png' alt='' className='w-full h-full z-10' /> */}
           <h1 className='landing-headline'>Funkcamp</h1>
           <Link to='/funkcamp' className='btn'>
             Enter
@@ -55,13 +64,28 @@ const Landing = () => {
           onMouseEnter={handleRightMouseEnter}
           onMouseLeave={handleRightMouseLeave}
         >
-         {/*  <img src='/locking.jpg' alt='' className='w-full h-full z-10' /> */}
           <h1 className='landing-headline'>Locking.se</h1>
-          <Link to='/locking' className='btn'>
+          <button
+            /* href='/locking' */ className='btn'
+            onClick={handleRightClick}
+          >
             Enter
-          </Link>
+          </button>
         </motion.div>
       </div>
+
+      {/* Pop-up Modal */}
+      {showPopup && (
+        <div className='popup'>
+          <div className='popup-content'>
+            <h2>Under Construction</h2>
+            <p>The Locking.se page is currently under construction.</p>
+            <button onClick={closePopup} className='close-btn'>
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </motion.div>
   );
 };

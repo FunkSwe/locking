@@ -201,7 +201,7 @@ const Menu = () => {
             {/* Show sign-in/sign-out buttons based on authentication */}
             {!authenticated ? (
               <Link to='/funkcamp/sign-in' className='menu-link'>
-                <RiLoginCircleLine size={32} />
+                <RiLoginCircleLine size={32} /> Login
               </Link>
             ) : (
               <>

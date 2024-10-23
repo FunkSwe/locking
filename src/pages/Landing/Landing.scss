@@ -102,6 +102,7 @@
   background-color: antiquewhite;
   border-color: #888;
   color: #121212;
+  pointer-events: none;
 }
 
 .split {
@@ -117,7 +118,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: rgba(233, 229, 233, 0.918);
+  background-color: #ef6a17;
   background-blend-mode: screen;
   filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.4));
   border-radius: 5px;
@@ -206,4 +207,35 @@
   .hover-right .left {
     width: 100%;
   }
+}
+
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 400px;
+}
+
+.close-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
 }

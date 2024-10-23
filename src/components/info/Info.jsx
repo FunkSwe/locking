@@ -8,11 +8,11 @@ import { AnimatedText } from '../animations/AnimatedText';
 const Info = () => {
   return (
     <div className={styles.info} id='info'>
-      <h2>FUNKCAMP 2025 Pre-Info</h2>
-      <p>(Changes may occur)</p>
+      <h4>FUNKCAMP 2025</h4>
       <h2>
-        <span>17th - 20th of april</span> 2025
+        <span>17th - 20th of april</span>
       </h2>
+      <p>(Times are set, full schedule coming up later)</p>
 
       <br />
       {/*  <Image src={IMGBIO} alt='funkcamp' width={'100%'} height={'auto'} /> */}
@@ -21,8 +21,7 @@ const Info = () => {
         <h2 className={styles.name}>
           Danscenter <span>Fryshuset</span>
         </h2>
-        <p>DANCE STUDIO 2 (bottom floor)</p>
-        <p>DANCE STUDIO 1 (1 floor down)</p>
+        <p>DANCE STUDIO 1 & 2 (bottom floor)</p>
         <h4 style={{ textAlign: 'left', marginTop: '2rem' }}>
           Adress for venue:
         </h4>
@@ -43,13 +42,9 @@ const Info = () => {
 
       <div className={styles.adress}>
         <p>Travel in Stockholm please follow the link</p>
-        <Link
-          rel='stylesheet'
-          href='https://sl.se/en/in-english'
-          target='_blank'
-        >
+        <a rel='stylesheet' href='https://sl.se/en/in-english' target='_blank'>
           SL - public transport in Stockholm.
-        </Link>
+        </a>
         <br />
         <br />
       </div>
@@ -66,11 +61,12 @@ const Info = () => {
         17th of april
       </p>
       <ul style={{ textDecoration: 'none' }}>
-        <li>16.30 Welcome and registration - Danscenter</li>
-        <li>17.00-18.25 Teacher: Not set</li>
-        <li>18.30-19.55 Teacher: Not set</li>
-        <li>20.00 doors close</li>
-        <li>Rest for friday - reload - strech - Chill</li>
+        <li>15.30-18.40 Teachers: Not set</li>
+        <li>15.30 Welcome and registration - Danscenter</li>
+        <li>16.00-17.25 Teacher: Not set</li>
+        <li>17.30-18.45 Teacher: Not set</li>
+        <li>19.00 doors close</li>
+        <li>Rest for friday - reload - stretch - Chill</li>
       </ul>
 
       <h3 style={{ textDecoration: 'none' }}>
@@ -81,10 +77,10 @@ const Info = () => {
         18th of april
       </p>
       <ul style={{ textDecoration: 'none' }}>
-        <li>12.30 Welcome and registration - Danscenter</li>
-        <li>14.00-15.25 Teacher: Not set</li>
+        <li>11.00-16.30 Teachers: Not set</li>
+        <li>13.30-14.25 Teacher: Not set</li>
         <li>15.30-16.55 Teacher: Not set</li>
-        <li>18.00 doors close</li>
+        <li>17.00 doors close</li>
         <li>Rest for saturday or go out and party - choice is yours</li>
       </ul>
 
@@ -96,14 +92,17 @@ const Info = () => {
         19th of april
       </p>
       <ul style={{ textDecoration: 'none' }}>
-        <li>11.00-12.30 Teacher: Rob-One & Will The Bill</li>
-        <li>12.30 - 14.00 Teacher: OG Skeeter Rabbit</li>
+        <li>11.00-16.30 Teachers: Not set</li>
+        <li>12.30 - 14.00 Teachers: Not set</li>
         <li>14.00-15.00 Break</li>
-        <li>15.00 - 17.00 Teacher: Not-set</li>
+        <li>15.00 - 16.30 Teacher: Not-set</li>
         <li>Might not be any rest - if the battles or party shows up...</li>
       </ul>
       <ul style={{ textDecoration: 'none' }}>
-        <li>FUNKCAMP BATTLES!!! Venue to be announced</li>
+        <li>
+          SOME SOME!!! There is other events in town, more info coming up! Venue
+          to be announced
+        </li>
         {/*  <li>Locking & Popping 1vs1</li>
         <li>DJ:s - Boondox, DJenius </li>
         <li>Judges - Willow & Inxi </li>
@@ -135,11 +134,12 @@ const Info = () => {
       {/*  <p style={{ color: 'tomato' }}>Done did with it</p> */}
       <p className={styles.date}>20th of april</p>
       <ul>
+        <li>11.00-16.30 Teachers: Not set</li>
         <li>11.00 - 12.00 Teacher: Not-set</li>
         <li>12.00 - 13.00 Teacher: Not-set</li>
         <li>13.00-14.00 Food Break</li>
         <li>15.15-16.15 Teacher: Not-set</li>
-        16.15 - til closing Q & A - Everybody + Thank you and good bye
+        16.15 - 17.00 til closing Q & A - Everybody + Thank you and good bye
         <li>THE END</li>
       </ul>
     </div>
