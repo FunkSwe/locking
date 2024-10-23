@@ -5,6 +5,17 @@ import {
   RiArrowRightCircleLine,
   RiArrowLeftCircleLine,
 } from 'react-icons/ri';
+import Img1 from '/fc05/1.jpg';
+import Img2 from '/fc05/2.jpg';
+import Img3 from '/fc05/3.jpg';
+import Img4 from '/fc05/4.jpg';
+import Img5 from '/fc05/5.jpg';
+import Img6 from '/fc05/6.jpg';
+import Img7 from '/fc05/7.jpg';
+import Img8 from '/fc05/8.jpg';
+import Img_61 from '/fc06/1.jpg';
+import Img_62 from '/fc06/2.jpg';
+import Img_63 from '/fc06/3.jpg';
 import Picture1 from '@/assets/images/2005.png';
 import Picture2 from '@/assets/images/2.jpg';
 import Picture3 from '@/assets/images/3.jpg';
@@ -22,6 +33,17 @@ const randomImages = [
 ];
 
 const images = [
+  Img1,
+  Img2,
+  Img3,
+  Img4,
+  Img5,
+  Img6,
+  Img7,
+  Img8,
+  Img_61,
+  Img_62,
+  Img_63,
   Picture1,
   Picture2,
   Picture3,
@@ -58,8 +80,8 @@ const ImageGallery = () => {
   };
 
   return (
-    <div className='p-20 md:p-40'>
-      <div className='columns-1 sm:columns-2 md:columns-3 gap-8'>
+    <div className='p-8 md:p-40'>
+      <div className='columns-2 sm:columns-2 md:columns-3 md:gap-8'>
         {images.map((image, index) => (
           <div key={index} className='mb-8 break-inside-avoid'>
             {/*  <img
@@ -69,7 +91,7 @@ const ImageGallery = () => {
               onClick={() => openLightbox(index)}
             /> */}
             <Img
-              className='w-full cursor-pointer rounded-xl'
+              className='w-full cursor-pointer rounded-sm'
               alt={`Gallery ${index}`}
               src={image}
               loader={<div>Loading...</div>}
@@ -109,10 +131,12 @@ const ImageGallery = () => {
             <RiArrowRightCircleLine />
           </button>
 
-          <img
+          <Img
             src={images[selectedIndex]}
             alt={`Gallery ${selectedIndex}`}
             className='max-w-[90%] max-h-[90%]'
+            loader={<div>Loading...</div>}
+            unloader={<div>Failed to load image</div>}
           />
         </div>
       )}

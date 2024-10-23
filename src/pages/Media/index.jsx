@@ -16,7 +16,7 @@ const Media = () => {
   }, []);
   return (
     <div className='mt-20'>
-      <h2 className='text-white text-7xl py-12 px-10 w-full text-center'>
+      <h2 className='text-white text-7xl py-12 md:px-10 w-full text-center'>
         Media from the past
       </h2>
       <ImageGallery />
