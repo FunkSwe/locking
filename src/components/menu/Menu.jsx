@@ -200,13 +200,19 @@ const Menu = () => {
           <div className='auth-controls'>
             {/* Show sign-in/sign-out buttons based on authentication */}
             {!authenticated ? (
-              <Link to='/funkcamp/sign-in' className='menu-link'>
-                <RiLoginCircleLine size={32} /> Login
+              <Link
+                to='/funkcamp/sign-in'
+                className='menu-link rounded-md border-solid border-white border-2 hover:bg-orange-700 transition-all ease-in-out duration-500'
+              >
+                {/*  <RiLoginCircleLine size={32} /> */} Login
               </Link>
             ) : (
               <>
-                <button onClick={handleLogout} className='menu-link'>
-                  <RiLogoutCircleLine size={32} />
+                <button
+                  onClick={handleLogout}
+                  className='menu-link rounded-md border-solid border-white border-2 hover:bg-orange-700 transition-all ease-in-out duration-500 '
+                >
+                  {/*  <RiLogoutCircleLine size={32} /> */} Logout
                 </button>
                 <Avatar
                   src={
