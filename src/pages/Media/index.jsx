@@ -19,6 +19,9 @@ const Media = () => {
       <h2 className='text-white text-7xl py-12 md:px-10 w-full text-center'>
         Media from the past
       </h2>
+      <p className='md:px-10 w-full text-center'>
+        More Image coming up shortly
+      </p>
       <ImageGallery />
     </div>
   );
