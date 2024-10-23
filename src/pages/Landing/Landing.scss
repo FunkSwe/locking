@@ -102,7 +102,6 @@
   background-color: antiquewhite;
   border-color: #888;
   color: #121212;
-  pointer-events: none;
 }
 
 .split {
@@ -225,6 +224,7 @@
 
 .popup-content {
   background: white;
+  color: black;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
