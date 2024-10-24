@@ -1,3 +1,21 @@
+.menu-container-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  transition: background 0.3s ease, backdrop-filter 0.3s ease;
+  
+  &.scrolled {
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px); // Glass effect
+    -webkit-backdrop-filter: blur(10px); // Glass effect for Safari
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    pointer-events: none;
+  }
+}
+
+
 .menu-bar,
 .menu-overlay,
 .menu-overlay-bar {
@@ -281,4 +299,17 @@
     bottom: -2rem;
     margin-left: 0;
   }
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.menu-logo,
+.auth-controls {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }

@@ -52,12 +52,11 @@ const About = () => {
         >
           Funkcamp 2025 20th Anniversary
         </motion.h2>
-        <motion.p
+        <motion.p className='max-w-xl pt-8 text-lg leading-7 md:text-xl'
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.6, delay: 1.6 }}
-        >
-          Next year it will be 20 years ago since the first camp
+          > Next year it will be 20 years ago since the first camp
           <br />
           The goal has always been to connect the pioneers with the younger
           generation, I started it with this in mind, I wanted to learn from the
@@ -86,6 +85,7 @@ const About = () => {
           How it all began ⚡️ & continues
         </motion.h2>
         <motion.p
+          className='max-w-xl pt-8 text-lg leading-7 md:text-xl'
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.6, delay: 1.6 }}
@@ -127,7 +127,7 @@ const About = () => {
           by many of the OG's.
           <br />
         </motion.p>
-        <p>
+        <p className='max-w-xl pt-8 text-lg leading-7 md:text-xl'>
           The past "soon" 20 years has been remarkable, learning from the
           pioneers, connecting the youth and future lockers to the pioneers and
           to be able to learn from some of the sources directly has been an

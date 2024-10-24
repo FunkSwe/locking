@@ -48,9 +48,9 @@ const Home = () => {
       <section className='px-4 md:px-60 mb-40'>
         <AnimatedText text='Welcome!' className='' />
         <SlideInLeft>
-          <p className='my-10'>
-            We are looking forward to meet all who will come and join the in
-            2025.
+        <p className='max-w-xl pt-8 text-lg leading-7 md:text-xl'>
+            We are looking forward to meet all who will come and join the
+            2025 camp.
             <br />
             Proud to say that we have 3/4 from the line up of funkcamp 2005. Og
             Skeeter Rabbit, Prime (Dj) & Damon Frost... only one missing is Dave
@@ -65,7 +65,7 @@ const Home = () => {
           </p>
         </SlideInLeft>
         <SlideInLeft>
-          <p className=''>
+        <p className='max-w-xl pt-8 text-lg leading-7 md:text-xl'>
             Schedule is not set, but dates are and time are! The camp will take
             place on 17th - 20th of April 2025, in Stockholm Sweden.
             <br />

@@ -35,6 +35,20 @@ const Menu = () => {
   const [user, setUser] = useState(null);
   const { authenticated, isAdmin } = useAuthStatus();
   const [copySuccess, setCopySuccess] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 200) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText('funkcampswe@gmail.com').then(() => {
@@ -130,7 +144,10 @@ const Menu = () => {
   };
 
   return (
-    <div className='menu-container' ref={container}>
+    <div className={`menu-container`} ref={container}>
+      <div
+        className={`menu-container-bg ${isScrolled ? 'scrolled' : ''}`}
+      ></div>
       <div className='menu-bar'>
         <div className='menu-logo'>
           <Link to={'/funkcamp'}>

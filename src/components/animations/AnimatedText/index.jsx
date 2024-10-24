@@ -19,10 +19,12 @@ export const AnimatedText = ({ text, className, once }) => {
     }
     return chars;
   };
+  
   return (
     <div className={className}>
       <span className={styles['sr-only']}>{text}</span>
       <motion.span
+        className={styles.text}
         ref={ref}
         aria-hidden
         initial='hidden'

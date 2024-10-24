@@ -23,15 +23,6 @@
             font-family: $font-alt;
         }
 
-        p {
-            padding:0;
-            line-height: 1.5;
-            @media (min-width: 768px) {
-                
-                padding: 1rem 0 0;
-            }
-        }
-
         span {
             font-family: $font-alt;
             font-weight: $font-bold;

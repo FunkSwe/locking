@@ -3,12 +3,13 @@ import React from 'react';
 import styles from './respect.module.scss';
 import PageTransition from '@/components/PageTransition';
 import { cn } from '@/utils/classnames';
+import { AnimatedText } from '@/components/animations/AnimatedText';
 
 const Tribute = () => {
   return (
     <div className={cn(styles.respect, 'mt-40 md:mt-60 mb-20 min-h-screen')}>
       <section>
-        <p>
+        <p className='max-w-xl pt-8 text-lg leading-7 md:text-xl'>
           Thank you for everything you given us, to inspire us and bring joy to
           our lives, the dances, steps and moves you created will live on for
           ever in our hearts. From the first steps and moves of Don Campbellock
@@ -24,7 +25,7 @@ const Tribute = () => {
         <PresentationCard />
       </section>
       <section>
-        <p>
+        <p className='max-w-xl pt-8 text-lg leading-7 md:text-xl'>
           Also thank you to everyone who has come to share with the community
           and been a part of funkcamp. I will forever be greatful for all
           knowledge as will many others. You all have contributed with flavors
@@ -32,7 +33,15 @@ const Tribute = () => {
           Dons foundation close to their heart. Thank you!
         </p>
       </section>
-      <section></section>
+      <section className='pb-20'>
+        <AnimatedText text='We give props' />
+        <p className='max-w-xl pt-8 text-lg leading-7 md:text-xl'>
+          To the teachers thats been a part of the camp thru the years.
+        </p>
+        <p className='max-w-xl pt-8 text-lg leading-7 md:text-xl'>
+          Coming soon...
+        </p>
+      </section>
     </div>
   );
 };
