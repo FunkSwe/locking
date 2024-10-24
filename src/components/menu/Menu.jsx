@@ -37,6 +37,8 @@ const Menu = () => {
   const [copySuccess, setCopySuccess] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
+  console.log(isScrolled)
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 200) {
