@@ -78,12 +78,14 @@ const Home = () => {
           </p>
         </SlideInLeft>
       </section>
+      <div className='py-10' id='info'></div>
       <section className='px-4 md:px-60 mb-40'>
         <Info />
       </section>
-      <div id='teachers'>
+      <div className='py-10' id='teachers'></div>
+      <section>
         <TeachersList />
-      </div>
+      </section>
       {/* Teacher presentation goes here */}
       <section className='px-4 md:px-60 mb-40'>
         <div className='py-10 px-4 md:px-20'>

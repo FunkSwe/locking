@@ -7,7 +7,7 @@ import { AnimatedText } from '../animations/AnimatedText';
 
 const Info = () => {
   return (
-    <div className={styles.info} id='info'>
+    <div className={styles.info}>
       <h4>FUNKCAMP 2025</h4>
       <h2>
         <span>17th - 20th of april</span>
