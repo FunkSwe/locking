@@ -144,7 +144,7 @@ const TeachersList = () => {
         {teacherData.map(({ id, image, name }) => (
           <Teacher key={id} id={id} name={name} image={image} />
         ))}
-      </motion.div>    
+      </motion.div>
     </div>
   );
 };

@@ -8,6 +8,8 @@ import ScrollIndicator from '@/components/scrolldown/ScrollIndicator';
 import Btn from '@/components/btn/Btn';
 import { motion } from 'framer-motion';
 import { teacherData } from '@/assets/data/pageData';
+import Button from '@/components/btn/Button';
+import { HashLink } from 'react-router-hash-link';
 
 const Teacher = () => {
   const [data, setData] = useState([]);
@@ -38,12 +40,14 @@ const Teacher = () => {
     <div className={styles.teacher}>
       <motion.div
         className={styles.btn_container}
-        onClick={() => navigate('/funkcamp')}
+        onClick={() => navigate('/funkcamp/#teachers')}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.4, delay: 3 }}
       >
-        <Btn title='Go Back' />
+        <Button variant='primary'>
+          <HashLink to='/funkcamp/#teachers'>Go Back</HashLink>
+        </Button>
       </motion.div>
 
       <PageLoader title={teacher.title} setLoading={setLoading} />

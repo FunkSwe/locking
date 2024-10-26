@@ -16,6 +16,8 @@ import { AnimatedText } from '@/components/animations/AnimatedText';
 import { SlideInLeft } from '@/components/animations/reveal/SlideInLeft';
 import Info from '@/components/info/Info';
 import '../../index.scss';
+import Button from '@/components/btn/Button';
+import { HashLink } from 'react-router-hash-link';
 
 const firstText =
   "Next year marks the 20th anniversary of Funkcamp. The goal has always been to connect the pioneers of locking with the younger generation. When I started, it was about learning from those who lived the dance, the culture, all of it. At the same time, I wanted to give the youth in Sweden the chance to gain the same knowledge, to raise the level of dancers here by inviting pioneers to teach and build connections between generations. It's been an incredible experience, and next year will also be the last Funkcamp. What the future holds, no one knows, but the young generation needs to pick up the torch, respect the old, and push the scene forward.";
@@ -48,9 +50,9 @@ const Home = () => {
       <section className='px-4 md:px-60 mb-40'>
         <AnimatedText text='Welcome!' className='' />
         <SlideInLeft>
-        <p className='max-w-xl pt-8 text-lg leading-7 md:text-xl'>
-            We are looking forward to meet all who will come and join the
-            2025 camp.
+          <p className='max-w-xl pt-8 text-lg leading-7 md:text-xl'>
+            We are looking forward to meet all who will come and join the 2025
+            camp.
             <br />
             Proud to say that we have 3/4 from the line up of funkcamp 2005. Og
             Skeeter Rabbit, Prime (Dj) & Damon Frost... only one missing is Dave
@@ -65,7 +67,7 @@ const Home = () => {
           </p>
         </SlideInLeft>
         <SlideInLeft>
-        <p className='max-w-xl pt-8 text-lg leading-7 md:text-xl'>
+          <p className='max-w-xl pt-8 text-lg leading-7 md:text-xl'>
             Schedule is not set, but dates are and time are! The camp will take
             place on 17th - 20th of April 2025, in Stockholm Sweden.
             <br />
@@ -90,14 +92,14 @@ const Home = () => {
         <Section
           image={IMG}
           title='2005'
-          desc='First camp only dedicated to Locking in Europe & Sweden. Not only first but first time Sweden had the honor to learn from two pioneers'
-          tag='The Beginning'
+          desc='Funkcamp 2005, first ever dance camp dedicated to Locking in Europe & Sweden. Not only first but first time Sweden had the honor to learn from two pioneers'
+          tag='Danscenter Stockholm (Åsögatan)'
         />
         <Section
           image={IMG2}
           title='Super Jam'
           desc='Not a funkcamp but a collab with superjam bringing Campbellock Jr to teach and perform in Stockholm Sweden'
-          tag='Performance/Workshop'
+          tag='Vitabergsparken'
         />
         <Section
           image={IMG3}
@@ -108,8 +110,8 @@ const Home = () => {
         <Section
           image={IMG4}
           title='Funkcamp 2009'
-          desc='O.G Skeeter Rabbit at Danscenter Stockholm'
-          tag='camp'
+          desc='O.G Skeeter Rabbit at Danscenter Stockholm, and also visited Gothenburg and Borås'
+          tag='Danscenter Stockholm (Åsögatan)'
         />
         <Section
           image={IMG5}
@@ -135,6 +137,16 @@ const Home = () => {
           desc='OG Skeeter Rabbit, Willow, Manne & Anthony teaching at funkcamp 2018'
           tag='Danscenter Fryshuset'
         />
+      </section>
+      <section className='px-4 md:px-60 mb-40 flex place-content-center items-center'>
+        <SlideInLeft>
+          <h3 className='max-w-xl pt-8 text-xl leading-7 md:text-xxl text-center'>
+            You can check more images on the media page... enjoy
+          </h3>
+          <Button variant='primary'>
+            <HashLink to='/funkcamp/media'>Media page</HashLink>
+          </Button>
+        </SlideInLeft>
       </section>
     </main>
   );
