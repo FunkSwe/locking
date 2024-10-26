@@ -6,10 +6,10 @@ import Item from './Item';
 import Preview from './Preview';
 import './Preview.scss';
 
-const PreviewWrapper: React.FC = () => {
-  const [activeIndex, setActiveIndex] = useState<number>(0);
+const PreviewWrapper = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
 
-  const handleMouseEnter = (index: number) => {
+  const handleMouseEnter = (index) => {
     setActiveIndex(index);
   };
 

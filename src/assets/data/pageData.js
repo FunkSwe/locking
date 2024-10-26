@@ -87,7 +87,7 @@ export const teacherData = [
     img: '4.png',
     title: 'Manne Schutt',
     subtitle: 'Funkademics',
-    desc: 'Emanuel "Manne" Schutt, also known as "Funky Asparagus" and sometimes "Manne," is one of the first lockers in Sweden to have mastered the fundamentals of locking. Initially self-taught, he later learned the art form directly from the pioneers. Known for his creative choreography and dedication to locking, he has taught in Stockholm for nearly 20 years, offering both hobby courses and professional training at Danscenter Stockholm, Balettakademien, House of Shapes, Base 23, Kulturama, and DOCH. Manne has been involved in numerous productions, teaching at top schools, and competing in various competitions. As a dedicated photographer and dancer, he has significantly influenced dancers in Sweden and the Nordic region and has much to share with the community.',
+    desc: 'Emanuel "Manne" Schutt, also known as "Funky Asparagus" and sometimes "Manne," is one of the first lockers in Sweden to have mastered the fundamentals of locking. Initially self-taught, he later learned the art form directly from the pioneers. Known for his creative choreography and dedication to locking, he has taught in Stockholm for 20+ years, offering both hobby courses and professional training at Danscenter Stockholm, Balettakademien, House of Shapes, Base 23, Kulturama, and DOCH. Manne has been involved in numerous productions, teaching at top schools, and competing in various competitions. As a dedicated photographer and dancer, he has significantly influenced dancers in Sweden and the Nordic region and has much to share with the community.',
   },
   {
     id: 5,

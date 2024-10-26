@@ -2,38 +2,21 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import './Preview.scss';
 
-interface PreviewProps {
-  preview: {
-    title: string;
-    img: string;
-    tags: string;
-    desc: string;
-  };
-  variant: string;
-  isActive: boolean;
-  activeIndex: number;
-}
-
-const Preview: React.FC<PreviewProps> = ({
-  preview,
-  variant,
-  isActive,
-  activeIndex,
-}) => {
-  const previewRef = useRef<HTMLDivElement>(null);
+const Preview = ({ preview, variant, isActive, activeIndex }) => {
+  const previewRef = useRef(null);
 
   useEffect(() => {
     console.log('isActive:', isActive, activeIndex, variant);
     if (isActive && previewRef.current) {
       const elementsToAnimate = ['title', 'tags', 'desc'];
       elementsToAnimate.forEach((el) => {
-        const element = previewRef.current!.querySelector(`.preview-${el}`);
+        const element = previewRef.current.querySelector(`.preview-${el}`);
         if (element) {
           gsap.to(element, { x: 0, y: 0, opacity: 1, duration: 0.5 });
         }
       });
 
-      const previewImg = previewRef.current!.querySelector('.preview-img');
+      const previewImg = previewRef.current.querySelector('.preview-img');
       if (previewImg) {
         gsap.to(previewImg, {
           clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
@@ -42,7 +25,7 @@ const Preview: React.FC<PreviewProps> = ({
         });
       }
     } else if (previewRef.current) {
-      const previewImg = previewRef.current!.querySelector('.preview-img');
+      const previewImg = previewRef.current.querySelector('.preview-img');
       if (previewImg) {
         gsap.to(previewImg, {
           clipPath: 'polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%)',
