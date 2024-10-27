@@ -3,13 +3,19 @@ import Button from '@/components/btn/Button';
 import heroImg from '@/assets/derbyhero.png';
 import { HashLink } from 'react-router-hash-link';
 import { AnimatedText } from '@/components/animations/AnimatedText';
+import { cn } from '@/utils/classnames';
+import styles from './Home.module.scss';
 
 const Hero = () => {
   return (
     <div className='relative w-full flex h-screen mb-32 items-center justify-between gap-8 px-4 pt-40 text-neutral-900 md:px-60 lg:pr-0'>
       <div>
         {/*  <h1 className='font-heading text-3xl font-bold md:text-5xl text-white'> */}
-        <AnimatedText text='FUNKCAMP 2025!' className='' />
+        <h1 className={cn('text-[#B8A054]', styles.heroTitle)}>FUNKCAMP</h1>
+        <AnimatedText
+          text='20th anniversary'
+          className={cn('text-[#eaeaea]')}
+        />
         {/* </h1> */}
         <p className='max-w-xl pt-8 text-lg leading-7 md:text-xl'>
           In 2025 we will celebrate the 20th anniversary of Funkcamp Sweden.

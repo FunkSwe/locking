@@ -1,3 +1,5 @@
+@use '@/styles/base' as *;
+
 .home {
     width: 100%;
     min-height: 100vh;
@@ -42,4 +44,16 @@
     }
 
 
+}
+
+.heroTitle {
+    margin-top: 1rem;
+    font-family: $font-alt;
+    margin-top: 2rem;
+    font-size: $font-size-xxl;
+    color: $color-client-3;
+    text-align: left;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    font-weight: $font-bold;
 }
