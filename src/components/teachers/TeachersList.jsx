@@ -64,13 +64,6 @@ const teacherData = [
     id: 6,
   },
   {
-    name: 'Sam-Samurai',
-    title: 'Super Powers',
-    description: 'Style and Grace - Pure funk, soulful, strong fundamentals',
-    image: Img7,
-    id: 7,
-  },
-  {
     name: 'Rob-One',
     title: 'Super Powers',
     description: 'Energy - Power - Strong fundamentals - Creativity',
