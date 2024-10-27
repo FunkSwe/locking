@@ -45,7 +45,7 @@ const Teacher = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.4, delay: 3 }}
       >
-        <Button variant='primary'>
+        <Button variant='outline'>
           <HashLink to='/funkcamp/#teachers'>Go Back</HashLink>
         </Button>
       </motion.div>
