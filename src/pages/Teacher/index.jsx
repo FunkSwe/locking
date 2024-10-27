@@ -20,7 +20,7 @@ const Teacher = () => {
 
   // Load data (fetch if it would be api)
   useEffect(() => {
-    setData(teacherData.slice(0, 6));
+    setData(teacherData.slice(0, 8));
     setLoading(false);
   }, []);
 
