@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { FaArrowLeft, FaArrowRight, FaTimes } from 'react-icons/fa';
 import {
   RiCloseFill,
   RiArrowRightCircleLine,
@@ -16,6 +15,18 @@ import Img8 from '/fc05/8.jpg';
 import Img_61 from '/fc06/1.jpg';
 import Img_62 from '/fc06/2.jpg';
 import Img_63 from '/fc06/3.jpg';
+import Img_151 from '/fc15/1.jpg';
+import Img_152 from '/fc15/2.jpg';
+import Img_153 from '/fc15/3.jpg';
+import Img_181 from '/fc18/1.jpg';
+import Img_182 from '/fc18/2.jpg';
+import Img_183 from '/fc18/3.jpg';
+import Img_231 from '/fc23/1.jpg';
+import Img_232 from '/fc23/2.jpg';
+import Img_233 from '/fc23/4.jpg';
+import Img_241 from '/fc24/1.jpg';
+import Img_242 from '/fc24/6.jpg';
+import Img_243 from '/fc24/7.jpg';
 import Picture1 from '@/assets/images/2005.png';
 import Picture2 from '@/assets/images/2.jpg';
 import Picture3 from '@/assets/images/3.jpg';
@@ -51,6 +62,18 @@ const images = [
   Picture5,
   Picture6,
   Picture7,
+  Img_151,
+  Img_152,
+  Img_153,
+  Img_181,
+  Img_182,
+  Img_183,
+  Img_231,
+  Img_232,
+  Img_233,
+  Img_241,
+  Img_242,
+  Img_243,
   /*  ...randomImages, */
 ];
 

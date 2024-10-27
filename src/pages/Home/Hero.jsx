@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import Button from '@/components/btn/Button';
-import heroImg from '@/assets/derbyhero.png';
+import heroImg from '/derbyhero.png';
 import { HashLink } from 'react-router-hash-link';
 import { AnimatedText } from '@/components/animations/AnimatedText';
 import { cn } from '@/utils/classnames';
@@ -40,8 +40,8 @@ const Hero = () => {
         </div>
       </div>
       <img
-        className='hidden xl:max-w-xl object-contain xl:block drop-shadow-2xl rotate-12 pr-10'
-        src={heroImg}
+        className='hidden xl:max-w-xl object-contain md:block drop-shadow-2xl rotate-12 pr-10 z-50'
+        src='/derbyhero.png'
         alt='Mavericks flats'
       />
     </div>
