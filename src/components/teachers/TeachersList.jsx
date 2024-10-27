@@ -10,6 +10,7 @@ import Img4 from '/teachers/4.png';
 import Img5 from '/teachers/5.png';
 import Img6 from '/teachers/6.png';
 import Img7 from '/teachers/7.png';
+import Img7 from '/teachers/8.png';
 import ToolT from '../tooltip/ToolT';
 import Teacher from './Teacher';
 import { AnimatedText } from '../animations/AnimatedText';
@@ -68,6 +69,13 @@ const teacherData = [
     description: 'Style and Grace - Pure funk, soulful, strong fundamentals',
     image: Img7,
     id: 7,
+  },
+  {
+    name: 'Rob-One',
+    title: 'Super Powers',
+    description: 'Energy - Power - Strong fundamentals - Creativity',
+    image: Img8,
+    id: 8,
   },
 ];
 
