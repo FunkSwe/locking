@@ -7,13 +7,13 @@ import {
   orderBy,
   query,
   where,
-} from "firebase/firestore";
-import React, { useEffect, useState } from "react";
-import { db } from "../config/firebase";
-import { useParams } from "react-router-dom";
-import Card from "../components/Card";
-import Loader from "../components/Loader";
-import CardSkeleton from "../components/skeleton/CardSkeleton";
+} from 'firebase/firestore';
+import React, { useEffect, useState } from 'react';
+import { db } from '@/config/firebase';
+import { useParams } from 'react-router-dom';
+import Card from '@/components/Card';
+import Loader from '@/components/Loader';
+import CardSkeleton from '@/components/skeleton/CardSkeleton';
 
 const Category = () => {
   const [BlogData, setBlogData] = useState(null);
@@ -24,11 +24,11 @@ const Category = () => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const blogRef = collection(db, "blogs");
+        const blogRef = collection(db, 'blogs');
         const q = query(
           blogRef,
-          where(`blogData.category`, "==", params.categoryName),
-          orderBy("timestamp", "desc"),
+          where(`blogData.category`, '==', params.categoryName),
+          orderBy('timestamp', 'desc'),
           limit(6)
         );
         const querySnap = await getDocs(q);
@@ -54,11 +54,11 @@ const Category = () => {
   return (
     <div className='mx-auto max-w-7xl'>
       <h1 className='my-12 bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-center text-5xl font-bold text-transparent'>
-        {" "}
-        Articles related to:{" "}
+        {' '}
+        Articles related to:{' '}
         <span className='bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text font-extrabold capitalize text-transparent'>
           {params.categoryName}
-        </span>{" "}
+        </span>{' '}
       </h1>
 
       <div className='mx-auto mt-12 grid w-[80%] grid-cols-1 gap-5 md:w-[95%] md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3'>

@@ -7,13 +7,13 @@ import {
   ref,
   uploadBytesResumable,
 } from 'firebase/storage';
-import { db } from '../config/firebase';
+import { db } from '@/config/firebase';
 import { toast } from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
-import Loader from '../components/Loader';
+import Loader from '@/components/Loader';
 import { v4 as uuidv4 } from 'uuid';
-import Dropdown from '../components/Dropdown';
-import useAuthStatus from '../hooks/useAuthStatus'; // Assuming this hook is available
+import Dropdown from '@/components/Dropdown';
+import useAuthStatus from '@/hooks/useAuthStatus'; // Assuming this hook is available
 
 const WriteBlog = () => {
   const { authenticated, isAdmin, loading } = useAuthStatus(); // Use admin status

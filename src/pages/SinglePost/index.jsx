@@ -2,15 +2,15 @@
 import { doc, getDoc } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { db } from '../config/firebase';
-import Loader from '../components/Loader';
+import { db } from '@/config/firebase';
+import Loader from '@/components/Loader';
 import { Balancer } from 'react-wrap-balancer';
 import { getAuth } from 'firebase/auth';
 import dayjs from 'dayjs';
-import LazyLoad from '../components/common/LazyLoad';
-import CommentSection from '../components/commentsSection/CommentSection';
+import LazyLoad from '@/components/common/LazyLoad';
+import CommentSection from '@/components/commentsSection/CommentSection';
 
-const SingleArticle = () => {
+const SinglePost = () => {
   const auth = getAuth();
   const [blogData, setBlogData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -132,4 +132,4 @@ const SingleArticle = () => {
   );
 };
 
-export default SingleArticle;
+export default SinglePost;

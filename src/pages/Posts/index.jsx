@@ -1,13 +1,22 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from 'react';
-import Search from '../components/Search';
-import Card from '../components/Card';
-import { collection, getDocs, limit, orderBy, query, startAfter, doc, deleteDoc } from 'firebase/firestore';
-import { db } from '../config/firebase';
+import Search from '@/components/Search';
+import Card from '@/components/Card';
+import {
+  collection,
+  getDocs,
+  limit,
+  orderBy,
+  query,
+  startAfter,
+  doc,
+  deleteDoc,
+} from 'firebase/firestore';
+import { db } from '@/config/firebase';
 import { toast } from 'react-hot-toast';
-import Tags from '../components/common/Tags';
+import Tags from '@/components/common/Tags';
 import InfiniteScroll from 'react-infinite-scroll-component';
-import CardSkeleton from '../components/skeleton/CardSkeleton';
+import CardSkeleton from '@/components/skeleton/CardSkeleton';
 
 const Posts = () => {
   const [blogsData, setBlogsData] = useState([]); // Initialize as empty array
@@ -48,7 +57,12 @@ const Posts = () => {
     setInfiniteLoading(true);
     try {
       const blogRef = collection(db, 'blogs');
-      const q = query(blogRef, orderBy('timestamp', 'desc'), startAfter(lastBlog), limit(4));
+      const q = query(
+        blogRef,
+        orderBy('timestamp', 'desc'),
+        startAfter(lastBlog),
+        limit(4)
+      );
       const docSnap = await getDocs(q);
       const lastVisible = docSnap.docs[docSnap.docs.length - 1];
 
@@ -109,7 +123,12 @@ const Posts = () => {
             }
           >
             {blogsData.map((blog, index) => (
-              <Card key={index} id={blog.id} blog={blog.data} delHandler={handleDelete} />
+              <Card
+                key={index}
+                id={blog.id}
+                blog={blog.data}
+                delHandler={handleDelete}
+              />
             ))}
           </InfiniteScroll>
         ) : (

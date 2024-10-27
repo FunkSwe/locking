@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import PrivateRoute from './components/PrivateRoute';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -14,7 +14,7 @@ import ForgotPassword from './pages/ForgotPassword';
 import WriteBlog from './pages/WriteBlog';
 import Logout from './pages/Logout';
 import Posts from './pages/Posts';
-import SingleArticle from './pages/SingleArticle';
+import SinglePost from './pages/SinglePost';
 import Category from './pages/Category';
 import EditArticle from './pages/EditArticle';
 import SearchResults from './pages/SearchResults';
@@ -27,6 +27,9 @@ import LockingHome from './pages/locking/Home';
 import HistoryPage from './pages/locking/history-page';
 
 const App = () => {
+  const location = useLocation();
+  const isFunkcamp = location.pathname.startsWith('/funkcamp');
+  const isLocking = location.pathname.startsWith('/locking');
   return (
     <>
       <ScrollToTop />
@@ -46,7 +49,7 @@ const App = () => {
         <Route path='/funkcamp/forgot-password' element={<ForgotPassword />} />
         <Route path='/funkcamp/sign-out' element={<Logout />} />
         <Route path='/funkcamp/category/:categoryName' element={<Category />} />
-        <Route path='/funkcamp/blog/:articleId' element={<SingleArticle />} />
+        <Route path='/funkcamp/blog/:articleId' element={<SinglePost />} />
         <Route path='/funkcamp/search/:query' element={<SearchResults />} />
         <Route path='/funkcamp/edit/:articleId' element={<EditArticle />} />
         <Route path='*' element={<PageNotFound />} />
