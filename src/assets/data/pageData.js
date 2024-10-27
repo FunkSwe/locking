@@ -65,7 +65,7 @@ export const teacherData = [
     id: 2,
     name: 'Willow Evann',
     country: 'FR',
-    img: '2.png',
+    img: '21.png',
     title: 'Willow Evann',
     subtitle: 'Team Rocket',
     desc: 'Willow Evann is a versatile French artist celebrated for his influence in the locking dance style and recent ventures into sculpture and visual arts. Known initially for his powerful and expressive approach to locking, he has competed and judged internationally, bringing a unique blend of technical skill and artistry to the stage. In my own mind Willow is the definition of Funk & Soul. He won several battles and has judged and taught around the world. In addition to his dance career, Willow has expanded into sculpture and mixed media installations. His recent exhibition, “Induku Enhle Ikhiwa Ezizweni,” hosted by 31 PROJECT in Paris, showcases his sculptural work that reflects on African and French heritage, identity, and social narratives. This series combines his interests in material, form, and digital media, adding a new dimension to his creative portfolio.\n\nHis journey into visual arts also includes photography, which he began to capture the essence of dance movement. Willow’s artistic evolution underscores his commitment to expressing cultural identity and challenging societal perceptions through various art forms.',
@@ -106,5 +106,14 @@ export const teacherData = [
     title: 'Arvid Håkansson',
     subtitle: 'Above the clouds',
     desc: 'Arvid "Arvidos" Håkansson is a prominent figure in the global locking scene, recognized for his remarkable precision and vibrant energy. Arvidos has solidified his place in dance through significant achievements, including winning the prestigious "Locking Forever" battle at Summer Dance Forever 2024 in Amsterdam. This event, held annually, brings together top dancers worldwide, and Arvidos\'s victory here reinforces his reputation as a top-tier locker.\n\nRecently, Arvidos also served as a judge at the Locking Forever battle in Japan, showcasing his expertise and influence within the international dance community. His contributions reflect his dedication to advancing the locking style and nurturing new talent on a global stage.',
+  },
+  {
+    id: 7,
+    name: 'Sammi Samurai',
+    country: 'UK',
+    img: '71.png',
+    title: 'Sammi-Jo Haynes',
+    subtitle: 'The Locksmiths Dance Company',
+    desc: 'Sammi-Jo has been a keen student of the FUNK for many years specialising in New Jack Swing/Old School Hip Hop, Popping and Locking. She’s learnt from many pioneers and teachers from Don Campbell to Greg, Shabba Doo to Scoo B Doo, Suga Pop to UK pioneers, Jimmy Williams and Fred ‘The Realness’ Folkes. Sammi-Jo’s main drive is the funk, evident in her weekly choreographic classes. Specialising in breaking down movement, musicality, grooves, social dances and Campbellocking/ Locking technique; she always brings great energy and fun while teaching. Personal trainer and gym instructor, Sam lectures and teaches around the UK at universities, academies and for street dance crews. She’s toured with James Brown’s music director with UK artist Omar MBE, performed for Nike, Red Bull Dance, Pay The Cost To Be The Boss and numerous times at Breakin’ Convention with The Locksmiths Dance Company.',
   },
 ];

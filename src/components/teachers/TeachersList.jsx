@@ -9,6 +9,7 @@ import Img3 from '/teachers/3.png';
 import Img4 from '/teachers/4.png';
 import Img5 from '/teachers/5.png';
 import Img6 from '/teachers/6.png';
+import Img7 from '/teachers/7.png';
 import ToolT from '../tooltip/ToolT';
 import Teacher from './Teacher';
 import { AnimatedText } from '../animations/AnimatedText';
@@ -60,6 +61,13 @@ const teacherData = [
       'Character - Style and Grace - Flawless technique, precision, stunts, fundamentals',
     image: Img6,
     id: 6,
+  },
+  {
+    name: 'Sam-Samurai',
+    title: 'Super Powers',
+    description: 'Style and Grace - Pure funk, soulful, strong fundamentals',
+    image: Img7,
+    id: 7,
   },
 ];
 
