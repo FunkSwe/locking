@@ -27,14 +27,8 @@ import Img_233 from '/fc23/4.jpg';
 import Img_241 from '/fc24/1.jpg';
 import Img_242 from '/fc24/6.jpg';
 import Img_243 from '/fc24/7.jpg';
-import Picture1 from '@/assets/images/2005.png';
-import Picture2 from '@/assets/images/2.jpg';
-import Picture3 from '@/assets/images/3.jpg';
-import Picture4 from '@/assets/images/4.jpg';
-import Picture5 from '@/assets/images/5.jpg';
-import Picture6 from '@/assets/images/6.jpg';
-import Picture7 from '@/assets/images/7.jpg';
 import { Img } from 'react-image';
+import { motion, AnimatePresence } from 'framer-motion';
 
 // Random images from Pexels
 /* const randomImages = [
@@ -55,13 +49,6 @@ const images = [
   Img_61,
   Img_62,
   Img_63,
-  Picture1,
-  Picture2,
-  Picture3,
-  Picture4,
-  Picture5,
-  Picture6,
-  Picture7,
   Img_151,
   Img_152,
   Img_153,
@@ -107,12 +94,6 @@ const ImageGallery = () => {
       <div className='columns-2 sm:columns-2 md:columns-3 md:gap-8'>
         {images.map((image, index) => (
           <div key={index} className='mb-8 break-inside-avoid'>
-            {/*  <img
-              src={image}
-              alt={`Gallery ${index}`}
-              className="w-full cursor-pointer rounded-xl"
-              onClick={() => openLightbox(index)}
-            /> */}
             <Img
               className='w-full cursor-pointer rounded-sm'
               alt={`Gallery ${index}`}
@@ -125,44 +106,68 @@ const ImageGallery = () => {
         ))}
       </div>
 
-      {selectedIndex !== null && (
-        <div
-          className='fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50'
-          onClick={closeLightbox}
-        >
-          {/* Close Button */}
-          <button
-            className='absolute bottom-4 right-8 text-white text-xl'
+      <AnimatePresence>
+        {selectedIndex !== null && (
+          <motion.div
+            className='fixed inset-0 bg-black flex items-center justify-center z-50'
             onClick={closeLightbox}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
           >
-            <RiCloseFill />
-          </button>
+            <motion.div
+              className='fixed inset-0 z-0'
+              style={{
+                backgroundImage: `url(${images[selectedIndex]})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                opacity: 0.2,
+                zIndex: -1,
+              }}
+            />
 
-          {/* Previous Button */}
-          <button
-            className='absolute left-4 text-white text-3xl'
-            onClick={showPrev}
-          >
-            <RiArrowLeftCircleLine />
-          </button>
+            {/* Close Button */}
+            <button
+              className='absolute bottom-4 right-8 text-white text-xl'
+              onClick={closeLightbox}
+            >
+              <RiCloseFill />
+            </button>
 
-          {/* Next Button */}
-          <button
-            className='absolute right-4 text-white text-3xl'
-            onClick={showNext}
-          >
-            <RiArrowRightCircleLine />
-          </button>
+            {/* Previous Button */}
+            <button
+              className='absolute left-4 text-white text-3xl'
+              onClick={showPrev}
+            >
+              <RiArrowLeftCircleLine />
+            </button>
 
-          <Img
-            src={images[selectedIndex]}
-            alt={`Gallery ${selectedIndex}`}
-            className='max-w-[90%] max-h-[90%]'
-            loader={<div>Loading...</div>}
-            unloader={<div>Failed to load image</div>}
-          />
-        </div>
-      )}
+            {/* Next Button */}
+            <button
+              className='absolute right-4 text-white text-3xl'
+              onClick={showNext}
+            >
+              <RiArrowRightCircleLine />
+            </button>
+
+            <motion.div
+              key={selectedIndex}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.4 }}
+            >
+              <Img
+                src={images[selectedIndex]}
+                alt={`Gallery ${selectedIndex}`}
+                className='max-w-[80%] md:max-w-[60%] max-h-auto shadow-lg z-10 mx-auto'
+                loader={<div>Loading...</div>}
+                unloader={<div>Failed to load image</div>}
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
