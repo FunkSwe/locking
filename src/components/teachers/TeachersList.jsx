@@ -10,7 +10,7 @@ import Img4 from '/teachers/4.png';
 import Img5 from '/teachers/5.png';
 import Img6 from '/teachers/6.png';
 import Img7 from '/teachers/7.png';
-import Img7 from '/teachers/8.png';
+import Img8 from '/teachers/8.png';
 import ToolT from '../tooltip/ToolT';
 import Teacher from './Teacher';
 import { AnimatedText } from '../animations/AnimatedText';
