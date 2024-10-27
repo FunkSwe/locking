@@ -97,7 +97,7 @@ const Hero = () => {
           >
             From Campbellocking to Locking
           </motion.h1>
-          <h2 className='text-center text-3xl md:text-6xl z-10'>
+          <h2 className='text-center text-2xl md:text-6xl z-10'>
             Coming soon... Under construction
           </h2>
           <Spinner />

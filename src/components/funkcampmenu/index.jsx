@@ -26,7 +26,7 @@ const menuLinks = [
   { path: '/funkcamp/contact', label: 'Contact' },
 ];
 
-const Menu = () => {
+const FunkCampMenu = () => {
   const container = useRef();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
@@ -37,7 +37,7 @@ const Menu = () => {
   const [copySuccess, setCopySuccess] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  console.log(isScrolled)
+  console.log(isScrolled);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -251,4 +251,4 @@ const Menu = () => {
   );
 };
 
-export default Menu;
+export default FunkCampMenu;

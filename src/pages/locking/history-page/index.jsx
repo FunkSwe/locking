@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import './history.scss';
 import Lenis from '@studio-freight/lenis';
 import PageTransition from '@/components/PageTransition';
+import { cn } from '@/utils/classnames';
 
 const History = () => {
   useEffect(() => {
@@ -16,7 +17,8 @@ const History = () => {
   }, []);
 
   return (
-    <main className='history w-screen h-full'>
+    <main className={cn('w-screen h-full py-20 px-6 md:px-60', 'history')}>
+      <p>Kommer ändra allt sen, lägger bara in text nu</p>
       <h1>LOCKINGENS HISTORIA</h1>
       <section>
         <h2>

@@ -7,7 +7,7 @@ import Contact from './pages/Contact';
 import Media from './pages/Media';
 import Tribute from './pages/Tribute';
 import Teacher from './pages/Teacher';
-import Menu from './components/menu/Menu';
+import FunkCampMenu from './components/funkcampmenu';
 import SignIn from './pages/SignIn';
 import Register from './pages/Register';
 import ForgotPassword from './pages/ForgotPassword';
@@ -25,6 +25,7 @@ import ScrollToTop from './utils/ScrollToTop';
 import Landing from './pages/Landing/Landing';
 import LockingHome from './pages/locking/Home';
 import HistoryPage from './pages/locking/history-page';
+import LockingMenu from './components/LockingMenu';
 
 const App = () => {
   const location = useLocation();
@@ -33,7 +34,9 @@ const App = () => {
   return (
     <>
       <ScrollToTop />
-      <Menu />
+      {isFunkcamp && <FunkCampMenu />}
+      {isLocking && <LockingMenu />}
+     {/*  <FunkCampMenu /> */}
       <Routes>
         <Route path='/' element={<Landing />} />
         <Route path='/funkcamp' element={<Home />} />
