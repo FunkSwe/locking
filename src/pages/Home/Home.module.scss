@@ -50,8 +50,7 @@
     margin-top: 1rem;
     font-family: $font-alt;
     margin-top: 2rem;
-    font-size: $font-size-xxl;
-    color: $color-client-3;
+    font-size: clamp($font-size-xl, 1rem + 2vw, $font-size-xxl);
     text-align: left;
     letter-spacing: 1px;
     text-transform: capitalize;
