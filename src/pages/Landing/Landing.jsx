@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Landing.scss';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import Logo from '@/components/Logo';
 
 const Landing = () => {
   const [conLeft, setConLeft] = useState(false);
@@ -51,7 +52,8 @@ const Landing = () => {
           onMouseEnter={handleLeftMouseEnter}
           onMouseLeave={handleLeftMouseLeave}
         >
-          <h1 className='landing-headline'>Funkcamp</h1>
+           <Logo />
+          <h1 className='landing-headline'>20th anniversary</h1>
           <Link to='/funkcamp' className='btn'>
             Enter
           </Link>
