@@ -51,19 +51,27 @@ const Home = () => {
         <AnimatedText text='Welcome!' className='' />
         <SlideInLeft>
           <p className='max-w-xl pt-8 text-lg leading-7 md:text-xl'>
-            We are looking forward to meet all who will come and join the 2025
-            camp.
+            We are excited to welcome everyone who will join us for Funkcamp
+            Sweden 2025!
             <br />
-            Proud to say that we have 3/4 from the line up of funkcamp 2005. Og
-            Skeeter Rabbit, Prime (Dj) & Damon Frost... only one missing is Dave
-            Gregory "Campbellock Jr" Pope 🕊️ We also have Manne Schutt, Willow
-            Evann who both have been a part of the camp since 2015.
+            We’re proud to have 3/4 of the original 2005 lineup returning: the
+            legendary OG Skeeter Rabbit, Prime (DJ), and Damon Frost. Sadly, the
+            only one missing will be Dave Gregory "Campbellock Jr" Pope 🕊️.
             <br />
-            We also have Manne Schutt, Willow Evann who both have been a part of
-            the camp since 2015.
+            In addition, we’re thrilled to have Manne Schütt who's been part of
+            the camps since 2005 and Willow Evann since 2015, both key
+            contributors to the camp, along with one of Sweden’s finest, the
+            Funk superhero 🔥 Arvid Håkansson.
             <br />
             And one of Swedens finest - <br />
             The Funk super hero 🔥 Arvid Håkansson.
+            <br />
+            <br />
+            While the schedule is still being finalized, the dates are set!
+            Funkcamp 2025 will take place from April 17th to 20th in Stockholm,
+            Sweden. Participants from around the world have already signed up,
+            so don’t miss out! Join the experience by registering via email at
+            funkcampswe@gmail.com or through the contact form on our website.
           </p>
         </SlideInLeft>
         <SlideInLeft>
