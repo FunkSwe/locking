@@ -77,7 +77,7 @@ export const teacherData = [
     img: '31.png',
     title: 'Damon Frost',
     subtitle: '...',
-    desc: 'Damon Frost, also known as the "Rubberband Man," is a key figure in the European hip-hop, funk, and locking scenes. Originally from the United States, he moved from Berkeley, California, to Stockholm, Sweden, in 1987. His innovative approach to popping, waving, and locking combined his American funk roots with a unique vision, making him a foundational influence in European street dance. Damon is known for his performances, workshops, and as a frequent judge at major competitions, such as Juste Debout in France (where he won in 2003). In addition to his dance career, Damon has made contributions as a music producer and BMX enthusiast, enhancing his versatile impact across creative domains. His work emphasizes a dedication to both technique and cultural expression, cementing his reputation as a mentor and global ambassador for street dance culture.',
+    desc: 'Damon Frost, also known as the "Rubberband Man," is a key figure in the European hip-hop, funk, and locking scenes. Originally from the United States, he moved from Berkeley, California, to Stockholm, Sweden, in 1985. His innovative approach to popping, waving, and locking combined his American funk roots with a unique vision, making him a foundational influence in European street dance. Damon is known for his performances, workshops, and as a frequent judge at major competitions, such as Juste Debout in France (where he won in 2004). In addition to his dance career, Damon has made contributions as a music producer and BMX enthusiast, enhancing his versatile impact across creative domains. His work emphasizes a dedication to both technique and cultural expression, cementing his reputation as a mentor and global ambassador for street dance culture.',
   },
 
   {
@@ -95,7 +95,7 @@ export const teacherData = [
     country: 'SWE',
     img: '51.png',
     title: 'Patrik Helge',
-    subtitle: 'CLC, Mass destruction',
+    subtitle: 'CLC, Mass destruction, Moves per minute',
     desc: 'Patrik "Prime" Helge is a respected Swedish dancer and one of the first hiphop pioneers in Sweden and master in the styles of popping and locking. Celebrated for his dedication to the fundamentals, funk & powerful technique, he has been teaching for over 30+ years and was a member of the influential dance crews Moves per Minute and Mass Destruction. Prime is also a prominent DJ, known as DJ Prime, and has been deeply involved in the Swedish hip-hop scene since it first arrived 40 years ago. Known for his dedication to teaching, he has inspired many generations of dancers by blending tradition with innovation.',
   },
   {
@@ -122,7 +122,7 @@ export const teacherData = [
     country: 'Swe',
     img: '81.png',
     title: 'Robert Wägar',
-    subtitle: 'GoGo Brothers, Mass destruction',
+    subtitle: 'GoGo Brothers, Mass destruction, Funkademics',
     desc: 'Robert "Rob One" Wägar is a pioneering figure in Sweden`s Hip-Hop and Locking dance scenes, recognized as one of the country’s most respected dance educators and performers. With a career spanning over 30 years, Robert has taught at some of Sweden’s most prestigious dance institutions, including the University College of Dance,Ballet Academy, Danscenter Sthlm, Fryshuset, and House of Shapes. His dedication to the art has shaped many of today`s top Swedish dancers.\n\nRob’s expertise is rooted in his deep connection with the US pioneers of Locking, having studied under the original creators of the style. His achievements include being awarded the "Original Style Locking Master Student" in 2007 and the "Original Lockers Master Award" in 2015. He is a proud member of the GoGo Brothers family (US) and was a member of Sweden’s Mass Destruction crew.\n\nThroughout his career, Rob has choreographed and performed for major TV productions, festivals, and theaters, working alongside renowned artists such as Wy-Clef Jean, Horace Brown, Jerry Williams, and many others. He has also served as a judge at international dance competitions, including Juste Debout Finals 2014, Baltic Session, and SDK preselections.\n\nAs the founder of FunkCamp, Robert leads a project that mentors young dancers by connecting them directly with the pioneers of Locking, ensuring the preservation and evolution of this iconic dance style for future generations.',
   },
 ];
