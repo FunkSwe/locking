@@ -7,7 +7,7 @@ import { AnimatedText } from '@/components/animations/AnimatedText';
 
 const Tribute = () => {
   return (
-    <div className={cn(styles.respect, 'mt-40 md:mt-60 mb-20 min-h-screen')}>
+    <div className={cn(styles.respect, 'mt-80 mb-20 min-h-screen')}>
       <section>
         <p className='max-w-xl pt-8 text-lg leading-7 md:text-xl'>
           Thank you for everything you given us, to inspire us and bring joy to
