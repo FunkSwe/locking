@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import Lenis from '@studio-freight/lenis';
 import PageTransition from '@/components/PageTransition';
 import ImageGallery from '@/components/image-gallery/ImageGallery';
+import ImageGallery2 from '@/components/image-gallery/ImageGallery2';
 
 const Media = () => {
   useEffect(() => {
@@ -23,6 +24,7 @@ const Media = () => {
         More Image coming up shortly
       </p>
       <ImageGallery />
+      <ImageGallery2 />
     </div>
   );
 };
