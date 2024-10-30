@@ -38,6 +38,8 @@ import Img_156 from '/fc15/6.jpg';
 import Img_157 from '/fc15/7.jpg';
 import Img_158 from '/fc15/8.jpg';
 import Img_159 from '/fc15/9.jpg';
+import Img_1510 from '/fc15/10.jpg';
+import Img_1515 from '/fc15/15.jpg';
 import { Img } from 'react-image';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -83,6 +85,8 @@ const images = [
   Img_157,
   Img_158,
   Img_159,
+  Img_1510,
+  Img_1515,
   /*  ...randomImages, */
 ];
 
