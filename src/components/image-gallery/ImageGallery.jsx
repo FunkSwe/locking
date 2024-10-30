@@ -38,6 +38,12 @@ import Img_156 from '/fc15/6.jpg';
 import Img_157 from '/fc15/7.jpg';
 import Img_158 from '/fc15/8.jpg';
 import Img_159 from '/fc15/9.jpg';
+import Img_161 from '/fc16/1.jpg';
+import Img_162 from '/fc16/2.jpg';
+import Img_163 from '/fc16/3.jpg';
+import Img_164 from '/fc16/4.jpg';
+import Img_165 from '/fc16/5.jpg';
+import Img_166 from '/fc16/6.jpg';
 import Img_181 from '/fc18/1.jpg';
 import Img_182 from '/fc18/2.jpg';
 import Img_183 from '/fc18/3.jpg';
@@ -105,6 +111,12 @@ const images = [
   Img_157,
   Img_158,
   Img_159,
+  Img_161,
+  Img_162,
+  Img_163,
+  Img_164,
+  Img_165,
+  Img_166,
   Img_181,
   Img_182,
   Img_183,
