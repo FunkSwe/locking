@@ -12,12 +12,25 @@ import Img5 from '/fc05/5.jpg';
 import Img6 from '/fc05/6.jpg';
 import Img7 from '/fc05/7.jpg';
 import Img8 from '/fc05/8.jpg';
+import Img9 from '/fc05/9.jpg';
+import Img10 from '/fc05/10.jpg';
+import Img11 from '/fc05/11.jpg';
+import Img12 from '/fc05/12.jpg';
+import Img13 from '/fc05/13.jpg';
+import Img14 from '/fc05/14.jpg';
+import Img815 from '/fc05/15.jpg';
 import Img_61 from '/fc06/1.jpg';
 import Img_62 from '/fc06/2.jpg';
 import Img_63 from '/fc06/3.jpg';
 import Img_151 from '/fc15/1.jpg';
 import Img_152 from '/fc15/2.jpg';
 import Img_153 from '/fc15/3.jpg';
+import Img_154 from '/fc15/4.jpg';
+import Img_155 from '/fc15/5.jpg';
+import Img_156 from '/fc15/6.jpg';
+import Img_157 from '/fc15/7.jpg';
+import Img_158 from '/fc15/8.jpg';
+import Img_159 from '/fc15/9.jpg';
 import Img_181 from '/fc18/1.jpg';
 import Img_182 from '/fc18/2.jpg';
 import Img_183 from '/fc18/3.jpg';
@@ -25,8 +38,12 @@ import Img_231 from '/fc23/1.jpg';
 import Img_232 from '/fc23/2.jpg';
 import Img_233 from '/fc23/4.jpg';
 import Img_241 from '/fc24/1.jpg';
-import Img_242 from '/fc24/6.jpg';
-import Img_243 from '/fc24/7.jpg';
+import Img_242 from '/fc24/1.jpg';
+import Img_243 from '/fc24/1.jpg';
+import Img_244 from '/fc24/1.jpg';
+import Img_245 from '/fc24/1.jpg';
+import Img_246 from '/fc24/6.jpg';
+import Img_247 from '/fc24/7.jpg';
 import { Img } from 'react-image';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -46,12 +63,25 @@ const images = [
   Img6,
   Img7,
   Img8,
+  Img9,
+  Img10,
+  Img11,
+  Img12,
+  Img13,
+  Img14,
+  Img15,
   Img_61,
   Img_62,
   Img_63,
   Img_151,
   Img_152,
   Img_153,
+  Img_154,
+  Img_155,
+  Img_156,
+  Img_157,
+  Img_158,
+  Img_159,
   Img_181,
   Img_182,
   Img_183,
@@ -61,6 +91,10 @@ const images = [
   Img_241,
   Img_242,
   Img_243,
+  Img_244,
+  Img_245,
+  Img_246,
+  Img_247,
   /*  ...randomImages, */
 ];
 
