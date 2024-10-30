@@ -18,7 +18,7 @@ import Img11 from '/fc05/11.jpg';
 import Img12 from '/fc05/12.jpg';
 import Img13 from '/fc05/13.jpg';
 import Img14 from '/fc05/14.jpg';
-import Img815 from '/fc05/15.jpg';
+import Img15 from '/fc05/15.jpg';
 import Img_61 from '/fc06/1.jpg';
 import Img_62 from '/fc06/2.jpg';
 import Img_63 from '/fc06/3.jpg';
