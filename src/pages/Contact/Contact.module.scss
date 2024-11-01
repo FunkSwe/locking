@@ -154,3 +154,14 @@
     }
   }
 }
+
+.recapthcha {
+  padding: 2rem 5rem;
+}
+
+@media (max-width: 980px) {
+  .recapthcha {
+    padding: 0;
+    align-self: center;
+  }
+}

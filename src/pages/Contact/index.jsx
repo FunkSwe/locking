@@ -4,6 +4,7 @@ import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
 import { FcCheckmark } from 'react-icons/fc';
 import PageTransition from '@/components/PageTransition';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 // styles
 import styles from './Contact.module.scss';
@@ -17,9 +18,11 @@ const Contact = () => {
   });
   const [validationMessage, setValidationMessage] = useState('');
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
+  const [recaptchaToken, setRecaptchaToken] = useState(null);
 
   const navigate = useNavigate();
   const form = useRef();
+  const recaptchaRef = useRef();
 
   const onChangeHandler = (e) => {
     const value = e.target.value;
@@ -40,8 +43,8 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const isValid = form.current.checkValidity();
-    if (isValid) {
-      console.log('is valid');
+
+    if (isValid && recaptchaToken) {
       emailjs
         .sendForm(
           import.meta.env.VITE_SENDER_ID,
@@ -52,41 +55,34 @@ const Contact = () => {
         .then(
           (result) => {
             console.log(result.text);
-            form.current.reset();
+            resetForm();
+            setValidationMessage(
+              'Thank you for getting in touch with funkcamp, we will answer your email shortly!'
+            );
+            recaptchaRef.current.reset(); // Reset reCAPTCHA
+            setTimeout(() => {
+              navigate('/');
+            }, 5000);
           },
           (error) => {
             console.log(error.text);
           }
         );
-      setValidationMessage(
-        'Thank you for getting in touch with funkcamp, we will answer your email shortly!'
-      );
-      resetForm();
-      setTimeout(() => {
-        navigate('/');
-      }, 5000);
-
-      setTimeout(() => {
-        setIsButtonDisabled(false);
-      }, 30000);
     } else {
-      console.log('is not valid');
       setValidationMessage(
         'Oops! My funky friend, It looks like you missed something. Please check and fill in all required fields.'
       );
     }
   };
 
-  console.log(`name: ${formData.name} \n
-        email: ${formData.email}  \n
-        subject: ${formData.subject} \n
-        message: ${formData.message}`);
+  const onReCAPTCHAChange = (token) => {
+    setRecaptchaToken(token);
+  };
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setValidationMessage('');
     }, 4000);
-
     return () => clearTimeout(timeoutId);
   }, [validationMessage]);
 
@@ -176,6 +172,12 @@ const Contact = () => {
             <FcCheckmark />
           </span>
         </div>
+        <ReCAPTCHA
+          ref={recaptchaRef}
+          sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+          onChange={onReCAPTCHAChange}
+          className={styles.recapthcha}
+        />
         <input
           className={styles.submit_btn}
           type='submit'
