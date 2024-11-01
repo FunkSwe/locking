@@ -29,6 +29,12 @@ const Info = () => {
         <h2 className={styles.name}>
           Danscenter <span>Fryshuset</span>
         </h2>
+        <p>
+          We are right now looking in to an other studio thursday friday so it
+          might change
+        </p>
+        <p>This is due to the time schedule and opening hours...</p>
+        <p>But saturday and sunday is at Danscenter 100%</p>
         <p>DANCE STUDIO 1 & 2 (bottom floor)</p>
         <h4 style={{ textAlign: 'left', marginTop: '2rem' }}>
           Adress for venue:
