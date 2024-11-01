@@ -61,7 +61,7 @@ const Contact = () => {
             );
             recaptchaRef.current.reset(); // Reset reCAPTCHA
             setTimeout(() => {
-              navigate('/');
+              navigate('/funkcamp');
             }, 5000);
           },
           (error) => {
