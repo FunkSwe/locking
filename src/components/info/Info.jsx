@@ -15,6 +15,8 @@ const Info = () => {
       <p>(Times are set, full schedule coming up later)</p>
 
       <br />
+      <h4>Price: 230&euro;</h4><p>This includes all classes/workshops</p>
+      <p style={{color: '#FFD700'}}>"Please note: Accommodation, including meals and hotel stays, is not included."</p>
       {/*  <Image src={IMGBIO} alt='funkcamp' width={'100%'} height={'auto'} /> */}
       <div className={styles.adress}>
         <h4>Main Venue!</h4>
