@@ -15,8 +15,14 @@ const Info = () => {
       <p>(Times are set, full schedule coming up later)</p>
 
       <br />
-      <h4>Price: 230&euro;</h4><p>This includes all classes/workshops</p>
-      <p style={{color: '#FFD700'}}>"Please note: Accommodation, including meals and hotel stays, is not included."</p>
+      <h4>Price: 230&euro;</h4>
+      <p style={{ color: '#B8A054' }}>
+        ✨This includes all classes/workshops✨
+      </p>
+      <p style={{ color: '#FFD700' }}>
+        "Please note: Accommodation, including meals and hotel stays, is not
+        included."
+      </p>
       {/*  <Image src={IMGBIO} alt='funkcamp' width={'100%'} height={'auto'} /> */}
       <div className={styles.adress}>
         <h4>Main Venue!</h4>
@@ -65,7 +71,7 @@ const Info = () => {
       <ul style={{ textDecoration: 'none' }}>
         <li>15.30-18.40 Time is set </li>
         <li>15.30 Welcome and registration - Danscenter</li>
-       {/*  <li>16.00-17.25 Teacher: Not set</li>
+        {/*  <li>16.00-17.25 Teacher: Not set</li>
         <li>17.30-18.45 Teacher: Not set</li> */}
         <li>19.00 doors close</li>
         <li>Rest for friday - reload - stretch - Chill</li>
@@ -80,7 +86,7 @@ const Info = () => {
       </p>
       <ul style={{ textDecoration: 'none' }}>
         <li>11.00-16.30 Time is set </li>
-       {/*  <li>13.30-14.25 Teacher: Not set</li>
+        {/*  <li>13.30-14.25 Teacher: Not set</li>
         <li>15.30-16.55 Teacher: Not set</li> */}
         <li>17.00 doors close</li>
         <li>Some plans in the making for this evening</li>
@@ -95,10 +101,13 @@ const Info = () => {
       </p>
       <ul style={{ textDecoration: 'none' }}>
         <li>11.00-16.30 Time is set </li>
-       {/*  <li>12.30 - 14.00 Teachers: Not set</li>
+        {/*  <li>12.30 - 14.00 Teachers: Not set</li>
         <li>14.00-15.00 Break</li>
         <li>15.00 - 16.30 Teacher: Not-set</li> */}
-        <li>There will be an event done by Stocholm tap-festival, it is really good.</li>
+        <li>
+          There will be an event done by Stocholm tap-festival, it is really
+          good.
+        </li>
       </ul>
       <ul style={{ textDecoration: 'none' }}>
         <li>
