@@ -1,22 +1,20 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
+import { toast } from 'react-hot-toast';
 import { motion } from 'framer-motion';
 import { FcCheckmark } from 'react-icons/fc';
 import PageTransition from '@/components/PageTransition';
 import ReCAPTCHA from 'react-google-recaptcha';
-
-// styles
 import styles from './Contact.module.scss';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: '',
+    subject: 'Registration', // Default to 'Registration' for proper selection on first load
     message: '',
   });
-  const [validationMessage, setValidationMessage] = useState('');
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
   const [recaptchaToken, setRecaptchaToken] = useState(null);
 
@@ -27,24 +25,51 @@ const Contact = () => {
   const onChangeHandler = (e) => {
     const value = e.target.value;
     setFormData({ ...formData, [e.target.name]: value });
-    console.log(e.target.value);
   };
 
   const resetForm = () => {
     setFormData({
       name: '',
       email: '',
-      subject: '',
+      subject: 'Registration',
       message: '',
     });
     form.current.reset();
+    setRecaptchaToken(null);
+  };
+
+  const validateFields = () => {
+    const { name, email, message } = formData;
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (name.length < 3) {
+      toast.error('Name must be at least 3 characters long.');
+      return false;
+    }
+
+    if (!emailPattern.test(email)) {
+      toast.error('Please enter a valid email address (e.g., example@example.com).');
+      return false;
+    }
+
+    if (message.length < 20) {
+      toast.error('Message must be at least 20 characters long.');
+      return false;
+    }
+
+    if (!recaptchaToken) {
+      toast.error('Please complete the reCAPTCHA.');
+      return false;
+    }
+
+    return true;
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const isValid = form.current.checkValidity();
 
-    if (isValid && recaptchaToken) {
+    if (validateFields()) {
+      setIsButtonDisabled(true);
       emailjs
         .sendForm(
           import.meta.env.VITE_SENDER_ID,
@@ -54,37 +79,31 @@ const Contact = () => {
         )
         .then(
           (result) => {
-            console.log(result.text);
             resetForm();
-            setValidationMessage(
-              'Thank you for getting in touch with funkcamp, we will answer your email shortly!'
-            );
-            recaptchaRef.current.reset(); // Reset reCAPTCHA
+            const successMessage =
+              formData.subject === 'Registration'
+                ? 'Thank you for signing up to Funkcamp 2025!'
+                : 'Thank you for reaching out to Funkcamp! We will get back to you soon.';
+            
+            toast.success(successMessage);
+            recaptchaRef.current.reset();
+
             setTimeout(() => {
               navigate('/funkcamp');
             }, 5000);
           },
           (error) => {
-            console.log(error.text);
+            console.error(error.text);
+            toast.error('Failed to send message, please try again.');
           }
-        );
-    } else {
-      setValidationMessage(
-        'Oops! My funky friend, It looks like you missed something. Please check and fill in all required fields.'
-      );
+        )
+        .finally(() => setIsButtonDisabled(false));
     }
   };
 
   const onReCAPTCHAChange = (token) => {
     setRecaptchaToken(token);
   };
-
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setValidationMessage('');
-    }, 4000);
-    return () => clearTimeout(timeoutId);
-  }, [validationMessage]);
 
   return (
     <div className={styles.contact}>
@@ -103,8 +122,6 @@ const Contact = () => {
         Registration
       </motion.h2>
 
-      {/* FORM === FORM */}
-
       <motion.form
         className={styles.contact_form}
         noValidate
@@ -119,7 +136,7 @@ const Contact = () => {
           <input
             type='text'
             name='name'
-            value={form.name}
+            value={formData.name}
             onChange={onChangeHandler}
             required
             minLength={3}
@@ -134,7 +151,7 @@ const Contact = () => {
           <input
             type='email'
             name='email'
-            value={form.email}
+            value={formData.email}
             onChange={onChangeHandler}
             required
           />
@@ -146,7 +163,7 @@ const Contact = () => {
         <div className={styles.input_field}>
           <select
             name='subject'
-            value={form.subject}
+            value={formData.subject}
             onChange={onChangeHandler}
             required
           >
@@ -160,9 +177,8 @@ const Contact = () => {
         <label>Message</label>
         <div className={styles.input_field}>
           <textarea
-            type='textarea'
             name='message'
-            value={form.message}
+            value={formData.message}
             onChange={onChangeHandler}
             minLength={20}
             maxLength={200}
@@ -176,12 +192,11 @@ const Contact = () => {
           ref={recaptchaRef}
           sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
           onChange={onReCAPTCHAChange}
-          className={styles.recapthcha}
+          className={styles.recaptcha}
         />
         <input
           className={styles.submit_btn}
           type='submit'
-          name='submit'
           value='Submit'
           disabled={isButtonDisabled}
           style={{
@@ -189,7 +204,6 @@ const Contact = () => {
             backgroundColor: isButtonDisabled ? 'orange' : '',
           }}
         />
-        <div className={styles.message}>{validationMessage}</div>
       </motion.form>
     </div>
   );
