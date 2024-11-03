@@ -55,16 +55,18 @@ const Home = () => {
             Sweden 2025!
             <br />
             We’re proud to have 3/4 of the original 2005 lineup returning: the
-            legendary OG Skeeter Rabbit, Prime (DJ), and Damon Frost. Sadly, the
-            only one missing will be Dave Gregory "Campbellock Jr" Pope 🕊️.
+            legendary OG Skeeter Rabbit, Prime, and Damon Frost. Sadly, the only
+            one missing will be Dave Gregory "Campbellock Jr" Pope 🕊️.
             <br />
             In addition, we’re thrilled to have Manne Schütt who's been part of
-            the camps since 2005 and Willow Evann since 2015, both key
-            contributors to the camp, along with one of Sweden’s finest, the
-            Funk superhero 🔥 Arvid Håkansson.
+            the camps since 2005 and Willow Evann from France, both key
+            contributors to the camp.
             <br />
-            And one of Swedens finest - <br />
-            The Funk super hero 🔥 Arvid Håkansson.
+            Sammi-Jo from UK who's been dedicated to Locking for a long time,
+            teaching and performing.
+            <br />
+            And last but not least one of Sweden’s finest, the Funk superhero 🔥
+            Arvid Håkansson.
             <br />
             <br />
             While the schedule is still being finalized, the dates are set!
