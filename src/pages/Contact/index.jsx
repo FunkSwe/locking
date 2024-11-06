@@ -12,8 +12,8 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: 'Registration', // Default to 'Registration' for proper selection on first load
-    message: '',
+    subject: 'Waiting List', // Default to 'Waiting List'
+    message: 'I want to be on the waiting list', // Pre-filled for 'Waiting List'
   });
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
   const [recaptchaToken, setRecaptchaToken] = useState(null);
@@ -31,8 +31,8 @@ const Contact = () => {
     setFormData({
       name: '',
       email: '',
-      subject: 'Registration',
-      message: '',
+      subject: 'Waiting List',
+      message: 'I want to be on the waiting list',
     });
     form.current.reset();
     setRecaptchaToken(null);
@@ -48,7 +48,9 @@ const Contact = () => {
     }
 
     if (!emailPattern.test(email)) {
-      toast.error('Please enter a valid email address (e.g., example@example.com).');
+      toast.error(
+        'Please enter a valid email address (e.g., example@example.com).'
+      );
       return false;
     }
 
@@ -81,10 +83,10 @@ const Contact = () => {
           (result) => {
             resetForm();
             const successMessage =
-              formData.subject === 'Registration'
-                ? 'Thank you for signing up to Funkcamp 2025!'
+              formData.subject === 'Waiting List'
+                ? 'Your request to join the waiting list has been received!'
                 : 'Thank you for reaching out to Funkcamp! We will get back to you soon.';
-            
+
             toast.success(successMessage);
             recaptchaRef.current.reset();
 
@@ -121,7 +123,11 @@ const Contact = () => {
       >
         Registration
       </motion.h2>
-
+      <section className='px-12 md:px-20 mb-40'>
+        <p className='max-w-xl pt-8 text-lg leading-7 md:text-xl'>
+          OBS! Registration is currently closed until january 2025, but you can add yourself to the waiting list
+        </p>
+      </section>
       <motion.form
         className={styles.contact_form}
         noValidate
@@ -167,7 +173,10 @@ const Contact = () => {
             onChange={onChangeHandler}
             required
           >
-            <option value='Registration'>Register</option>
+            <option value='Registration' disabled>
+              Registration (currently closed)
+            </option>
+            <option value='Waiting List'>Waiting List</option>
             <option value='Question'>Question</option>
           </select>
           <span className={styles.check_icon}>

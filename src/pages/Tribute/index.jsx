@@ -39,7 +39,7 @@ const Tribute = () => {
         <p className='max-w-xl pt-8 text-lg leading-7 md:text-xl'>
           To the legends thats been a part of locking / campbellocking thru the years
         </p>
-       <Carousel />
+      {/*  <Carousel /> */}
         <AnimatedText text='We give props' />
         <p className='max-w-xl pt-8 text-lg leading-7 md:text-xl'>
           To the teachers thats been a part of the camp thru the years

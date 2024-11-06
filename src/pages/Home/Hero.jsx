@@ -40,7 +40,7 @@ const Hero = () => {
         </div>
       </div>
       <img
-        className='sm:flex xl:max-w-xl w-48 md:w-full object-contain drop-shadow-2xl rotate-12 pr-10 z-50 md:relative absolute right-4 top-20 md:top-0 md:left:0'
+        className='sm:flex xl:max-w-xl w-32 md:w-full object-contain drop-shadow-2xl rotate-12 pr-10 z-50 md:relative absolute right-4 top-24 md:top-0 md:left:0'
         src='/derbyhero.png'
         alt='Mavericks flats'
       />
