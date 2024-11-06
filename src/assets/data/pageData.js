@@ -6,6 +6,11 @@ const ytVid5 = 'DnJ5fpSjAkg';
 const ytVid6 = 'WFkS5ljrnxU';
 const ytVid7 = 'REpgijxE_v4';
 
+
+import locksmith from '../images/guests/locksmith.png';
+import kiri from '../images/guests/kiri.png';
+import looselegs from '../images/guests/looselegs.png';
+
 export const videoData = [
   {
     name: 'P.Lock',
@@ -124,5 +129,48 @@ export const teacherData = [
     title: 'Robert Wägar',
     subtitle: 'GoGo Brothers, Mass destruction, Funkademics',
     desc: 'Robert "Rob One" Wägar is a pioneering figure in Sweden`s Hip-Hop and Locking dance scenes, recognized as one of the country’s most respected dance educators and performers. With a career spanning over 30 years, Robert has taught at some of Sweden’s most prestigious dance institutions, including the University College of Dance,Ballet Academy, Danscenter Sthlm, Fryshuset, and House of Shapes. His dedication to the art has shaped many of today`s top Swedish dancers.\n\nRob’s expertise is rooted in his deep connection with the US pioneers of Locking, having studied under the original creators of the style. His achievements include being awarded the "Original Style Locking Master Student" in 2007 and the "Original Lockers Master Award" in 2015. He is a proud member of the GoGo Brothers family (US) and was a member of Sweden’s Mass Destruction crew.\n\nThroughout his career, Rob has choreographed and performed for major TV productions, festivals, and theaters, working alongside renowned artists such as Wy-Clef Jean, Horace Brown, Jerry Williams, and many others. He has also served as a judge at international dance competitions, including Juste Debout Finals 2014, Baltic Session, and SDK preselections.\n\nAs the founder of FunkCamp, Robert leads a project that mentors young dancers by connecting them directly with the pioneers of Locking, ensuring the preservation and evolution of this iconic dance style for future generations.',
+  },
+];
+
+
+export const pastTeachers = [
+  {
+    id: 1,
+    name: "Locksmith",
+    price: 'Teacher',
+    image:
+     locksmith,
+    desc: 'One of Denmarks pioneers in locking and house'
+  },
+  {
+    id: 2,
+    name: "Loose Legs",
+    price: 'Dj',
+    image:
+      looselegs,
+      desc: 'Like walking on the clouds'
+  },
+  {
+    id: 3,
+    name: "Kiri",
+    price: 'Host',
+    image:
+     kiri,
+      desc: 'The funkiest host out there'
+  },
+  {
+    id: 4,
+    name: "",
+    price: '',
+    image:
+      "https://img01.ztat.net/article/spp-media-p1/33f7f939bcea47809810a2ed09cd0caa/7a4e747940f94466adf6efc9d822ace7.jpg?imwidth=1800",
+      desc: 'Retro of the most popular Jordans thru time'
+  },
+  {
+    id: 5,
+    name: "Playstation 5",
+    price: 'love ps5',
+    image: "https://www.elgiganten.se/image/dv_web_D1800010021328565/581993/playstation-5-2x-dualsense-kontroller-paket--pdp_zoom-3000.jpg",
+    desc: 'For the players'
   },
 ];

@@ -4,6 +4,7 @@ import styles from './respect.module.scss';
 import PageTransition from '@/components/PageTransition';
 import { cn } from '@/utils/classnames';
 import { AnimatedText } from '@/components/animations/AnimatedText';
+import Carousel from '@/components/carousel/Carousel';
 
 const Tribute = () => {
   return (
@@ -36,7 +37,12 @@ const Tribute = () => {
       <section className='pb-20'>
         <AnimatedText text='We give props' />
         <p className='max-w-xl pt-8 text-lg leading-7 md:text-xl'>
-          To the teachers thats been a part of the camp thru the years.
+          To the legends thats been a part of locking / campbellocking thru the years
+        </p>
+       <Carousel />
+        <AnimatedText text='We give props' />
+        <p className='max-w-xl pt-8 text-lg leading-7 md:text-xl'>
+          To the teachers thats been a part of the camp thru the years
         </p>
         <p className='max-w-xl pt-8 text-lg leading-7 md:text-xl'>
           Coming soon...
