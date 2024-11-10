@@ -52,11 +52,14 @@ const About = () => {
         >
           Funkcamp 2025 20th Anniversary
         </motion.h2>
-        <motion.p className='max-w-xl pt-8 text-lg leading-7 md:text-xl'
+        <motion.p
+          className='max-w-4xl pt-8 text-lg leading-7 md:text-xl'
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.6, delay: 1.6 }}
-          > Next year it will be 20 years ago since the first camp
+        >
+          {' '}
+          Next year it will be 20 years ago since the first camp
           <br />
           The goal has always been to connect the pioneers with the younger
           generation, I started it with this in mind, I wanted to learn from the
@@ -85,7 +88,7 @@ const About = () => {
           How it all began ⚡️ & continues
         </motion.h2>
         <motion.p
-          className='max-w-xl pt-8 text-lg leading-7 md:text-xl'
+          className='max-w-4xl pt-8 text-lg leading-7 md:text-xl'
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.6, delay: 1.6 }}
@@ -93,9 +96,9 @@ const About = () => {
           Funkcamp 2005 ✨ First ever dance camp dedicated to locking in Sweden
           and Europe.
           <br />
-          From there the rest is history, we are now coming in to our 19th year
-          in 2024. But actaully not 19th edition... due to some years falling
-          off, most of us know why.
+          <br />
+          From there the rest is history, we are now coming in to our 20th year
+          anniversary of FUNKCAMP in 2025
           <br />
           <br />
           Original idea to camp was from me working on a kids show for UR
@@ -104,10 +107,19 @@ const About = () => {
           the organisation to get hold of Don Campbell (who sadly never
           responded), OG Skeeter Rabbit, Greg Campbellock Jr for me.
           <br />
-          We (me and Skeeter) had a few emails sent back and forth, I asked him
-          to come and teach the foundation and history in Sweden, he said shure
-          I can help out and said he connect me with Greg. Then Greg also became
-          a part of the process
+          We (me and Skeeter) had a few emails sent back and forth, I went on to
+          the{' '}
+          <a
+            style={{ color: '#ea781a' }}
+            href='https://lockerlegends.net'
+            target='_blank'
+          >
+            LockerLegends website{' '}
+          </a>{' '}
+          <br />
+          I asked him to come and teach the foundation and history in Sweden, he
+          said shure I can help out and said he connect me with Greg. Then Greg
+          also became a part of the process
           <br />
           <br />
           Also during this period Skeeter and Greg planned a camp in LA, a
@@ -119,15 +131,16 @@ const About = () => {
           <br />
           <br />
           The same year we decided to do the funkcamp in Sweden. Bringing the
-          OG's so that our kids could learn directly from the source. With the
-          help of OG Skeeter Rabbit & Greg Campbellock Jr, we put the ideas
-          together and set the plans in motion for what was to become FUNKCAMP
-          (sweden) This lighted a spark amongst many younger lockers and a
-          groups like funky 4 brothers was formed from this spark! And supported
-          by many of the OG's.
+          OG's so that the kids here in Sweden could learn directly from the
+          source. <br />
+          With the help of OG Skeeter Rabbit & Greg Campbellock Jr, we put the
+          ideas together and set the plans in motion for what was to become
+          FUNKCAMP (sweden) This lighted a spark amongst many younger lockers
+          and a groups like funky 4 brothers was formed from this spark! And
+          supported by many of the OG's.
           <br />
         </motion.p>
-        <p className='max-w-xl pt-8 text-lg leading-7 md:text-xl'>
+        <p className='max-w-4xl pt-8 text-lg leading-7 md:text-xl'>
           The past "soon" 20 years has been remarkable, learning from the
           pioneers, connecting the youth and future lockers to the pioneers and
           to be able to learn from some of the sources directly has been an
