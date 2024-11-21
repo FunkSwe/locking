@@ -16,37 +16,45 @@ const Inspirations = () => {
           <br />
           <br /> First and foremost my big sister{' '}
           <span className='text-[#B8A054]'>Yasmina "Yazu" Tanttu</span> my big
-          brother <span className='text-[#B8A054]'>Samir Tanttu</span> <br />
-          They got me started with dancing and was teaching me my first moves.
-          <br />
-          Later 4 brothers that inspired me and we started going out to clubs +
-          My big bro! <br />
-          <span className='text-[#B8A054]'>Aziz Rhassane</span> probably would
-          have been the best hiphop dances in Sweden if he continued
-          <br />
-          <span className='text-[#B8A054]'>Kambiz Jabbari</span> the club head
-          number one, always on the positive side!
-          <br />
-          <span className='text-[#B8A054]'>Alvaro Aguilera</span> who was driven
-          by his passion for technique in dance and yes Tech
+          brother <span className='text-[#B8A054]'>Samir Tanttu</span> They got
+          me started with dancing and was teaching me my first moves.
           <br />
           <span className='text-[#B8A054]'>Carlos Cubillan</span> The bboy with
           more flava then any other! My Brother!
           <br />
+          <span className='text-[#B8A054]'>Gabriel Moraga </span>- Who was the
+          teachers and choreographer of 9 degrees heavily influenced by locking
+          and hiphop.
+          <br />
+          <br />
+          <span className='text-[#B8A054]'>Elvis Cetina</span> Always with the
+          latest and some videos also connection to us and many bboys around the
+          world with locking knowledge.
+          <br />
+          <span className='text-[#B8A054]'>Jasper Felder aka Jay one</span> Who
+          was one of the top club heads back in the days and in to locking
+          <br />
+          <span className='text-[#B8A054]'>Danne Grunden aka D Dog</span> Also
+          one of the top club heads back in the days and in to locking was my
+          tour partner for some years.
+          <br />
+          <span className='text-[#B8A054]'>Supreme</span> One of swedens most
+          dedicated and in to locking, was one funky brother heavy on the funk!
+          <br />
+          <span className='text-[#B8A054]'>Manne Schutt</span> The first to have
+          the foundation i think in Sweden, met him thru supreme back in the
+          day, and is one of my biggest inspirations still today
+          <br />
+          and many others like{' '}
+          <span className='text-[#B8A054]'>
+            Prime, Damon, Bebop, Karl Dyall, Charlie Prag, Isse, Joe Jobe,
+            Karim... list could go on
+          </span>{' '}
+          inspired my locking and dance in general.
+          <br />
           <br />
           <h2>Some of them visually presented! ↓↓↓</h2>
           <Carousel />
-          Later the hole 9 Degrees family from Rinkeby! But two special ones
-          <br />
-          <span className='text-[#B8A054]'>Gabriel Moraga </span>- Who was the
-          teachers and choreographer
-          <br />
-          <span className='text-[#B8A054]'>Volkan Akyuz </span>- Who became my
-          partner and duo for some years
-          <br />
-          And there is many who been inspiring my dancing thru the years...
-          Danne Grunden, Jasper Felder, Patrik Helge, Damon Frost, Be-bop, Mark
-          Allyn, Brian Green, Which-way Sha, All Locking pioneers
         </p>
       </section>
     </div>

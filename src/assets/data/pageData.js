@@ -148,17 +148,17 @@ export const myInspirations = [
   },
   {
     id: 3,
-    name: 'Aziz',
+    name: 'Carlos',
     price: 'Brotha',
     image: '',
-    desc: 'The funkies G in Hjulsta',
+    desc: 'The funkies G / bboy in Stockholm',
   },
   {
     id: 4,
-    name: 'Kambiz',
-    price: 'Brotha',
+    name: 'Elvis Cetina',
+    price: 'B-boy',
     image: '',
-    desc: 'The positive vibe of life',
+    desc: 'The "positive" vibe of life loool',
   },
   {
     id: 5,
@@ -169,10 +169,17 @@ export const myInspirations = [
   },
   {
     id: 6,
-    name: 'Volkan Akyuz',
+    name: 'Jay One',
     price: 'Brotha',
     image: '',
-    desc: 'One energetic raw soul, golden heart!',
+    desc: 'One energetic soul, true hiphop head!',
+  },
+  {
+    id: 6,
+    name: 'D-Dog',
+    price: 'Brotha',
+    image: '',
+    desc: 'Party brotha soulbrotha, funky club head, my partner!',
   },
 ];
 
