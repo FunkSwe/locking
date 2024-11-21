@@ -1,11 +1,13 @@
-.respect {
-    height: 100vh;
+@use '@/styles/base' as *;
+
+.tribute {
+    min-height: 100vh;
     width: 100%;
     padding-top: 10vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: baseline;
 
     h1 {
         font-size: 2rem;
@@ -26,9 +28,18 @@
             width: 60vw;
         }
     }
+}
 
-   
+.title {
+    display: inline-block;
+    font-weight: 800;
+    font-size: clamp($font-size-l, 4vw + 0.75rem, $font-size-xxl);
+    font-weight: $font-bold;
+    font-family: $font-alt;
+    padding: 0 4rem;
+
     
-    
-   
+  @media (max-width: 980px) {
+    padding: 0 2rem;
+  }
 }

@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import './carousel.scss';
-import { pastTeachers } from '@/assets/data/pageData';
+import { myInspirations } from '@/assets/data/pageData';
 
 const slideWidth = 30;
 
-const _items = [...pastTeachers];
+const _items = [...myInspirations];
 const length = _items.length;
 _items.push(..._items);
 

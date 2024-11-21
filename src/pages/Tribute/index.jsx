@@ -1,52 +1,56 @@
-import PresentationCard from '@/components/PresentationCard';
-import React from 'react';
-import styles from './respect.module.scss';
+import { useState } from 'react';
+import styles from './tribute.module.scss';
 import PageTransition from '@/components/PageTransition';
 import { cn } from '@/utils/classnames';
 import { AnimatedText } from '@/components/animations/AnimatedText';
-import Carousel from '@/components/carousel/Carousel';
+
+//pages
+import InHeaven from './InHeaven';
+import Inspirations from './Inspirations';
+import Guests from './Guests';
 
 const Tribute = () => {
+  // State to keep track of active tab
+  const [activeTab, setActiveTab] = useState('inHeaven');
+
+  // Map each tab to its title and component
+  const tabs = {
+    inHeaven: {
+      title: 'Give Props to the Pioneers',
+      component: <InHeaven />,
+    },
+    guests: {
+      title: 'All guests at funkcamp',
+      component: <Guests />,
+    },
+    inspirations: {
+      title: 'My Inspirations',
+      component: <Inspirations />,
+    },
+  };
+
   return (
-    <div className={cn(styles.respect, 'mt-80 mb-20 min-h-screen')}>
-      <section>
-        <p className='max-w-xl pt-8 text-lg leading-7 md:text-xl'>
-          Thank you for everything you given us, to inspire us and bring joy to
-          our lives, the dances, steps and moves you created will live on for
-          ever in our hearts. From the first steps and moves of Don Campbellock
-          Campbell, to the structure build by many others and passed on by
-          Gregory Pope "Campbellock Jr" Pope & and all other legends that has
-          contributed. WE give thanks
-        </p>
-        <h2 className='relative md:py-10 py-5 md:text-7xl text-2xl'>
-          We&apos;ll meet at the Lockers Lake 🕊️
+    <div className={cn(styles.tribute, 'mb-20')}>
+      <section className='px-8 md:px-60 mb-40'>
+        {/* Tab buttons */}
+        <div className='flex space-x-4 pb-4 my-10'>
+          {Object.keys(tabs).map((key) => (
+            <button
+              key={key}
+              onClick={() => setActiveTab(key)}
+              className={`px-4 py-2 border rounded-md ${activeTab === key ? 'font-bold bg-white text-black' : ''}`}
+            >
+              {tabs[key].title}
+            </button>
+          ))}
+        </div>
+
+        {/* Display active component and title */}
+        <h2 className={styles.title}>
+        {tabs[activeTab].title}
         </h2>
-      </section>
-      <section className='relative w-full h-full flex justify-center items-center mb-20'>
-        <PresentationCard />
-      </section>
-      <section>
-        <p className='max-w-xl pt-8 text-lg leading-7 md:text-xl'>
-          Also thank you to everyone who has come to share with the community
-          and been a part of funkcamp. I will forever be greatful for all
-          knowledge as will many others. You all have contributed with flavors
-          with in the artform of Locking and the few Campbellockers who has kept
-          Dons foundation close to their heart. Thank you!
-        </p>
-      </section>
-      <section className='pb-20'>
-        <AnimatedText text='We give props' />
-        <p className='max-w-xl pt-8 text-lg leading-7 md:text-xl'>
-          To the legends thats been a part of locking / campbellocking thru the years
-        </p>
-      {/*  <Carousel /> */}
-        <AnimatedText text='We give props' />
-        <p className='max-w-xl pt-8 text-lg leading-7 md:text-xl'>
-          To the teachers thats been a part of the camp thru the years
-        </p>
-        <p className='max-w-xl pt-8 text-lg leading-7 md:text-xl'>
-          Coming soon...
-        </p>
+       {/*  <AnimatedText text={tabs[activeTab].title} className='px-8' /> */}
+        {tabs[activeTab].component}
       </section>
     </div>
   );

@@ -22,10 +22,11 @@ $slide-width: 30rem;
     width: 100%;
     left: 50%;
     transform: translateX(-50%);
+    height: 60vh;
 }
 
 .carousel__inner {
-    height: 30rem;
+    height: 40rem;
     position: relative;
     width: calc(#{$slide-width * 4});
 }

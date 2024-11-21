@@ -6,7 +6,6 @@ const ytVid5 = 'DnJ5fpSjAkg';
 const ytVid6 = 'WFkS5ljrnxU';
 const ytVid7 = 'REpgijxE_v4';
 
-
 import locksmith from '../images/guests/locksmith.png';
 import kiri from '../images/guests/kiri.png';
 import looselegs from '../images/guests/looselegs.png';
@@ -132,45 +131,87 @@ export const teacherData = [
   },
 ];
 
+export const myInspirations = [
+  {
+    id: 1,
+    name: 'Yazu',
+    price: 'Sister',
+    image: '',
+    desc: 'My first teacher in the living room',
+  },
+  {
+    id: 2,
+    name: 'Samir',
+    price: 'Brother',
+    image: '',
+    desc: 'My brother! My first teacher',
+  },
+  {
+    id: 3,
+    name: 'Aziz',
+    price: 'Brotha',
+    image: '',
+    desc: 'The funkies G in Hjulsta',
+  },
+  {
+    id: 4,
+    name: 'Kambiz',
+    price: 'Brotha',
+    image: '',
+    desc: 'The positive vibe of life',
+  },
+  {
+    id: 5,
+    name: 'Gabriel Moraga',
+    price: 'Teacher/ Mentor',
+    image: '',
+    desc: 'Leader of 9 degrees!',
+  },
+  {
+    id: 6,
+    name: 'Volkan Akyuz',
+    price: 'Brotha',
+    image: '',
+    desc: 'One energetic raw soul, golden heart!',
+  },
+];
 
 export const pastTeachers = [
   {
     id: 1,
-    name: "Locksmith",
+    name: 'Locksmith',
     price: 'Teacher',
-    image:
-     locksmith,
-    desc: 'One of Denmarks pioneers in locking and house'
+    image: locksmith,
+    desc: 'One of Denmarks pioneers in locking and house',
   },
   {
     id: 2,
-    name: "Loose Legs",
+    name: 'Loose Legs',
     price: 'Dj',
-    image:
-      looselegs,
-      desc: 'Like walking on the clouds'
+    image: looselegs,
+    desc: 'Like walking on the clouds',
   },
   {
     id: 3,
-    name: "Kiri",
+    name: 'Kiri',
     price: 'Host',
-    image:
-     kiri,
-      desc: 'The funkiest host out there'
+    image: kiri,
+    desc: 'The funkiest host out there',
   },
   {
     id: 4,
-    name: "",
+    name: '',
     price: '',
     image:
-      "https://img01.ztat.net/article/spp-media-p1/33f7f939bcea47809810a2ed09cd0caa/7a4e747940f94466adf6efc9d822ace7.jpg?imwidth=1800",
-      desc: 'Retro of the most popular Jordans thru time'
+      'https://img01.ztat.net/article/spp-media-p1/33f7f939bcea47809810a2ed09cd0caa/7a4e747940f94466adf6efc9d822ace7.jpg?imwidth=1800',
+    desc: 'Retro of the most popular Jordans thru time',
   },
   {
     id: 5,
-    name: "Playstation 5",
+    name: 'Playstation 5',
     price: 'love ps5',
-    image: "https://www.elgiganten.se/image/dv_web_D1800010021328565/581993/playstation-5-2x-dualsense-kontroller-paket--pdp_zoom-3000.jpg",
-    desc: 'For the players'
+    image:
+      'https://www.elgiganten.se/image/dv_web_D1800010021328565/581993/playstation-5-2x-dualsense-kontroller-paket--pdp_zoom-3000.jpg',
+    desc: 'For the players',
   },
 ];
