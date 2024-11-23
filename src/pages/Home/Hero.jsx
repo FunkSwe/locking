@@ -25,7 +25,7 @@ const Hero = () => {
   }, [isHovered]);
 
   return (
-    <div className='relative w-full flex h-screen mb-32 items-center justify-between gap-8 px-4 pt-[500px] md:pt-40 text-neutral-900 md:px-60 lg:pr-0'>
+    <div className='relative w-full flex h-full mb-32 items-center justify-between gap-8 px-4 pt-[500px] md:pt-40 text-neutral-900 md:px-60 lg:pr-0'>
       <div>
         <h1 className={cn('text-[#B8A054]', styles.heroTitle)}>FUNKCAMP</h1>
         <AnimatedText
