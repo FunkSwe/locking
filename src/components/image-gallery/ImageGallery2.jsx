@@ -70,7 +70,7 @@ const ImageGallery2 = () => {
       <div className='columns-2 sm:columns-2 md:columns-3 md:gap-8'>
         {images.map((image, index) => (
           <div key={index} className='mb-8 break-inside-avoid'>
-            <LazyLoad height={200} offset={100} once>
+            <LazyLoad height={200} offset={100}>
               <Img
                 className='w-full cursor-pointer rounded-sm'
                 alt={`Gallery ${index}`}
