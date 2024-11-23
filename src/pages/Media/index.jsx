@@ -21,7 +21,6 @@ const Media = () => {
         Media from the past
       </h2>
       <p className='md:px-10 w-full text-center'>
-        More Image coming up shortly
       </p>
       <ImageGallery />
       <ImageGallery2 />
