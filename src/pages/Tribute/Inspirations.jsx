@@ -1,17 +1,17 @@
 import React from 'react';
-import styles from './tribute.module.scss';
+/* import styles from './tribute.module.scss';
 import { cn } from '@/utils/classnames';
 import { AnimatedText } from '@/components/animations/AnimatedText';
-import Carousel from '@/components/carousel/Carousel';
+import Carousel from '@/components/carousel/Carousel'; */
 
 const Inspirations = () => {
   return (
     <div>
       <section>
         <h2 className='relative py-5 md:text-5xl text-2xl'>
-          Thanks for inpiring me thru the years!
+          Thanks for inpiring US thru the years!
         </h2>
-        <p className='max-w-3xl pt-4 text-lg leading-7 md:text-xl'>
+        {/*  <p className='max-w-3xl pt-4 text-lg leading-7 md:text-xl'>
           This one is for all my inspirations thru the years in all my dancing{' '}
           <br />
           <br /> First and foremost my big sister{' '}
@@ -53,9 +53,9 @@ const Inspirations = () => {
           inspired my locking and dance in general.
           <br />
           <br />
-          <h2>Some of them visually presented! ↓↓↓</h2>
-          <Carousel />
-        </p>
+          <h2>Some of them visually presented! ↓↓↓</h2> 
+           <Carousel />
+        </p>  */}
       </section>
     </div>
   );

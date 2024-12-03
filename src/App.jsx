@@ -26,6 +26,7 @@ import Landing from './pages/Landing/Landing';
 import LockingHome from './pages/locking/Home';
 import HistoryPage from './pages/locking/history-page';
 import LockingMenu from './components/LockingMenu';
+import Item from './pages/item/Item';
 
 const App = () => {
   const location = useLocation();
@@ -36,7 +37,7 @@ const App = () => {
       <ScrollToTop />
       {isFunkcamp && <FunkCampMenu />}
       {isLocking && <LockingMenu />}
-     {/*  <FunkCampMenu /> */}
+      {/*  <FunkCampMenu /> */}
       <Routes>
         <Route path='/' element={<Landing />} />
         <Route path='/funkcamp' element={<Home />} />
@@ -45,7 +46,7 @@ const App = () => {
         <Route path='/funkcamp/tribute' element={<Tribute />} />
         <Route path='/funkcamp/contact' element={<Contact />} />
         <Route path='/funkcamp/teacher/:id' element={<Teacher />} />
-
+        <Route path='/funkcamp/tribute/:id' element={<Item />} />
         <Route path='/funkcamp/posts' element={<Posts />} />
         <Route path='/funkcamp/sign-in' element={<SignIn />} />
         <Route path='/funkcamp/sign-up' element={<Register />} />

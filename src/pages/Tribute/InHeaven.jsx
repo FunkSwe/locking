@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './tribute.module.scss';
+/* import styles from './tribute.module.scss';
 import { cn } from '@/utils/classnames';
-import { AnimatedText } from '@/components/animations/AnimatedText';
+import { AnimatedText } from '@/components/animations/AnimatedText'; */
 import PresentationCard from '@/components/PresentationCard';
 
 const InHeaven = () => {

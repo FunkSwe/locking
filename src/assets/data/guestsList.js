@@ -1,96 +1,71 @@
-import IMG1 from '../assets/images/p2422.png';
-import IMG2 from '../assets/images/shoe2.png';
-import IMG3 from '../assets/images/shoe3.png';
-import IMG4 from '../assets/images/shoe4.png';
-import IMG5 from '../assets/images/shoe5.png';
-import IMG6 from '../assets/images/shoe6.png';
-import IMG7 from '../assets/images/p241.png';
+import IMG1 from '../../../public/guests/1.png';
+import IMG2 from '../../../public/guests/2.png';
+import IMG3 from '../../../public/guests/3.png';
+import IMG4 from '../../../public/guests/4.png';
+import IMG5 from '../../../public/guests/5.png';
+import IMG6 from '../../../public/guests/6.png';
+import IMG7 from '../../../public/guests/7.png';
 
-
-
-export const shoesData = [
+export const guestsData = [
   {
     id: '1',
-    name: 'Running Shoe X',
+    name: 'Greg "Campbellock Jr" Pope',
     details:
-      'Introducing the Running Shoe X, a revolutionary footwear innovation designed for peak performance. This shoe is engineered with cutting-edge technology to provide you with unmatched comfort and support during your runs. Its unique sole design offers superior cushioning, while the lightweight fabric ensures breathability. The vibrant laces add a stylish touch to your running gear.',
-    steps:
-      'Step 1: Put on your Running Shoe X and tie the laces snugly. Step 2: Get ready to conquer your running goals with confidence.',
-    sole: 'Advanced cushioning technology',
-    fabricColor: 'Blue',
-    laces: 'Bright Red',
+      'Dave Gregory Pope a.k.a. Greg Campbellock Jr. was born on April 5th, 1952 at Fort McClellan in Calhoun, Alabama. His creative talents emerged at the young age of 15 accessing his musicality playing guitar. The talent for rhythm would shine even brighter when Pope pursued his true passion: dancing. Challenged by his father, Dave Pope, Greg became a regular on Soul Train, winning many competitions and later being an original member of the historic Street Dance Group: The Lockers. With a spectacular career, Greg was recognized as a big dancer and a brilliant teacher, spreading the love of Street Dance all over the globe. Greg passed away on January 28th, 2010 leaving a legacy of kindness that touched countless Street Dancers. The Street Dance community remembers him not only as a successful entertainer but also as a mentor who inspired others to pursue their dreams with determination and integrity.',
+    steps: 'Quickie - Stop n Go. Contibution: The man behind the curriculum.',
     image: IMG1,
   },
   {
     id: '2',
-    name: 'Hiking Boot Z',
+    name: 'Manuel "Loose Caboose" Tristan',
     details:
-      'Introducing the Hiking Boot Z, the perfect companion for your outdoor adventures. Crafted with durability in mind, this hiking boot is built to withstand rugged terrain. Its rugged sole provides excellent traction, while the waterproof fabric keeps your feet dry. The earthy brown laces add a rustic charm to your hiking ensemble.',
+      'Manuel "Loose Caboose" Tristan is a legendary figure in the locking dance community, celebrated for his electrifying performances and dedication to the art. Born in 1958 in Brea, California, he grew up in a modest household with eight siblings, instilled with values of love, respect, and resilience by his mother. Inspired by Don Campbell on "Soul Train," Manuel taught himself locking in his garage and began competing in local dance contests. His talent caught the eye of Tony GoGo, who mentored him and brought him into the GoGo Brothers, cementing his place in locking history. Manuel has performed at numerous events and judged prestigious competitions, including the Vancouver Street Dance Festival. As a dancer, mentor, and performer, he has bridged generations of lockers, blending traditional and modern styles. His passion and commitment continue to inspire dancers worldwide.',
     steps:
-      'Step 1: Lace up your Hiking Boot Z securely. Step 2: Explore the great outdoors with confidence and comfort.',
-    sole: 'Rugged all-terrain sole',
-    fabricColor: 'Brown',
-    laces: 'Earthy Brown',
+      'Throughout his career, Manuel has been a prominent figure in the dance community',
     image: IMG2,
   },
   {
     id: '3',
-    name: 'Sneaker E',
+    name: 'James "OG Skeeter Rabbit" Higgins',
     details:
-      'Meet the Sneaker E, a versatile and stylish choice for your everyday activities. These sneakers offer a perfect blend of comfort and fashion. The flexible sole ensures ease of movement, and the sleek fabric color complements any outfit. With minimalist white laces, these sneakers are a classic choice.',
+      'James "OG Skeeter Rabbit" Higgins is a legendary figure in the locking community, known for shaping the dance style and promoting its culture. Growing up in Los Angeles, he became a key part of the vibrant street dance scene in the 1970s. A founding member of The GoGo Brothers and part of The Lockers, James helped popularize locking through synchronized performances and groundbreaking choreography. He also created the iconic move "The Skeeter Rabbit," now a staple in locking. Beyond performing, James has worked tirelessly to preserve locking´s history, mentoring new generations and sharing his expertise through platforms like LockerLegends. His influence continues to inspire dancers worldwide.',
     steps:
-      'Step 1: Slip into your Sneaker E effortlessly. Step 2: Rock your day with style and comfort.',
-    sole: 'Flexible rubber sole',
-    fabricColor: 'Black',
-    laces: 'White',
+      'Step 1: Skeeter Rabbit. Step 2: Variations of the Skeeter Rabbit. Historian and preserver of the artform locking',
     image: IMG3,
   },
   {
     id: '4',
-    name: 'Casual Slip-Ons A',
+    name: 'Anthony "Tony Gogo" Foster',
     details:
-      "Introducing our Casual Slip-Ons A, the perfect shoes for those relaxed days. These slip-ons offer ultimate comfort with a cushioned sole and a soft, breathable fabric. With their easy-to-wear design and no laces to fuss with, you'll be ready to unwind in style.",
+      'Anthony "Tony GoGo" Foster is a pioneering figure in the locking community, known for his innovative style and global influence. Growing up in Watts, California, he became a prominent dancer in the vibrant street dance scene of the 1970s. A co-founder of The GoGo Brothers and a member of The Lockers, Tony played a key role in popularizing locking through synchronized performances and appearances on shows like Soul Train. His dynamic movements and creativity set a new standard for the dance. In the 1980s, Tony moved to Japan, where he introduced locking to a new audience and developed "Lock Fusion", blending traditional locking with other dance styles. He mentored many dancers, including his sons Yuu and Rei, who carry on his legacy as the modern-day GoGo Brothers. Tony´s passion and contributions continue to inspire dancers around the world.',
     steps:
-      'Step 1: Slide your feet into the Casual Slip-Ons A. Step 2: Enjoy a stress-free day of leisure and comfort.',
-    sole: 'Cushioned comfort sole',
-    fabricColor: 'Gray',
-    laces: 'None',
+      'Step 1: Gogo Brothers handshake. Always bring variations to the table',
     image: IMG4,
   },
   {
     id: '5',
-    name: 'Dress Shoe P',
+    name: 'Willow Evann',
     details:
-      'Introducing the Dress Shoe P, a timeless and elegant choice for formal occasions. These classic dress shoes are crafted with precision and attention to detail. The leather sole adds a touch of sophistication, and the deep black fabric color exudes refinement. Perfect for making a lasting impression.',
+      'Willow Evann, born in 1985 in Bondy, France, is a multifaceted artist renowned for his exceptional skills in locking dance and his innovative sculptures. Of Ivorian heritage, he immersed himself in hip-hop culture from the age of 10, specializing in locking—a dance style that emerged in the 1970s on the U.S. West Coast. His dedication and talent have established him as a prominent figure in the locking community. Beyond dance, Willow has pursued photography, focusing on capturing choreographic movements. In 2019, he joined the Kourtrajmé School, founded by artist JR and filmmaker Ladj Ly, where he expanded his artistic expression into visual arts. His sculptures often explore themes of identity and representation, challenging stereotypes and addressing the contrast between familial perceptions and societal portrayals. Notably, his work "Google Noir" presents positive images of Black men, provoking thought within the art community. 31 PROJECT. illow´s art has been exhibited in various venues, including a duo show at 31 PROJECT in Paris in 2022, where his sculptures were showcased alongside paintings by Aviwe Plaatjie. His innovative approach continues to inspire and provoke thought within the art community.',
     steps:
-      'Step 1: Slip on your Dress Shoe P with care. Step 2: Elevate your formal look with confidence and style.',
-    sole: 'Leather sole',
-    fabricColor: 'Black',
-    laces: 'Polished Black',
+      'Deep passion for the artform of locking and Campbellocking. The funkmaster himself',
     image: IMG5,
   },
   {
     id: '6',
-    name: 'Athletic Training Shoe M',
+    name: 'Anthony Edwards',
     details:
-      'Meet the Athletic Training Shoe M, designed for athletes seeking peak performance. These shoes are engineered to provide optimal support and stability during intense training sessions. The advanced sole technology enhances your agility, and the dynamic fabric color adds a sporty flair. Get ready to break your personal records.',
+      'Anthony "Tony" Edwards is a UK pioneer in locking and a key figure in the street dance community. As a founding member of the influential group "Out Of Control," Tony has shaped the UK’s hip-hop dance scene, bringing locking to prominence through his unique style and dedication to the art form. Over the years, he has mentored countless dancers, inspiring a new generation with his passion and expertise. His contributions have cemented his status as a cornerstone of the UK locking community and a global ambassador for the dance style.',
     steps:
-      'Step 1: Lace up your Athletic Training Shoe M securely. Step 2: Dominate your training with power and precision.',
-    sole: 'Dynamic performance sole',
-    fabricColor: 'Red',
-    laces: 'Neon Yellow',
+      'One of the main figures in the London Locking scene',
     image: IMG6,
   },
   {
     id: '7',
-    name: 'Canvas Espadrilles S',
+    name: 'Damon Frost',
     details:
-      "Introducing Canvas Espadrilles S, the perfect summer footwear choice. These espadrilles are crafted with a lightweight canvas fabric that's perfect for warm weather. The traditional jute sole adds a touch of beachy charm, and the colorful laces complete the casual look. Embrace summer in style.",
-    steps:
-      'Step 1: Slip into your Canvas Espadrilles S and tie the laces casually. Step 2: Enjoy the sunny days with ease and flair.',
-    sole: 'Traditional jute sole',
-    fabricColor: 'Striped Blue',
-    laces: 'Colorful Stripes',
+      'Damon Frost, known as the "Rubberband Man," is a legendary dancer and pioneer in locking and popping. Originally from San Francisco, he moved to Stockholm in 1986, becoming a central figure in Europe’s street dance scene. With over three decades of experience, Damon is celebrated for his mastery of street funk and grooves, as well as his innovative approach to dance. As a mentor and teacher, he has profoundly influenced the Swedish and European dance communities, leaving a lasting legacy as one of the most respected figures in street dance history.',
+    steps: 'The man the myth the legend, he raises peoples skills with the knowledge he shares on rhythm and dance',
     image: IMG7,
   },
 ];

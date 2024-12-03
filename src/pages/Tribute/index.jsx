@@ -24,7 +24,7 @@ const Tribute = () => {
       component: <Guests />,
     },
     inspirations: {
-      title: 'My Inspirations',
+      title: 'Inspirations',
       component: <Inspirations />,
     },
   };
@@ -46,10 +46,8 @@ const Tribute = () => {
         </div>
 
         {/* Display active component and title */}
-        <h2 className={styles.title}>
-        {tabs[activeTab].title}
-        </h2>
-       {/*  <AnimatedText text={tabs[activeTab].title} className='px-8' /> */}
+        <h2 className={styles.title}>{tabs[activeTab].title}</h2>
+        {/*  <AnimatedText text={tabs[activeTab].title} className='px-8' /> */}
         {tabs[activeTab].component}
       </section>
     </div>
