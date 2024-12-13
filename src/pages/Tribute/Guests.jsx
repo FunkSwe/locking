@@ -43,7 +43,7 @@ const stagger = {
 const Guests = () => {
   return (
     <div>
-      <section>
+      <section className='px-8 md:px-60 mb-40'>
         <h2 className='relative py-5 md:text-5xl text-2xl'>
           We give props and appriciate you sharing your knowledge and skills
           with us 🙏
