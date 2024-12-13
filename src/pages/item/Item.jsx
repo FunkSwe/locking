@@ -107,13 +107,12 @@ const Item = () => {
           <div className={styles.details}>
             <motion.div variants={stagger} className={styles.inner}>
               <motion.div variants={fadeInUp}>
-                <span className={styles.title}>Sneaker model: {name}</span>
+                <span className={styles.title}>Teacher: {name}</span>
               </motion.div>
               <motion.h1 variants={fadeInUp}>{name}</motion.h1>
               <motion.p variants={fadeInUp}>{details}</motion.p>
               <motion.div variants={fadeInUp} className={styles.additionals}>
-                <span>Instructions: </span>
-                <span>How to use</span>
+                <span>Short description: </span>
               </motion.div>
               <motion.div variants={fadeInUp}>
                 <span className={styles.steps}>{steps}</span>
