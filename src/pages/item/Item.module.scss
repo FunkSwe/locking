@@ -7,7 +7,10 @@
     height: 100vh;
     width: 100%;
     background-color: black;
-    
+
+    @media screen and (max-width: 480px) {
+      height: 100%;
+    }
   
     .go_back {
       cursor: pointer;
@@ -32,7 +35,7 @@
       @media screen and (max-width: 460px) {
         padding: 0.5rem 1rem;
         right: 10%;
-        top: 20%;
+        top: 12.5%;
         left: auto;
       }
     }
@@ -44,7 +47,7 @@
       justify-content: center;
   
       @media screen and (max-width: 1180px) {
-        margin: 5rem auto 0 5rem;
+        margin: 5rem auto 5rem;
         width: 100%;
       }
       @media screen and (max-width: 680px) {
@@ -61,7 +64,7 @@
         left: 55%;
         width: 100%;
         height: 100%;
-        background: #484848;
+        background: #ec6505;
         cursor: pointer;
   
         @media screen and (max-width: 680px) {
@@ -69,7 +72,7 @@
           left: 0;
           position: relative;
           width: 100%;
-          height: 40vh;
+          height: 60vh;
         }
         @media screen and (max-width: 460px) {
           position: relative;
@@ -80,28 +83,28 @@
           right: 0;
           left: 0;
           width: 100%;
-          height: 40%;
+          height: 100%;
         }
 
         > img {
-          margin: 20vh 0 0 10vw;
+          margin: 0;
           padding: 2rem;
-          width: 30%;
+          width: 50%;
           height: auto;
           filter: drop-shadow(1px 1px 1px #000000)
           drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.825));
           margin-bottom: 20rem;
-          transform: scale(0.5);
           
         /*   @media screen and (max-width: 680px) {
             margin-top: 30%;
           }
+            */
           @media screen and (max-width: 460px) {
             position: relative;
-            margin: 20% 0 0 10%;
-            width: 80%;
+            margin: 10% auto 10%;
+            width: 100%;
             height: unset;
-          } */
+          } 
         }
       }
       .details {
@@ -119,7 +122,7 @@
         }
         @media screen and (max-width: 460px) {
           position: relative;
-          padding: 0 0 0 4rem;
+          padding: 0 0 0 2rem;
           margin: 0 auto;
           top: 0%;
           width: 100%;
