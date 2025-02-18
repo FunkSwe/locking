@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
-import { toast, Toaster } from 'react-hot-toast'; // Added Toaster import
 import { motion } from 'framer-motion';
 import { FcCheckmark } from 'react-icons/fc';
 import PageTransition from '@/components/PageTransition';
@@ -17,6 +16,7 @@ const Contact = () => {
   });
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
   const [recaptchaToken, setRecaptchaToken] = useState(null);
+  const [notification, setNotification] = useState(null);
 
   const navigate = useNavigate();
   const form = useRef();
@@ -38,29 +38,38 @@ const Contact = () => {
     setRecaptchaToken(null);
   };
 
+  // Function to show a notification for 3 seconds
+  const showNotification = (message, type = 'success') => {
+    setNotification({ message, type });
+    setTimeout(() => {
+      setNotification(null);
+    }, 3000);
+  };
+
   const validateFields = () => {
     const { name, email, message } = formData;
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (name.length < 3) {
-      toast.error('Name must be at least 3 characters long.');
+      showNotification('Name must be at least 3 characters long.', 'error');
       return false;
     }
 
     if (!emailPattern.test(email)) {
-      toast.error(
-        'Please enter a valid email address (e.g., example@example.com).'
+      showNotification(
+        'Please enter a valid email address (e.g., example@example.com).',
+        'error'
       );
       return false;
     }
 
     if (message.length < 20) {
-      toast.error('Message must be at least 20 characters long.');
+      showNotification('Message must be at least 20 characters long.', 'error');
       return false;
     }
 
     if (!recaptchaToken) {
-      toast.error('Please complete the reCAPTCHA.');
+      showNotification('Please complete the reCAPTCHA.', 'error');
       return false;
     }
 
@@ -82,8 +91,9 @@ const Contact = () => {
         .then(
           (result) => {
             resetForm();
-            toast.success(
-              'Thank you for reaching out to Funkcamp! We will get back to you soon.'
+            showNotification(
+              'Thank you for reaching out to Funkcamp! We will get back to you soon.',
+              'success'
             );
             recaptchaRef.current.reset();
 
@@ -93,7 +103,10 @@ const Contact = () => {
           },
           (error) => {
             console.error(error.text);
-            toast.error('Failed to send message, please try again.');
+            showNotification(
+              'Failed to send message, please try again.',
+              'error'
+            );
           }
         )
         .finally(() => setIsButtonDisabled(false));
@@ -102,6 +115,22 @@ const Contact = () => {
 
   const onReCAPTCHAChange = (token) => {
     setRecaptchaToken(token);
+  };
+
+  // Custom Notification component with inline styles
+  const Notification = ({ message, type }) => {
+    const style = {
+      position: 'fixed',
+      top: '20px',
+      right: '20px',
+      backgroundColor: type === 'error' ? '#ff4d4f' : '#52c41a',
+      color: '#fff',
+      padding: '10px 20px',
+      borderRadius: '5px',
+      zIndex: 1000,
+      boxShadow: '0 2px 6px rgba(0,0,0,0.3)',
+    };
+    return <div style={style}>{message}</div>;
   };
 
   return (
@@ -195,8 +224,10 @@ const Contact = () => {
           }}
         />
       </motion.form>
-      {/* Toaster for displaying toast notifications */}
-      <Toaster />
+      {/* Render custom notification if it exists */}
+      {notification && (
+        <Notification message={notification.message} type={notification.type} />
+      )}
     </div>
   );
 };
