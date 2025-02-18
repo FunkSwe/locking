@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
-import { toast } from 'react-hot-toast';
+import { toast, Toaster } from 'react-hot-toast'; // Added Toaster import
 import { motion } from 'framer-motion';
 import { FcCheckmark } from 'react-icons/fc';
 import PageTransition from '@/components/PageTransition';
@@ -195,6 +195,8 @@ const Contact = () => {
           }}
         />
       </motion.form>
+      {/* Toaster for displaying toast notifications */}
+      <Toaster />
     </div>
   );
 };
