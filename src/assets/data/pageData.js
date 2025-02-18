@@ -67,6 +67,15 @@ export const teacherData = [
   },
   {
     id: 2,
+    name: 'Tony Gogo',
+    country: 'FR',
+    img: '91.png',
+    title: 'Anthony Foster',
+    subtitle: 'Gogo Brothers',
+    desc: 'Tony “Gogo” Foster, better known as Tony Gogo, is a pioneering figure in street dance and a foundational member of the Original Go-Go Brothers. Born and raised in Los Angeles, Tony burst onto the scene during the formative years of Locking, quickly captivating audiences with his explosive energy and innovative style. His signature move—the "Gogo Glide," a fluid, dynamic step that seamlessly blends precision and rhythm—became a defining element of his performances and a favorite among fans.Tony’s artistry and commitment helped propel Locking into the mainstream, influencing not only his peers but also a new generation of dancers. Throughout his career, he has graced stages from local dance battles to iconic television shows, sharing the infectious spirit of street dance wherever he goes. Beyond performing, Tony has dedicated himself to mentoring aspiring dancers and preserving the rich legacy of Locking, ensuring that its vibrant history continues to inspire worldwide. Today, Tony Gogo is celebrated as an OG of Locking—a true innovator whose enduring influence keeps the heartbeat of street dance alive.',
+  },
+  {
+    id: 3,
     name: 'Willow Evann',
     country: 'FR',
     img: '21.png',
@@ -75,7 +84,7 @@ export const teacherData = [
     desc: 'Willow Evann is a versatile French artist celebrated for his influence in the locking dance style and recent ventures into sculpture and visual arts. Known initially for his powerful and expressive approach to locking, he has competed and judged internationally, bringing a unique blend of technical skill and artistry to the stage. In my own mind Willow is the definition of Funk & Soul. He won several battles and has judged and taught around the world. In addition to his dance career, Willow has expanded into sculpture and mixed media installations. His recent exhibition, “Induku Enhle Ikhiwa Ezizweni,” hosted by 31 PROJECT in Paris, showcases his sculptural work that reflects on African and French heritage, identity, and social narratives. This series combines his interests in material, form, and digital media, adding a new dimension to his creative portfolio.\n\nHis journey into visual arts also includes photography, which he began to capture the essence of dance movement. Willow’s artistic evolution underscores his commitment to expressing cultural identity and challenging societal perceptions through various art forms.',
   },
   {
-    id: 3,
+    id: 4,
     name: 'The Rubberband Man',
     country: 'US/SWE',
     img: '31.png',
@@ -85,7 +94,7 @@ export const teacherData = [
   },
 
   {
-    id: 4,
+    id: 5,
     name: 'Funky Asparagus',
     country: 'SWE',
     img: '41.png',
@@ -94,7 +103,7 @@ export const teacherData = [
     desc: 'Emanuel "Funky Asparagus" Schutt, also known as "Manne", is one of the first lockers in Sweden to have mastered the fundamentals of locking. Initially self-taught, he later learned the art form directly from the pioneers. Known for his strong freestyle, dedication to locking & creative choreography, he has taught in Stockholm for 20+ years, offering both hobby courses and professional training at Danscenter Stockholm, Balettakademien, DOCH amongst many other schools. Manne has been involved in numerous productions, teaching at top schools, and competing in various competitions. As a dedicated photographer and dancer, he has significantly influenced dancers in Sweden, the Nordic region & worldwide. He has much to share with the community.',
   },
   {
-    id: 5,
+    id: 6,
     name: 'Prime (DJ)',
     country: 'SWE',
     img: '51.png',
@@ -103,7 +112,7 @@ export const teacherData = [
     desc: 'Patrik "Prime" Helge is a respected Swedish dancer and one of the first hiphop pioneers in Sweden and master in the styles of popping and locking. Celebrated for his dedication to the fundamentals, funk & powerful technique, he has been teaching for over 30+ years and was a member of the influential dance crews Moves per Minute and Mass Destruction. Prime is also a prominent DJ, known as DJ Prime, and has been deeply involved in the Swedish hip-hop scene since it first arrived 40 years ago. Known for his dedication to teaching, he has inspired many generations of dancers by blending tradition with innovation.',
   },
   {
-    id: 6,
+    id: 7,
     name: 'Arvidos',
     country: 'SWE',
     img: '61.png',
@@ -112,7 +121,7 @@ export const teacherData = [
     desc: 'Arvid "Arvidos" Håkansson is a prominent figure in the global locking scene, recognized for his remarkable precision and vibrant energy. Arvidos has solidified his place in dance through significant achievements, including winning the prestigious "Locking Forever" battle at Summer Dance Forever 2024 in Amsterdam. This event, held annually, brings together top dancers worldwide, and Arvidos\'s victory here reinforces his reputation as a top-tier locker.\n\nRecently, Arvidos also served as a judge at the Locking Forever battle in Japan, showcasing his expertise and influence within the international dance community. His contributions reflect his dedication to advancing the locking style and nurturing new talent on a global stage.',
   },
   {
-    id: 7,
+    id: 8,
     name: 'Sammi-Jo',
     country: 'UK',
     img: '71.png',
@@ -121,7 +130,7 @@ export const teacherData = [
     desc: 'Sammi-Jo has been a keen student of the FUNK for many years specialising in New Jack Swing/Old School Hip Hop, Popping and Locking. She’s learnt from many pioneers and teachers from Don Campbell to Greg, Shabba Doo to Scoo B Doo, Suga Pop to UK pioneers, Jimmy Williams and Fred ‘The Realness’ Folkes. Sammi-Jo’s main drive is the funk, evident in her weekly choreographic classes. Specialising in breaking down movement, musicality, grooves, social dances and Campbellocking/ Locking technique; she always brings great energy and fun while teaching. Personal trainer and gym instructor, Sam lectures and teaches around the UK at universities, academies and for street dance crews. She’s toured with James Brown’s music director with UK artist Omar MBE, performed for Nike, Red Bull Dance, Pay The Cost To Be The Boss and numerous times at Breakin’ Convention with The Locksmiths Dance Company.',
   },
   {
-    id: 8,
+    id: 9,
     name: 'Rob-One',
     country: 'Swe',
     img: '81.png',

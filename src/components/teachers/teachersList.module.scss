@@ -38,6 +38,8 @@
   .desc {
     padding: 0.5rem 1rem;
     margin: 0 auto;
+    font-size: 1.5rem;
+    font-weight: bolder;
   }
   p {
     margin: 0 auto;
@@ -83,7 +85,7 @@
 
   @media (min-width: 768px) {   
     grid-template-columns: repeat(3, 1fr);
-    height: 100%;
+    height: 0;
     display: grid;
   }
 }
@@ -102,6 +104,6 @@
   z-index: 5;
 
   @media (min-width: 768px) {
-    padding: 5rem 0 0;
+    padding: 0;
   }
 }

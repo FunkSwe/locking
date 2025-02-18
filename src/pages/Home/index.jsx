@@ -54,9 +54,10 @@ const Home = () => {
             We are excited to welcome everyone who will join us for Funkcamp
             Sweden 2025!
             <br />
-            We’re proud to have 3/4 of the original 2005 lineup returning: the
-            legendary OG Skeeter Rabbit, Prime, and Damon Frost. Sadly, the only
-            one missing will be Dave Gregory "Campbellock Jr" Pope 🕊️.
+            We’re proud to have the legendary Tony Gogo, OG Skeeter Rabbit (will
+            have a lecture online during the camp), Prime, and Damon Frost.
+            Sadly, the only one missing will be Dave Gregory "Campbellock Jr"
+            Pope 🕊️.
             <br />
             In addition, we’re thrilled to have Manne Schütt who's been part of
             the camps since 2005 and Willow Evann from France, both key

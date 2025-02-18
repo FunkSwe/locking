@@ -11,9 +11,10 @@ import Img5 from '/teachers/5.png';
 import Img6 from '/teachers/6.png';
 import Img7 from '/teachers/7.png';
 import Img8 from '/teachers/8.png';
-import ToolT from '../tooltip/ToolT';
+import Img9 from '/teachers/9.png';
+/* import ToolT from '../tooltip/ToolT'; */
 import Teacher from './Teacher';
-import { AnimatedText } from '../animations/AnimatedText';
+/* import { AnimatedText } from '../animations/AnimatedText'; */
 
 const teacherData = [
   {
@@ -25,19 +26,25 @@ const teacherData = [
     id: 1,
   },
   {
+    name: 'Tony GoGo',
+    title: 'Super Powers',
+    description: 'Pure Funk - Character - Grooves, Sensei',
+    image: Img9,
+    id: 2,
+  },
+  {
     name: 'Willow Evann',
     title: 'Super Powers',
-    description:
-      'Pure Funk - Character - Grooves, Playfullness, Sooouuul brotha no.1',
+    description: 'Soul - Funk - Grooves, Playfullness, Sooouuul brotha no.1',
     image: Img2,
-    id: 2,
+    id: 3,
   },
   {
     name: 'Damon Frost',
     title: 'Super Powers',
     description: 'Style and Grace - Attitude - Maturity, Fierce, Powerful',
     image: Img3,
-    id: 3,
+    id: 4,
   },
   {
     name: 'Funky Asparagus',
@@ -45,7 +52,7 @@ const teacherData = [
     description:
       'Pure Funk - Attitude - Unique, powerful, playfullness, perfectionism',
     image: Img4,
-    id: 4,
+    id: 5,
   },
   {
     name: 'Prime',
@@ -53,7 +60,7 @@ const teacherData = [
     description:
       'Character - Style and Grace - Flawless technique, precision, stunts, fundamentals',
     image: Img5,
-    id: 5,
+    id: 6,
   },
   {
     name: 'Arvidos',
@@ -61,21 +68,21 @@ const teacherData = [
     description:
       'Character - Style and Grace - Flawless technique, precision, stunts, fundamentals',
     image: Img6,
-    id: 6,
+    id: 7,
   },
   {
     name: 'Sam-Samurai',
     title: 'Super Powers',
     description: 'Style and Grace - Pure funk, soulful, strong fundamentals',
     image: Img7,
-    id: 7,
+    id: 8,
   },
   {
     name: 'Rob-One',
     title: 'Super Powers',
     description: 'Energy - Power - Strong fundamentals - Creativity',
     image: Img8,
-    id: 8,
+    id: 9,
   },
 ];
 
@@ -103,16 +110,23 @@ const TeachersList = () => {
         }}
         transition={{ duration: 1.2, delay: 2, ease: 'easeInOut' }}
       >
-        We are proud to have this great line up, and 3/4 teachers from funkcamp
-        2005
+        We are proud to have this great line up!
       </motion.p>
-      <div className={styles.tooltip_wrapper}>
+      {/*  <div className={styles.tooltip_wrapper}>
         <div className={styles.grid_item}>
           <ToolT
             title='The historian'
             description='Speaker of truths and protector of the artform'
           >
             <p>OG Skeeter Rabbit</p>
+          </ToolT>
+        </div>
+        <div className={styles.grid_item}>
+          <ToolT
+            title='The Funk Master'
+            description='Spreading the joy of dance & locking'
+          >
+            <p>Tony GoGo</p>
           </ToolT>
         </div>
         <div className={styles.grid_item}>
@@ -155,7 +169,7 @@ const TeachersList = () => {
             <p>Arvidos</p>
           </ToolT>
         </div>
-      </div>
+      </div> */}
       <motion.div className={styles.teachers_images}>
         {teacherData.map(({ id, image, name }) => (
           <Teacher key={id} id={id} name={name} image={image} />

@@ -33,6 +33,7 @@ const Teacher = ({ id, name, image }) => {
         loader={<div>Loading...</div>}
         unloader={<div>Failed to load image</div>}
       />
+      <p>{name}</p>
     </motion.div>
   );
 };

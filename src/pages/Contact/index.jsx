@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-hot-toast';
@@ -12,8 +12,8 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: 'Waiting List', // Default to 'Waiting List'
-    message: 'I want to be on the waiting list', // Pre-filled for 'Waiting List'
+    subject: 'Question', // Fixed subject
+    message: '',
   });
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
   const [recaptchaToken, setRecaptchaToken] = useState(null);
@@ -31,8 +31,8 @@ const Contact = () => {
     setFormData({
       name: '',
       email: '',
-      subject: 'Waiting List',
-      message: 'I want to be on the waiting list',
+      subject: 'Question',
+      message: '',
     });
     form.current.reset();
     setRecaptchaToken(null);
@@ -82,12 +82,9 @@ const Contact = () => {
         .then(
           (result) => {
             resetForm();
-            const successMessage =
-              formData.subject === 'Waiting List'
-                ? 'Your request to join the waiting list has been received!'
-                : 'Thank you for reaching out to Funkcamp! We will get back to you soon.';
-
-            toast.success(successMessage);
+            toast.success(
+              'Thank you for reaching out to Funkcamp! We will get back to you soon.'
+            );
             recaptchaRef.current.reset();
 
             setTimeout(() => {
@@ -114,18 +111,18 @@ const Contact = () => {
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.4, delay: 0.4, ease: 'easeOut' }}
       >
-        Contact &
+        Contact
       </motion.h2>
       <motion.h2
         initial={{ x: -300, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.4, delay: 0.6, ease: 'easeOut' }}
       >
-        Registration
+        Funkcamp
       </motion.h2>
       <section className='px-12 md:px-20 mb-40'>
         <p className='max-w-xl pt-8 text-lg leading-7 md:text-xl'>
-          OBS! Registration is currently closed until january 2025, but you can add yourself to the waiting list
+          Have a question about Funkcamp? Feel free to send us your inquiry.
         </p>
       </section>
       <motion.form
@@ -165,24 +162,6 @@ const Contact = () => {
             <FcCheckmark />
           </span>
         </div>
-        <label>Subject</label>
-        <div className={styles.input_field}>
-          <select
-            name='subject'
-            value={formData.subject}
-            onChange={onChangeHandler}
-            required
-          >
-            <option value='Registration' disabled>
-              Registration (currently closed)
-            </option>
-            <option value='Waiting List'>Waiting List</option>
-            <option value='Question'>Question</option>
-          </select>
-          <span className={styles.check_icon}>
-            <FcCheckmark />
-          </span>
-        </div>
         <label>Message</label>
         <div className={styles.input_field}>
           <textarea
@@ -197,6 +176,8 @@ const Contact = () => {
             <FcCheckmark />
           </span>
         </div>
+        {/* Hidden subject field */}
+        <input type='hidden' name='subject' value={formData.subject} />
         <ReCAPTCHA
           ref={recaptchaRef}
           sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}

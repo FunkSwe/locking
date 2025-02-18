@@ -12,8 +12,7 @@ const Info = () => {
       <h2>
         <span>17th - 20th of april</span>
       </h2>
-      <p>(Times are set, full schedule coming up later)</p>
-
+      <p>(Dates are set, full schedule coming up later)</p>
       <br />
       <h4>Price: 230&euro;</h4>
       <p style={{ color: '#B8A054' }}>
@@ -25,7 +24,7 @@ const Info = () => {
       </p>
       {/*  <Image src={IMGBIO} alt='funkcamp' width={'100%'} height={'auto'} /> */}
       <div className={styles.adress}>
-        <h4>Main Venue!</h4>
+        <h4>Main Venues!</h4>
         <h2 className={styles.name}>
           Danscenter <span>Fryshuset</span>
         </h2>
@@ -35,7 +34,7 @@ const Info = () => {
         </p>
         <p>This is due to the time schedule and opening hours...</p>
         <p>But saturday and sunday is at Danscenter 100%</p>
-        <p>DANCE STUDIO 1 & 2 (bottom floor)</p>
+        <p>DANCE STUDIO 1, 2 & 3</p>
         <h4 style={{ textAlign: 'left', marginTop: '2rem' }}>
           Adress for venue:
         </h4>
@@ -53,7 +52,6 @@ const Info = () => {
           Adress link to Danscenter Stockholm
         </Link>
       </div>
-
       <div className={styles.adress}>
         <p>Travel in Stockholm please follow the link</p>
         <a rel='stylesheet' href='https://sl.se/en/in-english' target='_blank'>
@@ -66,7 +64,6 @@ const Info = () => {
       <p className={styles.schedulestart}>
         Here is a pre- schedule, changes might happen so be on the look out
       </p>
-
       <h3 style={{ textDecoration: 'none' }}>
         <AnimatedText text='Thursday' style='title' />
       </h3>
@@ -75,14 +72,13 @@ const Info = () => {
         17th of april
       </p>
       <ul style={{ textDecoration: 'none' }}>
-        <li>15.30-18.40 Time is set </li>
-        <li>15.30 Welcome and registration - Danscenter</li>
+        <li>Time and schedule coming up soon... </li>
+        <li>Registration - </li>
         {/*  <li>16.00-17.25 Teacher: Not set</li>
         <li>17.30-18.45 Teacher: Not set</li> */}
-        <li>19.00 doors close</li>
+        <li> doors close</li>
         <li>Rest for friday - reload - stretch - Chill</li>
       </ul>
-
       <h3 style={{ textDecoration: 'none' }}>
         <AnimatedText text='Friday' />
       </h3>
@@ -91,13 +87,12 @@ const Info = () => {
         18th of april
       </p>
       <ul style={{ textDecoration: 'none' }}>
-        <li>11.00-16.30 Time is set </li>
+        <li>Schedule is coming up soon... </li>
         {/*  <li>13.30-14.25 Teacher: Not set</li>
         <li>15.30-16.55 Teacher: Not set</li> */}
-        <li>17.00 doors close</li>
-        <li>Some plans in the making for this evening</li>
+        <li> doors close</li>
+        <li>Some plans in the making for this day</li>
       </ul>
-
       <h3 style={{ textDecoration: 'none' }}>
         <AnimatedText text='Saturday' /> {/* + battle event */}
       </h3>
@@ -106,58 +101,92 @@ const Info = () => {
         19th of april
       </p>
       <ul style={{ textDecoration: 'none' }}>
-        <li>11.00-16.30 Time is set </li>
-        {/*  <li>12.30 - 14.00 Teachers: Not set</li>
-        <li>14.00-15.00 Break</li>
-        <li>15.00 - 16.30 Teacher: Not-set</li> */}
         <li>
-          There will be an event done by Stocholm tap-festival, it is really
-          good.
+          11:15–12:30 — Session 1
+          <ul>
+            <li>Group 1: Teacher Willow (Studio 1)</li>
+            <li>Group 2: Teacher Samantha (Studio 2)</li>
+            <li>Group 3: Teacher Manne (Studio 3)</li>
+          </ul>
+        </li>
+        <li>12:30–13:45 — Lunch Break</li>
+        <li>
+          13:45–15:00 — Session 2
+          <ul>
+            <li>Group 1: Teacher Samantha (Studio 3)</li>
+            <li>Group 2: Teacher Manne (Studio 1)</li>
+            <li>Group 3: Teacher Willow (Studio 2)</li>
+          </ul>
+        </li>
+        <li>15:00–15:15 — Short Break</li>
+        <li>
+          15:15–16:30 — Session 3
+          <ul>
+            <li>Group 1: Teacher Manne (Studio 2)</li>
+            <li>Group 2: Teacher Willow (Studio 3)</li>
+            <li>Group 3: Teacher Samantha (Studio 1)</li>
+          </ul>
         </li>
       </ul>
-      <ul style={{ textDecoration: 'none' }}>
-        <li>
-          SOME SOME!!! There is other events in town, more info coming up! Venue
-          to be announced
-        </li>
-        {/*  <li>Locking & Popping 1vs1</li>
-        <li>DJ:s - Boondox, DJenius </li>
-        <li>Judges - Willow & Inxi </li>
-        <li>Host - Mr 1NE-ONE </li>
-        <li>Doors open 17.00</li> */}
-        {/* <li>
-          <Link
-            rel='stylesheet'
-            href='https://www.fasching.se/club-yo/#2024-03-01T23-30'
-            target='_blank'
-          >
-            Link to the event
-          </Link>
-        </li> */}
-        {/*  <li>
-          <Link
-            rel='stylesheet'
-            href='https://maps.app.goo.gl/XxsBN6ZDRc9SVSSz5'
-            target='_blank'
-          >
-            Adress link to Fasching
-          </Link>
-        </li> */}
-        {/*  <div style={{ marginBottom: '2rem' }}></div> */}
-      </ul>
+      <div className={styles.stf}>
+        <h2>KLUBB STF - ALL STYLE BATTLE</h2>
+        <br />
+        <p>
+          The STF All Style Battle is back!! And as always, ALL dance styles are
+          welcome to join in. Come out and compete or just hang for a night with
+          amazing dancers and crazy energy! 🔥🔥🔥
+        </p>
+        <p>MC - 𝗛𝗔𝗞𝗘𝗬 𝗭𝗘𝗥𝗘</p>
+        <p>DJ - 𝗣𝗔𝗧𝗥𝗜𝗞 '𝗣𝗥𝗜𝗠𝗘' 𝗛𝗘𝗟𝗚𝗘</p>
+        <p>Judges -</p>
+        <p>
+          𝗗𝗔𝗠𝗢𝗡 𝗙𝗥𝗢𝗦𝗧 - 𝗝𝗢𝗔𝗡𝗡𝗔 𝗦𝗞𝗬𝗪𝗔𝗟𝗞𝗘𝗥 - 𝗪𝗜𝗟𝗟𝗢𝗪 𝗘𝗩𝗔𝗡𝗡 - 𝗔𝗠𝗕𝗥𝗔 𝗦𝗨𝗖𝗖𝗜 - 𝗡𝗜𝗖𝗢
+          𝗥𝗨𝗕𝗜𝗢
+        </p>{' '}
+        <Link
+          rel='stylesheet'
+          to='https://www.facebook.com/share/15q1Zmqbht/'
+          target='_blank'
+        >
+          Link to the event
+        </Link>
+        <Link rel='stylesheet' to='https://g.co/kgs/34zyBep' target='_blank'>
+          Adress to the event
+        </Link>
+      </div>
+      <div style={{ marginBottom: '2rem' }}></div>
       <h3 /* style={{ textDecoration: 'none' }} */>
         <AnimatedText text='Sunday' />
       </h3>
       {/*  <p style={{ color: 'tomato' }}>Done did with it</p> */}
       <p className={styles.date}>20th of april</p>
       <ul>
-        <li>11.00-16.30 Teachers: Not set</li>
-        <li>11.00 - 12.00 Teacher: Not-set</li>
-        <li>12.00 - 13.00 Teacher: Not-set</li>
-        <li>13.00-14.00 Food Break</li>
-        <li>15.15-16.15 Teacher: Not-set</li>
-        16.15 - 17.00 til closing Q & A - Everybody + Thank you and good bye
-        <li>THE END</li>
+        <li>
+          11:15–12:30 — Session 1
+          <ul>
+            <li>Group 1: Teacher Samantha (Studio 1)</li>
+            <li>Group 2: Teacher Manne (Studio 2)</li>
+            <li>Group 3: Teacher Willow (Studio 3)</li>
+          </ul>
+        </li>
+        <li>12:30–13:45 — Lunch Break</li>
+        <li>
+          13:45–15:00 — Session 2
+          <ul>
+            <li>Group 1: Teacher Manne (Studio 3)</li>
+            <li>Group 2: Teacher Willow (Studio 1)</li>
+            <li>Group 3: Teacher Samantha (Studio 2)</li>
+          </ul>
+        </li>
+        <li>15:00–15:15 — Short Break</li>
+        <li>
+          15:15–16:30 — Session 3
+          <ul>
+            <li>Group 1: Teacher Willow (Studio 2)</li>
+            <li>Group 2: Teacher Samantha (Studio 3)</li>
+            <li>Group 3: Teacher Manne (Studio 1)</li>
+          </ul>
+        </li>
       </ul>
     </div>
   );
