@@ -19,14 +19,6 @@ const Tribute = () => {
       title: 'Give Props to the Pioneers',
       component: <InHeaven />,
     },
-    guests: {
-      title: 'All guests at funkcamp',
-      component: <Guests />,
-    },
-    inspirations: {
-      title: 'Inspirations',
-      component: <Inspirations />,
-    },
   };
 
   return (

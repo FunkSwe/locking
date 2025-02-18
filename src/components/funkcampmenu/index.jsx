@@ -2,27 +2,14 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
-import { toast } from 'react-hot-toast';
-import Swal from 'sweetalert2';
-import {
-  RiLoginCircleLine,
-  RiLogoutCircleLine,
-  RiPencilLine,
-  RiArchive2Line,
-  RiFileCopyLine,
-} from 'react-icons/ri';
-import Avatar from '../avatar/Avatar';
-import Magnetic from '../magnetic/magnetic';
+import { RiFileCopyLine } from 'react-icons/ri';
 import './menu.scss';
-import useAuthStatus from '../../hooks/useAuthStatus';
 
 const menuLinks = [
   { path: '/funkcamp', label: 'Home' },
   { path: '/funkcamp/about', label: 'About' },
   { path: '/funkcamp/tribute', label: 'Tribute' },
   { path: '/funkcamp/media', label: 'Media' },
-  { path: '/funkcamp/posts', label: 'Posts' },
   { path: '/funkcamp/contact', label: 'Contact' },
 ];
 
@@ -31,9 +18,6 @@ const FunkCampMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
-  const auth = getAuth();
-  const [user, setUser] = useState(null);
-  const { authenticated, isAdmin } = useAuthStatus();
   const [copySuccess, setCopySuccess] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -55,7 +39,7 @@ const FunkCampMenu = () => {
   const copyToClipboard = () => {
     navigator.clipboard.writeText('funkcampswe@gmail.com').then(() => {
       setCopySuccess(true);
-      setTimeout(() => setCopySuccess(false), 2000); // Reset message after 2 seconds
+      setTimeout(() => setCopySuccess(false), 2000);
     });
   };
 
@@ -108,43 +92,6 @@ const FunkCampMenu = () => {
     setIsMenuOpen(false); // Close the menu on route change
   }, [location.pathname]);
 
-  // Check user authentication status
-  useEffect(() => {
-    const checkAuthStatus = () => {
-      onAuthStateChanged(auth, (user) => {
-        if (user) {
-          setUser(user);
-        } else {
-          setUser(null);
-        }
-      });
-    };
-    checkAuthStatus();
-  }, [auth]);
-
-  const handleLogout = async () => {
-    const result = await Swal.fire({
-      title: 'Logout',
-      text: 'Are you sure you want to logout?',
-      icon: 'question',
-      showCancelButton: true,
-      confirmButtonColor: '#e3f68c',
-      cancelButtonColor: '#ef7575',
-      confirmButtonText: 'Logout',
-      cancelButtonText: 'Cancel',
-    });
-
-    if (result.isConfirmed) {
-      try {
-        await signOut(auth);
-        navigate('/');
-        toast.success('Logged out successfully!');
-      } catch (error) {
-        toast.error('An error occurred while logging out. Please try again.');
-      }
-    }
-  };
-
   return (
     <div className={`menu-container`} ref={container}>
       <div
@@ -184,25 +131,6 @@ const FunkCampMenu = () => {
                   </div>
                 </div>
               ))}
-              <div className='icons-menu'>
-                {authenticated && isAdmin && (
-                  <>
-                    <Magnetic>
-                      <Link
-                        to={`/funkcamp/myblogs/${user.uid}`}
-                        className='menu-link-icon'
-                      >
-                        <RiArchive2Line />
-                      </Link>
-                    </Magnetic>
-                    <Magnetic>
-                      <Link to='/funkcamp/write' className='menu-link-icon'>
-                        <RiPencilLine />
-                      </Link>
-                    </Magnetic>
-                  </>
-                )}
-              </div>
             </div>
             <div className='menu-info'>
               <div className='menu-info-col'>
@@ -216,32 +144,6 @@ const FunkCampMenu = () => {
           </div>
         </div>
         <div className='flex gap-12'>
-          <div className='auth-controls'>
-            {/* Show sign-in/sign-out buttons based on authentication */}
-            {!authenticated ? (
-              <Link
-                to='/funkcamp/sign-in'
-                className='menu-link rounded-md border-solid border-white border-2 hover:bg-orange-700 transition-all ease-in-out duration-500'
-              >
-                {/*  <RiLoginCircleLine size={32} /> */} Login
-              </Link>
-            ) : (
-              <>
-                <button
-                  onClick={handleLogout}
-                  className='menu-link rounded-md border-solid border-white border-2 hover:bg-orange-700 transition-all ease-in-out duration-500 '
-                >
-                  {/*  <RiLogoutCircleLine size={32} /> */} Logout
-                </button>
-                <Avatar
-                  src={
-                    user.photoURL || '../../assets/images/default-avatar.png'
-                  }
-                />
-                <p>: {user.displayName || 'Anonymous'}</p>
-              </>
-            )}
-          </div>
           <div className='menu-open' onClick={toggleMenu}>
             <p className='font-alt'>Menu</p>
           </div>
