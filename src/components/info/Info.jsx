@@ -96,8 +96,8 @@ const Info = () => {
       </p>
       <ul style={{ textDecoration: 'none' }}>
         <li>Schedule is coming up soon... </li>
-        <li>13.00-14.00 Teacher: Tony Gogo / / Not set / Studio 8 / 9</li>
-        <li>14.15-15.15 Teacher: Tony Gogo / / Not set / Studio 8 / 9</li>
+        <li>13.00-14.00 Teacher: Tony Gogo / Not set / Studio 8 / 9</li>
+        <li>14.15-15.15 Teacher: Tony Gogo / Not set / Studio 8 / 9</li>
         <li>15.15 - 17.00 — Lunch break</li>
         <li>17.00-21.00 Jam/Battle</li>
         <li> doors close</li>
