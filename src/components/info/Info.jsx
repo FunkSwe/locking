@@ -81,9 +81,9 @@ const Info = () => {
       <ul style={{ textDecoration: 'none' }}>
         <li>Pre-schedule</li>
         <li>Registration - 15.30-16.00 </li>
-        <li>16.00-17.15 Teacher: Arvidos / </li>
-        <li>17.30-18.45 Teacher: Arvidos / </li>
-        <li>19.00-20.30 Teacher: Tony GOGO!</li>
+        <li>16.00-17.15 Teacher: Arvidos / Not set / Studio 8 / 9</li>
+        <li>17.30-18.45 Teacher: Arvidos / Not set / Studio 8 / 9</li>
+        <li>19.00-20.30 Teacher: Tony GOGO! The BlackBox</li>
         <li> doors close</li>
         <li>Rest for friday - reload - stretch - Chill</li>
       </ul>
@@ -96,8 +96,8 @@ const Info = () => {
       </p>
       <ul style={{ textDecoration: 'none' }}>
         <li>Schedule is coming up soon... </li>
-        <li>13.00-14.00 Teacher: Tony Gogo / </li>
-        <li>14.15-15.15 Teacher: Tony Gogo / </li>
+        <li>13.00-14.00 Teacher: Tony Gogo / / Not set / Studio 8 / 9</li>
+        <li>14.15-15.15 Teacher: Tony Gogo / / Not set / Studio 8 / 9</li>
         <li>15.15 - 17.00 — Lunch break</li>
         <li>17.00-21.00 Jam/Battle</li>
         <li> doors close</li>
