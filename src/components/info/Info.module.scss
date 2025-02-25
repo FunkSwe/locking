@@ -17,27 +17,18 @@
         color: $color-orange;
         filter: drop-shadow(5px 5px 10px rgba(0,0,0,.335));
 
-        &:nth-child(2) {
-          font-size: $font-size-xl;
-        }
-
         > span {
           font-size: $font-size-l;
         }
       }
 
 
-      .name {
-       font-size: clamp(2rem, 5vw, 6rem);
-       font-weight: 800;
-       filter: drop-shadow(5px 5px 10px rgba(0,0,0,.335));
-      }
+     
       
       h4 {
         margin-top: 1rem;
         font-family: $font-alt;
-        margin-top: 2rem;
-        font-size: clamp($font-size-xl, 1rem + 2vw, $font-size-xxl);
+        font-size: clamp($font-size-l, 1rem + 2vw, $font-size-xl);
         color: $color-client-3;
         text-align: left;
         letter-spacing: 1px;
@@ -64,14 +55,19 @@
       }
     }
 
-    &>.adress {
+    .subway {
+      color: $color-yellow;
+    }
+
+    & .adress {
+      font-size: $font-size-l;
       margin: 1rem 0;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       justify-content: flex-start;
 
-      &>p {
+      & p {
         margin: 0;
         padding: 1rem 0.5rem;
         align-self: flex-start;

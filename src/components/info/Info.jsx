@@ -8,36 +8,43 @@ import { AnimatedText } from '../animations/AnimatedText';
 const Info = () => {
   return (
     <div className={styles.info}>
-      <h4>FUNKCAMP 2025</h4>
-      <h2>
-        <span>17th - 20th of april</span>
-      </h2>
-      <p>(Dates are set, full schedule coming up later)</p>
-      <br />
-      <h4>Price: 230&euro;</h4>
-      <p style={{ color: '#B8A054' }}>
-        ✨This includes all classes/workshops✨
-      </p>
-      <p style={{ color: '#FFD700' }}>
-        "Please note: Accommodation, including meals and hotel stays, is not
-        included."
-      </p>
-      {/*  <Image src={IMGBIO} alt='funkcamp' width={'100%'} height={'auto'} /> */}
       <div className={styles.adress}>
-        <h4>Main Venues!</h4>
+        <h3>Main Venues!</h3>
+
+        <h2 className={styles.name}>
+          SKH <span>Stockholms konstnärliga högskola</span>
+        </h2>
+        <p style={{ textAlign: 'left', marginTop: '2rem' }}>
+          Adress to SKH:
+          <br />
+          <span className={styles.subway}>
+            Subway station: Tekniska högskolan (10min walk)
+          </span>
+        </p>
+        <p>
+          Brinellvägen 58
+          <br />
+          <br />
+          114 28 Stockholm, Sweden
+        </p>
+        <Link
+          rel='stylesheet'
+          to='https://www.google.com/search?q=skh+brinellv%C3%A4gen+58&sca_esv=fb875f67547db07d&rlz=1C1BYYL_svSE957SE957&tbm=lcl&sxsrf=AHTn8zpQI6e_faFHWzjoOGF8Qa_Ch_flpg%3A1740391216234&ei=MEO8Z-fzDfDEwPAPmsK1yAM&ved=0ahUKEwjny9rBhtyLAxVwIhAIHRphDTkQ4dUDCAo&uact=5&oq=skh+brinellv%C3%A4gen+58&gs_lp=Eg1nd3Mtd2l6LWxvY2FsIhRza2ggYnJpbmVsbHbDpGdlbiA1ODICECYyCBAAGIAEGKIEMgUQABjvBTIIEAAYgAQYogQyBRAAGO8FMgUQABjvBUi-C1DGAlibCXAAeACQAQCYAYQBoAH1AqoBAzMuMbgBA8gBAPgBAZgCBKACkAPCAgYQABgWGB6YAwCIBgGSBwMyLjKgB_gR&sclient=gws-wiz-local'
+          target='_blank'
+        >
+          Adress link to SKH - Stockholms konstnärliga högskola
+        </Link>
+
         <h2 className={styles.name}>
           Danscenter <span>Fryshuset</span>
         </h2>
-        <p>
-          We are right now looking in to an other studio thursday friday so it
-          might change
+        <p style={{ textAlign: 'left', marginTop: '2rem' }}>
+          Adress to Danscenter:
+          <br />
+          <span className={styles.subway}>
+            Subway station: Gullmarsplan (tram Mårtensdal)
+          </span>
         </p>
-        <p>This is due to the time schedule and opening hours...</p>
-        <p>But saturday and sunday is at Danscenter 100%</p>
-        <p>DANCE STUDIO 1, 2 & 3</p>
-        <h4 style={{ textAlign: 'left', marginTop: '2rem' }}>
-          Adress for venue:
-        </h4>
         <p>
           Mårtensdalsgatan 2-8
           <br />
@@ -72,10 +79,11 @@ const Info = () => {
         17th of april
       </p>
       <ul style={{ textDecoration: 'none' }}>
-        <li>Time and schedule coming up soon... </li>
-        <li>Registration - </li>
-        {/*  <li>16.00-17.25 Teacher: Not set</li>
-        <li>17.30-18.45 Teacher: Not set</li> */}
+        <li>Pre-schedule</li>
+        <li>Registration - 15.30-16.00 </li>
+        <li>16.00-17.15 Teacher: Arvidos / </li>
+        <li>17.30-18.45 Teacher: Arvidos / </li>
+        <li>19.00-20.30 Teacher: Tony GOGO!</li>
         <li> doors close</li>
         <li>Rest for friday - reload - stretch - Chill</li>
       </ul>
@@ -88,8 +96,10 @@ const Info = () => {
       </p>
       <ul style={{ textDecoration: 'none' }}>
         <li>Schedule is coming up soon... </li>
-        {/*  <li>13.30-14.25 Teacher: Not set</li>
-        <li>15.30-16.55 Teacher: Not set</li> */}
+        <li>13.00-14.00 Teacher: Tony Gogo / </li>
+        <li>14.15-15.15 Teacher: Tony Gogo / </li>
+        <li>15.15 - 17.00 — Lunch break</li>
+        <li>17.00-21.00 Jam/Battle</li>
         <li> doors close</li>
         <li>Some plans in the making for this day</li>
       </ul>

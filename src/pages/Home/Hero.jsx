@@ -50,7 +50,7 @@ const Hero = () => {
             <HashLink to='/funkcamp/#teachers'>Teachers</HashLink>
           </Button>
           <Button variant='outline'>
-            <Link to='/funkcamp/contact'>Register</Link>
+            <Link to='/funkcamp/contact'>Contact</Link>
           </Button>
         </div>
       </div>
