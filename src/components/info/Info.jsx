@@ -75,7 +75,9 @@ const Info = () => {
         <AnimatedText text='Thursday' style='title' />
       </h3>
       <h2 className={styles.name}>
-        <span>Venue:</span>&nbsp;&nbsp;SKH
+        <span>Venue:</span>
+        <br />
+        &nbsp;&nbsp;SKH
       </h2>
       {/* <p style={{ color: 'tomato' }}>Done did with it</p> */}
       <p className={styles.date} style={{ textDecoration: 'none' }}>
@@ -94,7 +96,9 @@ const Info = () => {
         <AnimatedText text='Friday' />
       </h3>
       <h2 className={styles.name}>
-        <span>Venue:</span>&nbsp;&nbsp;SKH
+        <span>Venue:</span>
+        <br />
+        &nbsp;&nbsp;SKH
       </h2>
       {/* <p style={{ color: 'tomato' }}>Done did with it</p> */}
       <p className={styles.date} style={{ textDecoration: 'none' }}>
@@ -113,7 +117,9 @@ const Info = () => {
         <AnimatedText text='Saturday' /> {/* + battle event */}
       </h3>
       <h2 className={styles.name}>
-        <span>Venue:</span>&nbsp;&nbsp;Danscenter
+        <span>Venue:</span>
+        <br />
+        &nbsp;&nbsp;Danscenter
       </h2>
       {/* <p style={{ color: 'tomato' }}>Done did with it</p> */}
       <p className={styles.date} style={{ textDecoration: 'none' }}>
@@ -178,7 +184,9 @@ const Info = () => {
         <AnimatedText text='Sunday' />
       </h3>
       <h2 className={styles.name}>
-        <span>Venue:</span>&nbsp;&nbsp;Danscenter
+        <span>Venue:</span>
+        <br />
+        &nbsp;&nbsp;Danscenter
       </h2>
       {/*  <p style={{ color: 'tomato' }}>Done did with it</p> */}
       <p className={styles.date}>20th of april</p>
