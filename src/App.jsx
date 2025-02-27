@@ -14,6 +14,7 @@ import LockingHome from './pages/locking/Home';
 import HistoryPage from './pages/locking/history-page';
 import LockingMenu from './components/LockingMenu';
 import Item from './pages/item/Item';
+import Schedule from './pages/Schedule';
 
 const App = () => {
   const location = useLocation();
@@ -28,6 +29,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Landing />} />
         <Route path='/funkcamp' element={<Home />} />
+        <Route path='/funkcamp/schedule' element={<Schedule />} />
         <Route path='/funkcamp/about' element={<About />} />
         <Route path='/funkcamp/media' element={<Media />} />
         <Route path='/funkcamp/tribute' element={<Tribute />} />

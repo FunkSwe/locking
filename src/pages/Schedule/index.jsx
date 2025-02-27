@@ -31,47 +31,22 @@ const Schedule = () => {
   }, []);
 
   return (
-    <main className='w-screen h-full'>
-      <section className='px-8 md:px-60 mb-40'>
-        <AnimatedText text='Welcome!' className='' />
+    <main className='w-screen h-full pt-60'>
+      <section className='px-8 md:px-60 mb-10'>
+        <AnimatedText text='Schedule!' className='' />
         <SlideInLeft>
-          <p className='max-w-xl md:max-w-4xl pt-8 text-lg leading-7 md:text-xl'>
-            We are excited to welcome everyone who will join us for Funkcamp
-            Sweden 2025!
-            <br />
-            We’re proud to have the legendary Tony Gogo, OG Skeeter Rabbit (will
-            have a lecture online during the camp), Prime, and Damon Frost.
-            Sadly, the only one missing will be Dave Gregory "Campbellock Jr"
-            Pope 🕊️.
-            <br />
-            In addition, we’re thrilled to have Manne Schütt who's been part of
-            the camps since 2005 and Willow Evann from France, both key
-            contributors to the camp.
-            <br />
-            Sammi-Jo from UK who's been dedicated to Locking for a long time,
-            teaching and performing.
-            <br />
-            And last but not least one of Sweden’s finest, the Funk superhero 🔥
-            Arvid Håkansson.
-            <br />
-            <br />
-            While the schedule is still being finalized, the dates are set!
-            Funkcamp 2025 will take place from April 17th to 20th in Stockholm,
-            Sweden. Participants from around the world have already signed up,
-            so don’t miss out! Join the experience by registering via email at
-            funkcampswe@gmail.com or through the contact form on our website.
+          <p className='max-w-xl text-lg leading-7 md:text-xl'>
+            Pre schedule is set - changes might happen be on the look out!
           </p>
-        </SlideInLeft>
-        <SlideInLeft>
-          <p className='max-w-xl pt-8 text-lg leading-7 md:text-xl'>
-            Schedule is not set, but dates are and time are! The camp will take
-            place on 17th - 20th of April 2025, in Stockholm Sweden.
-            <br />
-            We already have participants from around the world. So if you wanna
-            be part of the experience, <br />
-            sign up at funkcampswe@gmail.com or thru the form on the contact
-            page.
+          <p>
+            The camp will be split in to 2 groups thursday and friday and 3
+            groups saturday and sunday
           </p>
+          <p>
+            You will get information of which group you are in before the camp
+            starts
+          </p>
+          <p>Camp registration starts thursday 15.30 at venue: SKH</p>
         </SlideInLeft>
       </section>
       <div className='py-10' id='info'></div>
