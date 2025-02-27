@@ -74,6 +74,9 @@ const Info = () => {
       <h3 style={{ textDecoration: 'none' }}>
         <AnimatedText text='Thursday' style='title' />
       </h3>
+      <h2 className={styles.name}>
+        <span>Venue:</span>&nbsp;&nbsp;SKH
+      </h2>
       {/* <p style={{ color: 'tomato' }}>Done did with it</p> */}
       <p className={styles.date} style={{ textDecoration: 'none' }}>
         17th of april
@@ -81,8 +84,8 @@ const Info = () => {
       <ul style={{ textDecoration: 'none' }}>
         <li>Pre-schedule</li>
         <li>Registration - 15.30-16.00 </li>
-        <li>16.00-17.15 Teacher: Arvidos / Not set / Studio 8 / 9</li>
-        <li>17.30-18.45 Teacher: Arvidos / Not set / Studio 8 / 9</li>
+        <li>16.00-17.15 Teacher: Arvidos / Damon Frost / 8 & 9</li>
+        <li>17.30-18.45 Teacher: Arvidos / Damon Frost / Studio 8 & 9</li>
         <li>19.00-20.30 Teacher: Tony GOGO! The BlackBox</li>
         <li> doors close</li>
         <li>Rest for friday - reload - stretch - Chill</li>
@@ -90,14 +93,17 @@ const Info = () => {
       <h3 style={{ textDecoration: 'none' }}>
         <AnimatedText text='Friday' />
       </h3>
+      <h2 className={styles.name}>
+        <span>Venue:</span>&nbsp;&nbsp;SKH
+      </h2>
       {/* <p style={{ color: 'tomato' }}>Done did with it</p> */}
       <p className={styles.date} style={{ textDecoration: 'none' }}>
         18th of april
       </p>
       <ul style={{ textDecoration: 'none' }}>
-        <li>Schedule is coming up soon... </li>
-        <li>13.00-14.00 Teacher: Tony Gogo / Not set / Studio 8 / 9</li>
-        <li>14.15-15.15 Teacher: Tony Gogo / Not set / Studio 8 / 9</li>
+        <li>Pre-schedule</li>
+        <li>13.00-14.00 Teacher: Tony Gogo / Prime / Studio 8 & 9</li>
+        <li>14.15-15.15 Teacher: Tony Gogo / Prime / Studio 8 & 9</li>
         <li>15.15 - 17.00 — Lunch break</li>
         <li>17.00-21.00 Jam/Battle</li>
         <li> doors close</li>
@@ -106,6 +112,9 @@ const Info = () => {
       <h3 style={{ textDecoration: 'none' }}>
         <AnimatedText text='Saturday' /> {/* + battle event */}
       </h3>
+      <h2 className={styles.name}>
+        <span>Venue:</span>&nbsp;&nbsp;Danscenter
+      </h2>
       {/* <p style={{ color: 'tomato' }}>Done did with it</p> */}
       <p className={styles.date} style={{ textDecoration: 'none' }}>
         19th of april
@@ -168,6 +177,9 @@ const Info = () => {
       <h3 /* style={{ textDecoration: 'none' }} */>
         <AnimatedText text='Sunday' />
       </h3>
+      <h2 className={styles.name}>
+        <span>Venue:</span>&nbsp;&nbsp;Danscenter
+      </h2>
       {/*  <p style={{ color: 'tomato' }}>Done did with it</p> */}
       <p className={styles.date}>20th of april</p>
       <ul>
