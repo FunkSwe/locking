@@ -195,7 +195,7 @@ const Info = () => {
           11:15–12:30 — Session 1
           <ul>
             <li>Group 1: Teacher Samantha (Studio 1)</li>
-            <li>Group 2: Teacher Manne (Studio 2)</li>
+            <li>Group 2: Teacher Not set (Studio 2)</li>
             <li>Group 3: Teacher Willow (Studio 3)</li>
           </ul>
         </li>
@@ -203,7 +203,7 @@ const Info = () => {
         <li>
           13:45–15:00 — Session 2
           <ul>
-            <li>Group 1: Teacher Manne (Studio 3)</li>
+            <li>Group 1: Teacher Not set (Studio 3)</li>
             <li>Group 2: Teacher Willow (Studio 1)</li>
             <li>Group 3: Teacher Samantha (Studio 2)</li>
           </ul>
@@ -214,7 +214,7 @@ const Info = () => {
           <ul>
             <li>Group 1: Teacher Willow (Studio 2)</li>
             <li>Group 2: Teacher Samantha (Studio 3)</li>
-            <li>Group 3: Teacher Manne (Studio 1)</li>
+            <li>Group 3: Teacher Not set (Studio 1)</li>
           </ul>
         </li>
       </ul>
