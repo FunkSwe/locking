@@ -131,25 +131,25 @@ const Info = () => {
           <ul>
             <li>Group 1: Teacher Willow (Studio 1)</li>
             <li>Group 2: Teacher Samantha (Studio 2)</li>
-            <li>Group 3: Teacher Manne (Studio 3)</li>
+            <li>Group 3: Open Session DJ BoonDox (Studio 3)</li>
           </ul>
         </li>
         <li>12:30–13:45 — Lunch Break</li>
         <li>
           13:45–15:00 — Session 2
           <ul>
-            <li>Group 1: Teacher Samantha (Studio 3)</li>
-            <li>Group 2: Teacher Manne (Studio 1)</li>
-            <li>Group 3: Teacher Willow (Studio 2)</li>
+            <li>Group 1: Open Session DJ BoonDox (Studio 3)</li>
+            <li>Group 2: Teacher Willow (Studio 1)</li>
+            <li>Group 3: Teacher Samantha (Studio 2)</li>
           </ul>
         </li>
         <li>15:00–15:15 — Short Break</li>
         <li>
           15:15–16:30 — Session 3
           <ul>
-            <li>Group 1: Teacher Manne (Studio 2)</li>
-            <li>Group 2: Teacher Willow (Studio 3)</li>
-            <li>Group 3: Teacher Samantha (Studio 1)</li>
+            <li>Group 1: Teacher Samantha (Studio 2)</li>
+            <li>Group 2: Open Session DJ BoonDox (Studio 3)</li>
+            <li>Group 3: Teacher Willow (Studio 1)</li>
           </ul>
         </li>
       </ul>
@@ -195,7 +195,7 @@ const Info = () => {
           11:15–12:30 — Session 1
           <ul>
             <li>Group 1: Teacher Samantha (Studio 1)</li>
-            <li>Group 2: Teacher Not set (Studio 2)</li>
+            <li>Group 2: Teacher Manne (Studio 2)</li>
             <li>Group 3: Teacher Willow (Studio 3)</li>
           </ul>
         </li>
@@ -203,7 +203,7 @@ const Info = () => {
         <li>
           13:45–15:00 — Session 2
           <ul>
-            <li>Group 1: Teacher Not set (Studio 3)</li>
+            <li>Group 1: Teacher Manne (Studio 3)</li>
             <li>Group 2: Teacher Willow (Studio 1)</li>
             <li>Group 3: Teacher Samantha (Studio 2)</li>
           </ul>
@@ -214,10 +214,18 @@ const Info = () => {
           <ul>
             <li>Group 1: Teacher Willow (Studio 2)</li>
             <li>Group 2: Teacher Samantha (Studio 3)</li>
-            <li>Group 3: Teacher Not set (Studio 1)</li>
+            <li>Group 3: Teacher Manne (Studio 1)</li>
           </ul>
         </li>
       </ul>
+      <h3 /* style={{ textDecoration: 'none' }} */>
+        <AnimatedText text='Sunday 27th' />
+      </h3>
+      <h2 className={styles.name}>
+        <span>Venue: Online Sunday 27th of april</span>
+        <br />
+        &nbsp;&nbsp;Lecture / Q&A - Closure for funkcamp
+      </h2>
     </div>
   );
 };
