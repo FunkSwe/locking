@@ -135,7 +135,7 @@ const Info = () => {
         </li>
         <li>15.15 - 17.00 — Food break</li>
         <li>17.00-21.00 Jam/Battle 7-to-smoke</li>
-        <li>By F.U.N.K.I.G</li>
+        <li>Organized by FOWKUS & (f.u.n.k.ig)</li>
         <InstagramReel />
       </ul>
       <h3 style={{ textDecoration: 'none' }}>
@@ -152,25 +152,25 @@ const Info = () => {
       </p>
       <ul style={{ textDecoration: 'none' }}>
         <li>
-          11:15–12:30 — Session 1
+          11:30–12:45 — Session 1
           <ul>
             <li>Group 1: Teacher Willow (Studio 1)</li>
             <li>Group 2: Teacher Samantha (Studio 2)</li>
             <li>Group 3: Open Session DJ BoonDox (Studio 3)</li>
           </ul>
         </li>
-        <li>12:30–13:45 — Lunch Break</li>
+        <li>12:45–14:15 — Lunch Break</li>
         <li>
-          13:45–15:00 — Session 2
+          14:15–15:30 — Session 2
           <ul>
             <li>Group 1: Open Session DJ BoonDox (Studio 3)</li>
             <li>Group 2: Teacher Willow (Studio 1)</li>
             <li>Group 3: Teacher Samantha (Studio 2)</li>
           </ul>
         </li>
-        <li>15:00–15:15 — Short Break</li>
+        <li>15:30–15:45 — 15min Break</li>
         <li>
-          15:15–16:30 — Session 3
+          15:45–17:00 — Session 3
           <ul>
             <li>Group 1: Teacher Samantha (Studio 2)</li>
             <li>Group 2: Open Session DJ BoonDox (Studio 3)</li>
@@ -227,30 +227,33 @@ const Info = () => {
       <p className={styles.date}>20th of april</p>
       <ul>
         <li>
-          11:15–12:30 — Session 1
+          11:30–12:45 — Session 1
           <ul>
             <li>Group 1: Teacher Samantha (Studio 1)</li>
             <li>Group 2: Teacher Manne (Studio 2)</li>
             <li>Group 3: Teacher Willow (Studio 3)</li>
           </ul>
         </li>
-        <li>12:30–13:45 — Lunch Break</li>
+        <li>12:45–14:15 — Lunch Break</li>
         <li>
-          13:45–15:00 — Session 2
+          14:15–15:30 — Session 2
           <ul>
             <li>Group 1: Teacher Manne (Studio 3)</li>
             <li>Group 2: Teacher Willow (Studio 1)</li>
             <li>Group 3: Teacher Samantha (Studio 2)</li>
           </ul>
         </li>
-        <li>15:00–15:15 — Short Break</li>
+        <li>15:30–15:45 — Short Break</li>
         <li>
-          15:15–16:30 — Session 3
+          15:45–17:00 — Session 3
           <ul>
             <li>Group 1: Teacher Willow (Studio 2)</li>
             <li>Group 2: Teacher Samantha (Studio 3)</li>
             <li>Group 3: Teacher Manne (Studio 1)</li>
           </ul>
+        </li>
+        <li>
+          Doors close at 18:00 so everyone has to be out from the building
         </li>
       </ul>
       <h3 /* style={{ textDecoration: 'none' }} */>
