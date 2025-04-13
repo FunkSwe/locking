@@ -1,0 +1,74 @@
+// CheckGroup.scss
+
+.check-group-container {
+    margin: 4rem;
+    font-family: sans-serif;
+    color: white;
+  
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+  
+    p {
+      line-height: 1.6;
+    }
+  
+    form {
+      margin-top: 2rem;
+  
+      input {
+        margin-right: 10px;
+        padding: 0.6rem 1rem;
+        font-size: 1rem;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        max-width: 280px;
+        color: black;
+      }
+  
+      button {
+        background: orangered;
+        padding: 12px 18px;
+        border-radius: 10px;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        color: #fff;
+        border: none;
+  
+        &:hover {
+          background: darkorange;
+        }
+      }
+    }
+  
+    .results {
+      margin-top: 2rem;
+  
+      div + div {
+        margin-top: 10px;
+      }
+    }
+  }
+  
+  // Responsive adjustment
+  @media (max-width: 600px) {
+    .check-group-container {
+      margin: 2rem;
+  
+      form {
+        display: flex;
+        flex-direction: column;
+  
+        input {
+          margin: 0 0 1rem 0;
+        }
+  
+        button {
+          width: 100%;
+        }
+      }
+    }
+  }
+  

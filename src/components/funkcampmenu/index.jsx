@@ -9,6 +9,7 @@ const menuLinks = [
   { path: '/funkcamp', label: 'Home' },
   { path: '/funkcamp/about', label: 'About' },
   { path: '/funkcamp/schedule', label: 'Schedule' },
+  { path: '/funkcamp/checkgroup', label: 'CheckGroup' },
   { path: '/funkcamp/tribute', label: 'Tribute' },
   { path: '/funkcamp/media', label: 'Media' },
   { path: '/funkcamp/contact', label: 'Contact' },
