@@ -44,7 +44,7 @@ const Hero = () => {
         </p>
         <div className='flex flex-col items-start md:items-center justify-center md:justify-start gap-4 pt-12 md:flex-row md:gap-6'>
           <Button variant='secondary'>
-            <HashLink to='/funkcamp/#info'>Info</HashLink>
+            <HashLink to='/funkcamp/schedule'>Schedule</HashLink>
           </Button>
           <Button variant='secondary'>
             <HashLink to='/funkcamp/#teachers'>Teachers</HashLink>

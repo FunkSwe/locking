@@ -68,24 +68,6 @@ const Home = () => {
             <br />
             And last but not least one of Sweden’s finest, the Funk superhero 🔥
             Arvid Håkansson.
-            <br />
-            <br />
-            While the schedule is still being finalized, the dates are set!
-            Funkcamp 2025 will take place from April 17th to 20th in Stockholm,
-            Sweden. Participants from around the world have already signed up,
-            so don’t miss out! Join the experience by registering via email at
-            funkcampswe@gmail.com or through the contact form on our website.
-          </p>
-        </SlideInLeft>
-        <SlideInLeft>
-          <p className='max-w-xl pt-8 text-lg leading-7 md:text-xl'>
-            Schedule is not set, but dates are and time are! The camp will take
-            place on 17th - 20th of April 2025, in Stockholm Sweden.
-            <br />
-            We already have participants from around the world. So if you wanna
-            be part of the experience, <br />
-            sign up at funkcampswe@gmail.com or thru the form on the contact
-            page.
           </p>
         </SlideInLeft>
       </section>
