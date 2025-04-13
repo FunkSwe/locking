@@ -4,6 +4,7 @@ import { Img } from 'react-image';
 // styles
 import styles from './Info.module.scss';
 import { AnimatedText } from '../animations/AnimatedText';
+import InstagramReel from './staevent';
 
 const Info = () => {
   return (
@@ -86,11 +87,23 @@ const Info = () => {
       <ul style={{ textDecoration: 'none' }}>
         <li>Pre-schedule</li>
         <li>Registration - 15.30-16.00 </li>
-        <li>16.00-17.15 Teacher: Arvidos / Damon Frost / 8 & 9</li>
-        <li>17.30-18.45 Teacher: Arvidos / Damon Frost / Studio 8 & 9</li>
-        <li>19.00-20.30 Teacher: Tony GOGO! The BlackBox</li>
-        <li> doors close</li>
-        <li>Rest for friday - reload - stretch - Chill</li>
+        <li>
+          16.00-17.15 — Session 1
+          <ul>
+            <li>Group 2: Teacher Arvidos (Studio 8)</li>
+            <li>Group 1: Teacher Damon (Studio 9)</li>
+          </ul>
+        </li>
+        <li>
+          17.30-18.45 — Session 2
+          <ul>
+            <li>Group 1: Teacher Arvidos (Studio 8)</li>
+            <li>Group 2: Teacher Damon (Studio 9)</li>
+          </ul>
+        </li>
+        <li>19.00-20.30 Teacher: Tony GOGO! The BlackBox (Group 1+2)</li>
+        <li>21.00 Doors close</li>
+        <li>Rest for friday - Reload - Eat - Sleep</li>
       </ul>
       <h3 style={{ textDecoration: 'none' }}>
         <AnimatedText text='Friday' />
@@ -106,10 +119,23 @@ const Info = () => {
       </p>
       <ul style={{ textDecoration: 'none' }}>
         <li>Pre-schedule</li>
-        <li>13.00-14.00 Teacher: Tony Gogo / Prime / Studio 8 & 9</li>
-        <li>14.15-15.15 Teacher: Tony Gogo / Prime / Studio 8 & 9</li>
-        <li>15.15 - 17.00 — Lunch break</li>
+        <li>
+          13.00-14.00 — Session 1
+          <ul>
+            <li>Group 1: Teacher Tony Gogo (Studio 8)</li>
+            <li>Group 2: Teacher Prime (Studio 9)</li>
+          </ul>
+        </li>
+        <li>
+          14.15-15.15 — Session 2
+          <ul>
+            <li>Group 2: Teacher Tony Gogo (Studio 8)</li>
+            <li>Group 1: Teacher Prime (Studio 9)</li>
+          </ul>
+        </li>
+        <li>15.15 - 17.00 — Food break</li>
         <li>17.00-21.00 Jam/Battle</li>
+        <InstagramReel />
         <li> doors close</li>
         <li>Some plans in the making for this day</li>
       </ul>
@@ -161,6 +187,14 @@ const Info = () => {
           welcome to join in. Come out and compete or just hang for a night with
           amazing dancers and crazy energy! 🔥🔥🔥
         </p>
+        <p>Sign up will be done thru STF</p>
+        <Link
+          rel='stylesheet'
+          to=' https://stockholmtapfestival.se/evening-events/#All-Style-Battle-and-Cinema'
+          target='_blank'
+        >
+          More info!
+        </Link>
         <p>MC - 𝗛𝗔𝗞𝗘𝗬 𝗭𝗘𝗥𝗘</p>
         <p>DJ - 𝗣𝗔𝗧𝗥𝗜𝗞 '𝗣𝗥𝗜𝗠𝗘' 𝗛𝗘𝗟𝗚𝗘</p>
         <p>Judges -</p>
