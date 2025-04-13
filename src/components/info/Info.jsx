@@ -4,7 +4,7 @@ import { Img } from 'react-image';
 // styles
 import styles from './Info.module.scss';
 import { AnimatedText } from '../animations/AnimatedText';
-import InstagramReel from './staevent';
+import InstagramReel from './Instaevent';
 
 const Info = () => {
   return (
