@@ -276,29 +276,4 @@ const Info = () => {
 
 export default Info;
 
-/* 
-<li>- A little re-scedule</li>
-        <li>
-          12.00 Workshop with Tony Gogo at Studion Kulturhuset + session <br />-
-          At STUDION
-        </li>
-        <li>13.00 - 15.00 Session / Jam - At STUDION</li>
-        <li>In association with Gatuverket</li>
-        <li>and the DANCESPOT</li>
-        <li>
-          <Link
-            rel='stylesheet'
-            href='https://www.google.com/maps/place/Kulturhuset/@59.3320447,18.0627552,17z/data=!3m2!4b1!5s0x465f9d5e6495902d:0x64dca853c2bd10ec!4m6!3m5!1s0x465f9d5e7cf16e05:0x5068230272fbf543!8m2!3d59.332042!4d18.0649439!16s%2Fm%2F027_kvs'
-            target='_blank'
-          >
-            Adress link to Studion
-          </Link>
-        </li>
-        <li>Adress: Studion, Sergels Torg, 111 57 Stockholm</li>
-        <li>15-16.30 BREAK - change of venue</li>
-        <li>
-          16.30-20.00 - Workshops continue for funkcamp <br />- At Danscenter
-        </li>
-        <li>Teacher schedule coming up on friday</li>
 
-*/

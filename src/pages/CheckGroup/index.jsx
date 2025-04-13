@@ -5,7 +5,7 @@ import {
   groupSatSun1,
   groupSatSun2,
   groupSatSun3,
-} from './groups';
+} from './groupsold';
 
 import './checkgroup.scss';
 
