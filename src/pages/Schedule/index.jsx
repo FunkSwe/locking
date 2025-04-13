@@ -36,15 +36,15 @@ const Schedule = () => {
         <AnimatedText text='Schedule!' className='' />
         <SlideInLeft>
           <p className='max-w-xl text-lg leading-7 md:text-xl'>
-            Pre schedule is set - changes might happen be on the look out!
+            Schedule is set - changes might happen be on the look out!
           </p>
           <p>
-            The camp will be split in to 2 groups thursday and friday and 3
+            The camp will be split in to 2 groups thursday and friday <br />3
             groups saturday and sunday
           </p>
           <p>
-            You will get information of which group you are in before the camp
-            starts
+            You will get the info on your email (if a parent has registered you
+            then thru them)
           </p>
           <p>Camp registration starts thursday 15.30 at venue: SKH</p>
         </SlideInLeft>

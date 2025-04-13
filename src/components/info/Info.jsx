@@ -70,7 +70,7 @@ const Info = () => {
       </div>
       <br />
       <p className={styles.schedulestart}>
-        Here is a pre- schedule, changes might happen so be on the look out
+        Here is the schedule, changes might happen so be on the look out
       </p>
       <h3 style={{ textDecoration: 'none' }}>
         <AnimatedText text='Thursday' style='title' />
@@ -85,7 +85,6 @@ const Info = () => {
         17th of april
       </p>
       <ul style={{ textDecoration: 'none' }}>
-        <li>Pre-schedule</li>
         <li>Registration - 15.30-16.00 </li>
         <li>
           16.00-17.15 — Session 1
@@ -118,7 +117,6 @@ const Info = () => {
         18th of april
       </p>
       <ul style={{ textDecoration: 'none' }}>
-        <li>Pre-schedule</li>
         <li>
           13.00-14.00 — Session 1
           <ul>
