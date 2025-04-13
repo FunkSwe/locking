@@ -134,10 +134,9 @@ const Info = () => {
           </ul>
         </li>
         <li>15.15 - 17.00 — Food break</li>
-        <li>17.00-21.00 Jam/Battle</li>
+        <li>17.00-21.00 Jam/Battle 7-to-smoke</li>
+        <li>By F.U.N.K.I.G</li>
         <InstagramReel />
-        <li> doors close</li>
-        <li>Some plans in the making for this day</li>
       </ul>
       <h3 style={{ textDecoration: 'none' }}>
         <AnimatedText text='Saturday' /> {/* + battle event */}
