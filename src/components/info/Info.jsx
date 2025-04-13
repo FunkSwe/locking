@@ -186,7 +186,9 @@ const Info = () => {
           welcome to join in. Come out and compete or just hang for a night with
           amazing dancers and crazy energy! 🔥🔥🔥
         </p>
-        <p>Sign up will be done thru STF</p>
+        <p>
+          Sign up will be done at the event so be in time if you wanna battle
+        </p>
         <Link
           rel='stylesheet'
           to=' https://stockholmtapfestival.se/evening-events/#All-Style-Battle-and-Cinema'
@@ -254,11 +256,19 @@ const Info = () => {
       <h3 /* style={{ textDecoration: 'none' }} */>
         <AnimatedText text='Sunday 27th' />
       </h3>
-      <h2 className={styles.name}>
-        <span>Venue: Online Sunday 27th of april</span>
-        <br />
-        &nbsp;&nbsp;Lecture / Q&A - Closure for funkcamp
-      </h2>
+      <h3 className={styles.name}>Venue: Online Sunday 27th of april</h3>
+      <h4>
+        WITH - <br />
+        OG SKEETER RABBIT
+      </h4>
+      <p style={{ fontSize: '1.75rem', fontWeight: 'bold' }}>
+        Lecture / Q&A - Closure for funkcamp
+      </p>
+      <p style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>
+        If you have specific questions you wanna ask, please send it to
+        funkcampswe@gmail.com and we will choose a few to bring up during the
+        Q&A
+      </p>
     </div>
   );
 };
