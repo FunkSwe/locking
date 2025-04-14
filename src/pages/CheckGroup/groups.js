@@ -65,7 +65,6 @@ export const groupThuFri2 = [
   'Eliace',
   'Evert Markus Sirendi',
   'Henri Ollikainen',
-
   'Ippi Iris Arjanne',
   'Jacklyn Talm',
   'Jenna Mäkinen',
@@ -157,7 +156,6 @@ export const groupSatSun2 = [
   'Kristi Bevan',
   'Laura Kyllönen',
   'Mayo N',
-  'Nadja Boson',
   'Nataniel',
   'Oda Reitaas',
   'Ole B Sondal',
@@ -200,6 +198,7 @@ export const groupSatSun3 = [
   'Mari Pulkkinen',
   'Martin Arango',
   'Mikael Koivula',
+  'Nadja Boson',
   'Niko Karppinen',
   'Olea Huuska',
   'Paula Uitto',
