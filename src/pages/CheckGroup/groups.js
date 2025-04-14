@@ -6,12 +6,10 @@ export const groupThuFri1 = [
   'Elnaz',
   'Emil Tamang',
   'Elsa Lundqvist',
-
   'Fanny Leon',
   'Hans Tai',
   'Hilma Hakkebo',
   'Isak Unogwu',
-
   'Josefin Maria T',
   'Joss Thao',
   'Jörgen',
@@ -25,10 +23,10 @@ export const groupThuFri1 = [
   'Oda Reitaas',
   'Ole B Sondal',
   'Olav Juberg',
+  'Olav',
   'Oona Spara',
   'Oscar Sandmark',
   'Pilar Padron',
-
   'Puya',
   'Roble Adare',
   'Robin Sabazade',
@@ -88,7 +86,6 @@ export const groupThuFri2 = [
   'Nataniel',
   'Niko Karppinen',
   'Nova Skeri',
-  'Olav',
   'Olea Huuska',
   'Oona Korhonen',
   'Paula Uitto',
@@ -98,7 +95,6 @@ export const groupThuFri2 = [
   'Sara J',
   'Selim Reboudi',
   'Sergei P',
-
   'Simon Hälldal',
   'Valdemar Larsson',
   'Valeria D',
@@ -180,7 +176,6 @@ export const groupSatSun3 = [
   'Andrei Misukka',
   'Agnes Andersson',
   'Anna Wroz',
-
   'Birgitta',
   'Cheuk Kei Charley Lam (SKY)',
   'Danys Van',
@@ -201,7 +196,6 @@ export const groupSatSun3 = [
   'Martin Arango',
   'Mikael Koivula',
   'Niko Karppinen',
-
   'Olea Huuska',
   'Paula Uitto',
   'Selim Reboudi',
