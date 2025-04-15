@@ -16,6 +16,7 @@ export const groupThuFri1 = [
   'Kertu Kase',
   'Loke Wadström',
   'Malva N',
+  'Mayo N',
   'Mettemai',
   'Mimmi',
   'Nikolas Ramža',
@@ -27,6 +28,7 @@ export const groupThuFri1 = [
   'Oscar Sandmark',
   'Pilar Padron',
   'Puya',
+  'Rebecca N',
   'Roble Adare',
   'Robin Sabazade',
   'Ronja Simone',
@@ -43,6 +45,7 @@ export const groupThuFri1 = [
   'Trine Kjøsnes',
   'Willer',
   'William Bois',
+  'William A',
 ];
 
 export const groupThuFri2 = [
@@ -79,7 +82,6 @@ export const groupThuFri2 = [
   'Lilian Kallo',
   'Mari Pulkkinen',
   'Martin Arango',
-  'Mayo N',
   'Mikael Koivula',
   'Nadja Boson',
   'Niko Karppinen',
@@ -88,7 +90,6 @@ export const groupThuFri2 = [
   'Oona Korhonen',
   'Paula Uitto',
   'Pillerin Arge',
-  'Rebecca N',
   'Sabina Nowakowska',
   'Sami Harju',
   'Sebastian Björkman',  
@@ -98,7 +99,6 @@ export const groupThuFri2 = [
   'Valdemar Larsson',
   'Valeria D',
   'Vide h p',
-  'William A (Albinsson)',
 ];
 
 export const groupSatSun1 = [
@@ -142,6 +142,7 @@ export const groupSatSun2 = [
   'Emil Tamang',
   'Emmy Ohlsson',
   'Eli Keery',
+  'Eliace',
   'Hans Tai',
   'Sky',
   'Hiu Shuen TSE',
@@ -194,6 +195,7 @@ export const groupSatSun3 = [
   'Martin Arango',
   'Mikael Koivula',
   'Nadja Boson',
+  'Nova Skeri',
   'Niko Karppinen',
   'Olea Huuska',
   'Oona Korhonen',
