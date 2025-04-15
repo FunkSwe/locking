@@ -5,6 +5,8 @@
     font-family: sans-serif;
     color: white;
     width: 80%;
+    padding-top: 20vh;
+    height: 100dvh;
 
   
     h1 {
@@ -47,10 +49,17 @@
   
     .results {
       margin-top: 2rem;
+      margin-bottom: 5vh;
   
       div + div {
         margin-top: 10px;
       }
+    }
+
+    .lockerWrapper {
+      position: relative;
+      margin-top: 2rem;
+      align-self: center;
     }
   }
   

@@ -8,6 +8,7 @@ import {
 } from './groups';
 
 import './checkgroup.scss';
+import Locker from '@/components/locker/Locker';
 
 function matchesName(rawName, userInput) {
   const name = rawName.trim().toLowerCase();
@@ -117,6 +118,10 @@ function CheckGroup() {
           </div>
         )}
       </div>
+      <div className='lockerWrapper'>
+      <Locker />
+      </div>
+     
     </div>
   );
 }
