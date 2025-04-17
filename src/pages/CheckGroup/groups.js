@@ -44,6 +44,7 @@ export const groupThuFri1 = [
   'Theresa Gustavsson',
   'Tobias Ramberg',
   'Trine Kjøsnes',
+  'Vi',
   'Willer',
   'William Bois',
   'William A',
