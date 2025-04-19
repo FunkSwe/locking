@@ -181,7 +181,7 @@ const Info = () => {
           amazing dancers and crazy energy! 🔥🔥🔥
         </p>
         <p>
-          Sign up will be done at the event so be in time if you wanna battle
+          Sign up will be done at the event (starts 19:00) so be in time if you wanna battle
         </p>
         <Link
           rel='stylesheet'
