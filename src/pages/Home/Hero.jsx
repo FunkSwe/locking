@@ -32,7 +32,7 @@ const Hero = () => {
           text='20th anniversary'
           className={cn('text-[#eaeaea]')}
         />
-        <p className='max-w-xl pt-8 text-lg leading-7 md:text-xl'>
+        {/* <p className='max-w-xl pt-8 text-lg leading-7 md:text-xl'>
           In 2025, we will celebrate the 20th anniversary of Funkcamp Sweden, a
           camp dedicated to the art form and culture of the street dance known
           as Locking, originally created by Don Campbell as Campbellock. This
@@ -41,6 +41,10 @@ const Hero = () => {
           uniting people and confronting the divisions of the time. Over the
           years, this dance has touched many lives in countless ways, resonating
           with people on personal, cultural, and community levels.
+        </p> */}
+        <p className='max-w-xl pt-8 text-lg leading-7 md:text-xl'>
+          Day 1 and 2 was fire! I hope you all are having fun!
+          2 more days! Lets Go! 
         </p>
         <div className='flex flex-col items-start md:items-center justify-center md:justify-start gap-4 pt-12 md:flex-row md:gap-6'>
           <Button variant='secondary'>

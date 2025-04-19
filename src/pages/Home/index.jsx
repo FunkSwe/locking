@@ -48,7 +48,8 @@ const Home = () => {
       {/*  <Hero /> */}
       <Hero />
       <section className='px-8 md:px-60 mb-40'>
-        <AnimatedText text='Welcome!' className='' />
+        <AnimatedText text='Schedule Sat & Sun! ⬇️' className='' />
+        {/* 
         <SlideInLeft>
           <p className='max-w-xl md:max-w-4xl pt-8 text-lg leading-7 md:text-xl'>
             We are excited to welcome everyone who will join us for Funkcamp
@@ -69,7 +70,7 @@ const Home = () => {
             And last but not least one of Sweden’s finest, the Funk superhero 🔥
             Arvid Håkansson.
           </p>
-        </SlideInLeft>
+        </SlideInLeft> */}
       </section>
       <div className='py-10' id='info'></div>
       <section className='px-4 md:px-60 mb-40'>
