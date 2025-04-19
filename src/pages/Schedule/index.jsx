@@ -34,20 +34,6 @@ const Schedule = () => {
     <main className='w-screen h-full pt-60'>
       <section className='px-8 md:px-60 mb-10'>
         <AnimatedText text='Schedule!' className='' />
-        <SlideInLeft>
-          <p className='max-w-xl text-lg leading-7 md:text-xl'>
-            Schedule is set - changes might happen be on the look out!
-          </p>
-          <p>
-            The camp will be split in to 2 groups thursday and friday <br />3
-            groups saturday and sunday
-          </p>
-          <p>
-            You will get the info on your email (if a parent has registered you
-            then thru them)
-          </p>
-          <p>Camp registration starts thursday 15.30 at venue: SKH</p>
-        </SlideInLeft>
       </section>
       <div className='py-10' id='info'></div>
       <section className='px-4 md:px-60 mb-40'>

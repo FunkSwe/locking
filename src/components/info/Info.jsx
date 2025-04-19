@@ -10,8 +10,8 @@ const Info = () => {
   return (
     <div className={styles.info}>
       <div className={styles.adress}>
-        <h3>Main Venues!</h3>
-
+        <h3>Main Venue Saturday & Sunday!</h3>
+        {/* 
         <h2 className={styles.name}>
           SKH <span>Stockholms konstnärliga högskola</span>
         </h2>
@@ -35,7 +35,7 @@ const Info = () => {
         >
           Adress link to SKH - Stockholms konstnärliga högskola
         </Link>
-
+ */}
         <h2 className={styles.name}>
           Danscenter <span>Fryshuset</span>
         </h2>
@@ -69,10 +69,7 @@ const Info = () => {
         <br />
       </div>
       <br />
-      <p className={styles.schedulestart}>
-        Here is the schedule, changes might happen so be on the look out
-      </p>
-      <h3 style={{ textDecoration: 'none' }}>
+      {/* <h3 style={{ textDecoration: 'none' }}>
         <AnimatedText text='Thursday' style='title' />
       </h3>
       <h2 className={styles.name}>
@@ -80,7 +77,6 @@ const Info = () => {
         <br />
         &nbsp;&nbsp;SKH
       </h2>
-      {/* <p style={{ color: 'tomato' }}>Done did with it</p> */}
       <p className={styles.date} style={{ textDecoration: 'none' }}>
         17th of april
       </p>
@@ -112,7 +108,7 @@ const Info = () => {
         <br />
         &nbsp;&nbsp;SKH
       </h2>
-      {/* <p style={{ color: 'tomato' }}>Done did with it</p> */}
+     
       <p className={styles.date} style={{ textDecoration: 'none' }}>
         18th of april
       </p>
@@ -135,7 +131,7 @@ const Info = () => {
         <li>17.00-21.00 Jam/Battle 7-to-smoke</li>
         <li>Organized by FOWKUS & (f.u.n.k.ig)</li>
         <InstagramReel />
-      </ul>
+      </ul> */}
       <h3 style={{ textDecoration: 'none' }}>
         <AnimatedText text='Saturday' /> {/* + battle event */}
       </h3>
@@ -275,5 +271,3 @@ const Info = () => {
 };
 
 export default Info;
-
-
