@@ -48,7 +48,7 @@ const Home = () => {
       {/*  <Hero /> */}
       <Hero />
       <section className='px-8 md:px-60 mb-40'>
-        <AnimatedText text='Schedule Sat & Sun! ⬇️' className='' />
+        <AnimatedText text='Schedule Sun! ⬇️' className='' />
         {/* 
         <SlideInLeft>
           <p className='max-w-xl md:max-w-4xl pt-8 text-lg leading-7 md:text-xl'>
