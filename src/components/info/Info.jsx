@@ -10,7 +10,18 @@ const Info = () => {
   return (
     <div className={styles.info}>
       <div className={styles.adress}>
-        <h3>Main Venue Sunday!</h3>
+        <h3>Lecture Sunday 27th of April!</h3>
+        <h3>11.00 Las Vegas time</h3>
+        <h3>20.00 Stockholm time</h3>
+        <p>Lecture will be lived on LockerLegends youtube channel </p>
+        <p>Here is the link to the lecture</p>
+        <Link
+          rel='stylesheet'
+          to='https://www.youtube.com/@lockerlegends/streams'
+          target='_blank'
+        >
+          LockerLegends youtube
+        </Link>
         {/* 
         <h2 className={styles.name}>
           SKH <span>Stockholms konstnärliga högskola</span>
@@ -36,7 +47,8 @@ const Info = () => {
           Adress link to SKH - Stockholms konstnärliga högskola
         </Link>
  */}
-        <h2 className={styles.name}>
+        
+{/*         <h2 className={styles.name}>
           Danscenter <span>Fryshuset</span>
         </h2>
         <p style={{ textAlign: 'left', marginTop: '2rem' }}>
@@ -59,15 +71,15 @@ const Info = () => {
         >
           Adress link to Danscenter Stockholm
         </Link>
-      </div>
-      <div className={styles.adress}>
+      </div> */}
+   {/*    <div className={styles.adress}>
         <p>Travel in Stockholm please follow the link</p>
         <a rel='stylesheet' href='https://sl.se/en/in-english' target='_blank'>
           SL - public transport in Stockholm.
         </a>
         <br />
         <br />
-      </div>
+      </div> */}
       <br />
       {/* <h3 style={{ textDecoration: 'none' }}>
         <AnimatedText text='Thursday' style='title' />
