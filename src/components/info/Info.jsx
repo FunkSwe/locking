@@ -48,7 +48,7 @@ const Info = () => {
         </Link>
  */}
         
-{/*         <h2 className={styles.name}>
+       {/*  <h2 className={styles.name}>
           Danscenter <span>Fryshuset</span>
         </h2>
         <p style={{ textAlign: 'left', marginTop: '2rem' }}>
@@ -70,9 +70,9 @@ const Info = () => {
           target='_blank'
         >
           Adress link to Danscenter Stockholm
-        </Link>
-      </div> */}
-   {/*    <div className={styles.adress}>
+        </Link> */}
+      </div>
+     {/*  <div className={styles.adress}>
         <p>Travel in Stockholm please follow the link</p>
         <a rel='stylesheet' href='https://sl.se/en/in-english' target='_blank'>
           SL - public transport in Stockholm.
@@ -221,7 +221,7 @@ const Info = () => {
         </Link>
       </div>
       <div style={{ marginBottom: '2rem' }}></div> */}
-      <h3 /* style={{ textDecoration: 'none' }} */>
+     {/*  <h3 >
         <AnimatedText text='Sunday' />
       </h3>
       <h2 className={styles.name}>
@@ -229,7 +229,7 @@ const Info = () => {
         <br />
         &nbsp;&nbsp;Danscenter
       </h2>
-      {/*  <p style={{ color: 'tomato' }}>Done did with it</p> */}
+     
       <p className={styles.date}>20th of april</p>
       <ul>
         <li>
@@ -267,7 +267,7 @@ const Info = () => {
           Doors close at 18:00, so everyone has to be out of the building.
         </li>
       </ul>
-      <h3 /* style={{ textDecoration: 'none' }} */>
+      <h3 >
         <AnimatedText text='Sunday 27th' />
       </h3>
       <h3 className={styles.name}>Venue: Online Sunday 27th of april</h3>
@@ -282,7 +282,7 @@ const Info = () => {
         If you have specific questions you wanna ask, please send it to
         funkcampswe@gmail.com and we will choose a few to bring up during the
         Q&A
-      </p>
+      </p> */}
     </div>
   );
 };
